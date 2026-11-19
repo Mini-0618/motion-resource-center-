@@ -1,0 +1,12 @@
+{
+  "title": "示例：卡片展开动效（占位数据，非已验证素材）",
+  "url": "https://example.com/motion-card",
+  "source_pool": "daily",
+  "category": "UI-02",
+  "styles": [
+    "minimal",
+    "glass"
+  ],
+  "description": "仅用于测试数据库，不是真实动效资源。",
+  "prompt": "设计共享元素卡片展开，控制时长、弹簧阻尼和背景模糊。"
+}
