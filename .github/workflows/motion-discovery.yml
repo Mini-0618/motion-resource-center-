@@ -1,0 +1,36 @@
+name: Motion resource discovery
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+permissions:
+  contents: write
+concurrency:
+  group: motion-resource-discovery
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: data/motion-center-v4
+          path: data-checkout
+      - name: Test collector
+        run: python -m unittest discover -s tests -v
+      - name: Collect candidates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/discover.py --data-dir data-checkout/motion-data --max-results 24
+      - name: Commit collected metadata
+        working-directory: data-checkout
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add motion-data/
+          if ! git diff --cached --quiet; then
+            git commit -m "data: motion discovery"
+            git push origin HEAD:data/motion-center-v4
+          fi
