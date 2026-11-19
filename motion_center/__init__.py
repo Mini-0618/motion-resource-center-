@@ -1,0 +1,1 @@
+"""Motion resource center prototype."""
