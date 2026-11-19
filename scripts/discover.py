@@ -124,6 +124,18 @@ def collect(root, api=api_search, now=None, token=None, max_results=MAX_PER_RUN)
     token = token if token is not None else os.environ.get("GH_TOKEN", "")
     stamp = now.isoformat(timespec="seconds")
     seen_cache, pending, errors, candidates = {}, {}, [], []
+    archive = root / "daily"
+    if archive.exists():
+        for historical in archive.glob("*.jsonl"):
+            for line in historical.read_text(encoding="utf-8").splitlines():
+                try:
+                    old_url = json.loads(line).get("url")
+                    if old_url:
+                        digest = hashlib.sha256(old_url.casefold().encode("utf-8")).hexdigest()
+                        path = seen_file(root, digest)
+                        seen_cache.setdefault(path, set()).add(digest)
+                except (ValueError, TypeError):
+                    continue
     examined = 0
     for topic, category, pool in source_queries(now):
         try:
