@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "required": [
+    "id",
+    "type",
+    "title",
+    "source_url",
+    "verification_status"
+  ],
+  "types": [
+    "motion",
+    "writing",
+    "video_template",
+    "audio",
+    "image"
+  ],
+  "verification_status": [
+    "discovered",
+    "previewed",
+    "source_checked",
+    "reproduced",
+    "packaged"
+  ],
+  "optional": [
+    "tags",
+    "style",
+    "use_cases",
+    "preview_url",
+    "code_url",
+    "license",
+    "license_checked",
+    "engine",
+    "parameters",
+    "updated_at"
+  ]
+}
