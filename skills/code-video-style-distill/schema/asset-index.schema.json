@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cvsd-asset-index/1",
+  "title": "code-video-style-distill asset index (styles/*/ → motion resource library)",
+  "type": "object",
+  "required": ["schema", "generated_at", "tool", "count", "assets"],
+  "properties": {
+    "schema": {"const": "cvsd-asset-index/1"},
+    "generated_at": {"type": "string"},
+    "tool": {"type": "string"},
+    "styles_dir": {"type": "string"},
+    "taxonomy_source": {"type": ["string", "null"]},
+    "alignment": {"type": "string"},
+    "count": {"type": "integer", "minimum": 0},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "assets": {"type": "array", "items": {"$ref": "#/$defs/asset"}}
+  },
+  "$defs": {
+    "taxid": {"type": "string", "pattern": "^(UI|V|A)-[0-9]+$"},
+    "asset": {
+      "type": "object",
+      "required": ["id", "name", "path", "tokens_file", "tokens_summary", "components", "taxonomy_ids", "provenance", "refs", "license", "motion_center"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^cvsd-style:"},
+        "name": {"type": "string"},
+        "path": {"type": "string"},
+        "version": {"type": ["string", "integer", "number", "null"]},
+        "created_at": {"type": ["string", "null"]},
+        "description": {"type": "string"},
+        "source": {"type": "object", "properties": {"video_file": {"type": ["string", "null"]}, "duration_s": {"type": ["number", "null"]}}},
+        "tokens_file": {"type": "string"},
+        "tokens_summary": {
+          "type": "object",
+          "required": ["canvas", "palette", "typography", "motion", "rhythm"],
+          "properties": {
+            "canvas": {"type": "object"}, "palette": {"type": "object"}, "typography": {"type": "object"},
+            "motion": {"type": "object"},
+            "rhythm": {"type": "object", "properties": {"entrance_events_per_min": {"type": ["number", "null"]}}}
+          }
+        },
+        "components": {"type": "array", "items": {
+          "type": "object", "required": ["type", "taxonomy_ids", "taxonomy_verified"],
+          "properties": {"type": {"type": "string"}, "template_segment": {"type": ["string", "null"]},
+                         "confidence": {"type": ["number", "null"]},
+                         "taxonomy_ids": {"type": "array", "items": {"$ref": "#/$defs/taxid"}},
+                         "taxonomy_verified": {"type": "boolean"}}}},
+        "taxonomy_ids": {"type": "array", "items": {"$ref": "#/$defs/taxid"}},
+        "provenance": {"type": "object", "required": ["counts"], "properties": {
+          "counts": {"type": "object", "required": ["seen", "inferred", "unknown"],
+                     "properties": {"seen": {"type": "integer"}, "inferred": {"type": "integer"}, "unknown": {"type": "integer"}}},
+          "unknowns": {"type": "array", "items": {"type": ["string", "null"]}}}},
+        "refs": {"type": "array", "items": {"type": "string"}},
+        "license": {"type": "object",
+                    "required": ["style_tokens_license", "reference_rights", "source_label", "refs_distributable"],
+                    "properties": {"style_tokens_license": {"type": "string"}, "reference_rights": {"type": "string"},
+                                   "source_label": {"type": "string"}, "attribution": {"type": "string"},
+                                   "refs_distributable": {"const": false}, "notes": {"type": "string"}}},
+        "motion_center": {
+          "description": "same keys as motion_center.core.add_resource() in Mini-0618/motion-resource-center-",
+          "type": "object", "required": ["title", "url", "source_pool", "category"],
+          "properties": {"title": {"type": "string"}, "url": {"type": "string"},
+                         "source_pool": {"enum": ["daily", "evergreen"]}, "category": {"$ref": "#/$defs/taxid"},
+                         "styles": {"type": "array", "items": {"type": "string"}}, "description": {"type": "string"},
+                         "prompt": {"type": "string"}, "license": {"type": ["string", "null"]}, "source_url": {"type": ["string", "null"]}}}
+      }
+    }
+  }
+}

@@ -33,10 +33,20 @@ from cvsd_common import (read_json, write_json, srgb_to_lab, delta_e2000, hex_to
 
 TOOL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCHEMA = os.path.join(TOOL_DIR, "schema", "style-tokens.schema.json")
-TAXONOMY_CANDIDATES = [
-    "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md",
-    "/workspace/ip-team/deliverables/motion/README.md",
-]
+# Motion taxonomy shipped INSIDE the skill (references/motion-taxonomy.md); override with --taxonomy or CVSD_TAXONOMY.
+DEFAULT_TAXONOMY = os.path.join(TOOL_DIR, "references", "motion-taxonomy.md")
+
+
+def load_taxonomy(path):
+    """parse `| ID | name | keywords |` rows -> {id: name}. Returns ({}, error) when missing/empty."""
+    if not path or not os.path.exists(path):
+        return {}, f"taxonomy file not found: {path}"
+    ids = {}
+    for line in open(path, encoding="utf-8"):
+        m = re.match(r"^\|\s*((?:UI|V|A)-\d+)\s*\|\s*([^|]+?)\s*\|", line)
+        if m:
+            ids[m.group(1)] = m.group(2)
+    return (ids, None) if ids else ({}, f"no taxonomy rows (| ID | name | ...) in {path}")
 
 # component -> (template segment, UI ids, V ids). Category names in taxonomy-from-user.md.
 TAXO = {
@@ -630,7 +640,9 @@ def detect_components(A, P, pal):
     def add(t, sc, evidence, conf, params=None):
         seg, ui, v = TAXO[t]
         comps.append({"type": t, "template_segment": seg, "scenes": sorted(set(sc)), "evidence": evidence,
-                      "confidence": round(conf, 2), "taxonomy": {"ui": ui, "video": v, "source": TAXO_SRC}, "params": params or {}})
+                      "confidence": round(conf, 2), "taxonomy": {"ui": ui, "video": v, "source": TAXO_SRC,
+                                   "verified": bool(TAXO_SRC) and all(i in TAXO_IDS for i in ui + v),
+                                   "names": {i: TAXO_IDS.get(i, "UNVERIFIED") for i in ui + v}}, "params": params or {}})
 
     # subtitle bar
     subs = [l for l in lines if l["pos_pct"]["y"] > 78 and abs(l["pos_pct"]["cx"] - 50) < 6]
@@ -781,11 +793,21 @@ def main():
     ap.add_argument("--name", required=True, help="style name, lowercase-kebab, e.g. paper-terminal")
     ap.add_argument("--overrides", help="JSON deep-merged on top (visual-review corrections)")
     ap.add_argument("--styles-dir", help="also store the style asset under <styles-dir>/<name>/")
+    ap.add_argument("--taxonomy", help="motion taxonomy table (default: references/motion-taxonomy.md in the skill; env CVSD_TAXONOMY)")
     args = ap.parse_args()
 
     A = read_json(os.path.join(args.analysis_dir, "analysis.json"))
-    global TAXO_SRC
-    TAXO_SRC = next((p for p in TAXONOMY_CANDIDATES if os.path.exists(p)), "")
+    global TAXO_SRC, TAXO_IDS
+    tpath = args.taxonomy or os.environ.get("CVSD_TAXONOMY") or DEFAULT_TAXONOMY
+    TAXO_IDS, terr = load_taxonomy(tpath)
+    if terr:
+        print(f"[distill] ERROR {terr} — component taxonomy ids will be marked UNVERIFIED", file=sys.stderr)
+        TAXO_SRC = ""
+    else:
+        TAXO_SRC = os.path.abspath(tpath)
+        bad = sorted({i for _, ui, v in TAXO.values() for i in ui + v} - set(TAXO_IDS))
+        if bad:
+            print(f"[distill] WARNING taxonomy ids used by the detector table but missing from {tpath}: {bad}", file=sys.stderr)
     P = Prov()
     meta = A["source"]
     ocr = A.get("ocr", {})
@@ -812,12 +834,19 @@ def main():
         "av_sync": {"rule": ("视觉事件起点对齐音频起音点（容差 80 ms）" if sync.get("match_ratio", 0) >= 0.5 else
                              "音画为松散同步：只有少数切点落在起音点上" if sync else "无音轨或未测"),
                     "match_ratio": sync.get("match_ratio"), "median_offset_ms": sync.get("median_offset_ms")},
+        "entrance_events_per_min": entrance_density(A),
         "pacing_rule": (f"平均每 {R.get('shot_duration_mean_s')} s 一个镜头；镜头内元素约每 {R.get('stagger_median_s')} s 入场一个"
                         if R.get("shot_duration_mean_s") else "unknown"),
     }
     sc_ev = [{"file": A["files"]["scenes_csv"]}] + [{"tc": s["start_tc"]} for s in A["scenes"][1:6]]
     P.set("rhythm.shot_mean_s", "seen", sc_ev, "detected cuts")
     P.set("rhythm.shot_median_s", "seen", sc_ev, "detected cuts")
+    if rhythm["entrance_events_per_min"] is not None:
+        P.set("rhythm.entrance_events_per_min", "seen", [{"file": A["files"].get("motion_events_json", "analysis.json#motion.events")}],
+              "non-transition motion events / duration × 60 (scripts/distill.py entrance_density)",
+              "events are motion-energy bursts: simultaneous entrances inside one burst count once")
+    else:
+        P.set("rhythm.entrance_events_per_min", "unknown", [], "no motion events in analysis")
     P.set("rhythm.motion_onset_interval_s", "inferred", [{"file": A["files"]["motion_energy_csv"]}], "median interval between motion onsets")
     P.set("rhythm.visual_bpm", "inferred", [], "60 / onset interval folded into 60–180")
     if au.get("onsets_s") is not None:
@@ -926,6 +955,11 @@ def main():
             shutil.copy(s["keyframes"]["settled"]["path"], refs)
         with open(os.path.join(sd, "README.md"), "w", encoding="utf-8") as f:
             f.write(style_readme(tokens, A))
+        att = os.path.join(sd, "attribution.json")
+        if not os.path.exists(att):  # template; export-index flags UNSPECIFIED until the user fills it
+            write_json(att, {"source_label": "UNSPECIFIED", "reference_rights": "UNSPECIFIED",
+                             "style_tokens_license": "UNSPECIFIED", "attribution": "",
+                             "_help": "填写参考片来源标注与你拥有的权利（自有/授权），export-index 会读取；未填写时资源库清单标记 UNSPECIFIED"})
         print(f"[distill] style asset saved -> {sd}")
 
 
@@ -951,6 +985,17 @@ def style_readme(T, A):
 
 
 TAXO_SRC = ""
+TAXO_IDS = {}
+
+
+def entrance_density(A):
+    """入场事件密度（次/分钟）= 非转场运动事件数 / 时长(分钟)."""
+    ev = (A.get("motion") or {}).get("events")
+    dur = (A.get("source") or {}).get("duration_s") or 0
+    if ev is None or dur <= 0:
+        return None
+    n = sum(1 for e in ev if not e.get("is_transition"))
+    return round(n / (dur / 60.0), 2)
 
 if __name__ == "__main__":
     main()

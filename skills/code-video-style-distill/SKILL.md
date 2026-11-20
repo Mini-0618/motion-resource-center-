@@ -1,6 +1,6 @@
 ---
 name: code-video-style-distill
-description: 参考视频 → 蒸馏风格底座（style-tokens.json）→ 换选题用 Remotion 模板量产 → 和原片对比迭代。用于底层由代码生成的动效视频（Remotion/React、GSAP/HTML、Manim、Motion Canvas、AE 表达式风格的 MG/知识类视频）。目标是高保真复刻风格，不承诺像素级一致。
+description: 参考视频 → 蒸馏风格底座（style-tokens.json）→ 换选题量产（渲染后端可换：Remotion / Lemo-Opuscar 页面 / Motion Canvas / HyperFrames）→ 和原片对比迭代。用于底层由代码生成的动效视频（Remotion/React、GSAP/HTML、Manim、Motion Canvas、AE 表达式风格的 MG/知识类视频）。目标是高保真复刻风格，不承诺像素级一致。
 ---
 
 # 代码动效视频：风格蒸馏与量产
@@ -108,10 +108,14 @@ $T/run.sh distill /abs/work <style-name> [/abs/work/overrides.json]
 - `typography`（气质、免费替代字体族、字号阶梯 display/h1/h2/body/caption/code、字重、`font_substitutions` 替代表）
 - `layout`（边距、安全区、栅格、对齐、圆角、装饰）
 - `motion`（时长档位、`easing` 的 cubic-bezier、`easings` CSS 字符串、`keyframes` 轨道、spring、入场类型、错峰 stagger、转场、打字速度）
-- `rhythm`（平均镜头时长、切换间隔、视觉/音频 BPM、音画卡点规则）
-- `components`（标题卡、要点列表、柱状图、数字滚动、代码块、证据截图框、时间线、对比双栏、流程图、关键词高亮、字幕条、进度条、转场 → 模板段落类型 + 动效库分类 UI-01~UI-11 / V-01~V-15，分类来源 `/workspace/ip-team/deliverables/motion/taxonomy-from-user.md`）
+- `rhythm`（平均/中位镜头时长、切换间隔、视觉/音频 BPM、音画卡点规则、**入场事件密度 `entrance_events_per_min`**＝非转场运动事件数 ÷ 时长（分钟），seen；同一次能量爆发里同时入场的多个元素只计一次）
+- `components`（标题卡、要点列表、柱状图、数字滚动、代码块、证据截图框、时间线、对比双栏、流程图、关键词高亮、字幕条、进度条、转场 → 模板段落类型 + 动效库分类编号；分类表随 Skill 打包在 `$T/references/motion-taxonomy.md`（只有编号、分类名、方法关键词），每个元件写 `taxonomy.verified` 和分类名，表里查不到的编号标 `UNVERIFIED`）
 - `components_style`：字幕条、进度条，以及 evidence / timeline / compare / flow 四个知识片元件的样式（尺寸、描边、圆角、标注色、入场时长）。参考片里检测到 → 用实测值，provenance=seen；没检测到 → 从 palette/motion/layout 推出缺省值，provenance=unknown。
 - `provenance`：**每个字段**都有 `status`（seen / inferred / unknown）、`confidence`、`evidence`（时间码、帧文件、OCR 行、CSV）、`method`。`unknowns` 列出所有没测到的字段。`unknown` 的意思是“没测到”，不是“不存在”（规则来自 aicodeking/leanrea，MIT）。
+
+**分类表**：默认读 Skill 内的 `$T/references/motion-taxonomy.md`；换表用 `--taxonomy <file>`（`run.sh distill <work> <name> --taxonomy x.md`）或环境变量 `CVSD_TAXONOMY`，优先级 `--taxonomy` > `CVSD_TAXONOMY` > 内置。文件不存在 → stderr 打印 `ERROR taxonomy file not found` 并把所有编号标 `UNVERIFIED`（不中断蒸馏）；检测表用到但分类表里没有的编号 → 打 WARNING 列出编号。表格式：`| 编号 | 分类名 | 关键词 |`，编号形如 `UI-09`/`V-03`/`A-01`。
+
+**风格目录 attribution.json**：`--styles-dir` 存风格时会生成模板，填参考片来源标注（`source_label`）、你对参考片的权利（`reference_rights`：自有/授权）、风格参数的许可（`style_tokens_license`）。不填，资源库清单里就是 `UNSPECIFIED`。
 
 **overrides.json**：视觉判断和迭代修正都写这里，不手改 tokens。格式见 `$T/examples/overrides.example.json`，可带 `_provenance` 写清依据；没写依据的会自动标 `inferred / visual review`。
 
@@ -125,8 +129,8 @@ $T/run.sh checklist /abs/work /abs/script.json            # 同内容复刻再�
 
 | 原定档 | 项目与默认阈值 |
 |---|---|
-| must | M1 画布一致；M2 背景 ΔE2000 ≤ 3；M3 色板加权 ΔE ≤ 6；M4 主色/强调色 ΔE ≤ 8；M5 入场速度曲线 r ≥ 0.80；M6 入场时长误差 ≤ 25%；M7 左边距差 ≤ 2pp；M8 对齐方式相同；M9 安全区差 ≤ 3pp；M10 面板圆角差 ≤ 6px；C* 脚本用到的每个元件都被检测到；知识片元件各两项几何/颜色（见下） |
-| should | S1 正文字号 ≤ 15%；S2 标题字号 ≤ 20%；S3 转场类型+时长；S4 平均镜头时长 ≤ 35%；S5 错峰间隔 ≤ 35%；S6 背景装饰；S7 音画卡点比例差 ≤ 0.2；（同内容时）S8 运动曲线 r ≥ 0.6、S9 SSIM ≥ 0.85 |
+| must | M1 画布一致；M2 背景 ΔE2000 ≤ 3；M3 色板加权 ΔE ≤ 6；M4 主色/强调色 ΔE ≤ 8；M5 入场速度曲线 r ≥ 0.80；M6 入场时长误差 ≤ 25%；M7 左边距差 ≤ 2pp；M8 对齐方式相同；M9 安全区差 ≤ 3pp；M10 面板圆角差 ≤ 6px；C* 脚本用到的每个元件都被检测到；知识片元件各两项几何/颜色（见下）；脚本有字幕时加中文字幕三项 U1 字幕底条色 ΔE ≤ 8、U2 字幕字号误差 ≤ 15%、U3 单条字幕 ≤ 18 字 |
+| should | S1 正文字号 ≤ 15%；S2 标题字号 ≤ 20%；S3 转场类型+时长；S4 平均镜头时长 ≤ 35%；S5 错峰间隔 ≤ 35%；S6 背景装饰；S7 音画卡点比例差 ≤ 0.2；S10 入场事件密度（次/分钟）误差 ≤ 35%（受脚本内容量影响，所以是 should）；（同内容时）S8 运动曲线 r ≥ 0.6、S9 SSIM ≥ 0.85 |
 | out | 原片字体文件、原素材/logo/商标、像素级完全一致；换选题时的整条曲线相关和 SSIM |
 
 **出处分级规则（硬规则）**：每一项都记录 `source_paths`（依赖的 token 字段）和 `source_level`（这些字段 provenance 里最弱的那个：unknown < inferred < seen）。
@@ -138,6 +142,11 @@ $T/run.sh checklist /abs/work /abs/script.json            # 同内容复刻再�
 **基准冻结**：主色/强调色、元件颜色与几何、圆角的基准，取自参考片分析（不带 overrides 的 distill，缓存在 `ref_analysis/_distill/`），建清单时写进各项 `baseline`，之后每轮都从 acceptance.json 读，**不会**随你修改 style-tokens/overrides 而漂移。
 
 **字号**：任一侧没有 OCR、或字号来源是默认值/unknown 时，S1/S2 记 not-testable，不参与相似度计算。
+
+**中文字幕三项（U1–U3）**：来源字段 `components_style.subtitle`。参考片 OCR 认出了底部居中的字幕行 → seen → 留在 must；参考片没 OCR 或没认出字幕 → unknown → 降为 should 并强制 not-testable。复刻侧没有 OCR 结果时，U2/U3 也记 not-testable，不会被算成通过。
+- U1 底条色：复刻片字幕行局部底色与冻结基准（参考片实测 `subtitle.bg`）的 ΔE2000 ≤ 8；
+- U2 字号：底部居中 OCR 行墨迹字号中位数之比 |rep/ref−1| ≤ 0.15（按画布高度归一）；
+- U3 单条 ≤ 18 字：复刻片每条底部 OCR 行去掉空格和标点后的字数最大值 ≤ 18。模板（三个 HTML/Remotion/Motion Canvas 实现一致）会把超过 18 字的 `caption` 自动拆成连续的单行字幕（优先在标点处断，不拆英文单词，去掉行尾逗号句号，`**高亮**` 保留），按字数分配显示时长；`caption_cues` 里过长的条目也在各自时间窗内拆分。上限可用 `components_style.subtitle.max_chars` 改。Python 版同一规则：`scripts/subtitle_rules.py`。
 
 知识片元件的验收项（元件没有验收项不算数）：
 
@@ -179,7 +188,7 @@ $T/run.sh checklist /abs/work /abs/script.json            # 同内容复刻再�
 $T/run.sh stillcheck /abs/work /abs/script.json      # -> work/stillcheck_rN/stillcheck.md / .json / stillcheck_sheet.png
 ```
 
-只渲 3 张静帧（Remotion `renderStill`）：从参考片挑 3 个有代表性的镜头（优先一个面板类：代码/对比/流程，一个文字类：要点/标题，一个其它类：时间线/柱状图/证据/数字），在复刻脚本里找同类段落，取该段停稳时刻（下一段转场开始前 0.3s）。只查两档：
+只渲 3 张静帧（用当前渲染后端，`--renderer` 可选）：从参考片挑 3 个有代表性的镜头（优先一个面板类：代码/对比/流程，一个文字类：要点/标题，一个其它类：时间线/柱状图/证据/数字），在复刻脚本里找同类段落，取该段停稳时刻（下一段转场开始前 0.3s）。只查两档：
 - 色板：背景 ΔE（M2）、色板加权 ΔE（M3）、主色/强调色 ΔE（M4，基准取自 acceptance.json 冻结值）；
 - 版式：左边距（M7）、对齐（M8）、安全区（M9）、面板圆角（M10）。
 
@@ -188,10 +197,20 @@ $T/run.sh stillcheck /abs/work /abs/script.json      # -> work/stillcheck_rN/sti
 ## 第 6 步：渲染
 
 ```bash
-$T/run.sh render /abs/work /abs/script.json /abs/work/replica_r1.mp4 [--renderer remotion]
+$T/run.sh render /abs/work /abs/script.json /abs/work/replica_r1.mp4 [--renderer remotion|lemo|motion-canvas|hyperframes]
+# 或环境变量 CVSD_RENDERER=lemo；stillcheck / resume 同样接受 --renderer
 ```
 
-渲染层是可替换接口（`$T/scripts/renderers.py`）：style-tokens.json + script.json 进、mp4（或静帧）出。当前后端是 Remotion（自有许可证，团队商用前核对 https://www.remotion.dev/license）；以后换 Motion Canvas（MIT）或 HyperFrames（Apache-2.0）只需在 `BACKENDS` 里加一项，tokens、脚本、分析和验收不用改。每次渲染都在 mp4 元数据写入渲染时间，所以每个成片文件哈希都不同。
+渲染层是可替换接口（`$T/scripts/renderers.py`）：style-tokens.json + script.json 进、mp4（或静帧 PNG）出，四个后端用同一套时间线语义（段落顺序播放，后一段提前 `transition.duration_s` 叠入，`cut` 不叠），所以 stillcheck 的取帧时刻、compare 的验收对所有后端通用。每次渲染都在 mp4 元数据写入渲染时间，成片哈希各不相同。
+
+| 后端 | 实现 | 段落支持 | 依赖 / 许可 |
+|---|---|---|---|
+| `remotion`（默认） | `template/`（React） | 9 种全部 | Remotion 自有许可证，团队商用前核对 https://www.remotion.dev/license |
+| `lemo` | `renderers/html/`：自写的无框架页面（`runtime.js`，MIT），符合 Lemo-Opuscar 页面契约（`window.READY` / `window.DUR` / 确定性 `window.render(t)` / `window.TEXTS(t)`），由 Lemo 自己的 `core/render/video.mjs`、`still.mjs` 录制 | 9 种全部 | Lemo-Opuscar 代码 MIT（文档 CC BY-NC 4.0，未拷贝）；需要本地 checkout：`git clone https://github.com/lemomo-ai/lemo-opuscar <dir> && cd <dir> && npm install`，设 `LEMO_HOME=<dir>`（默认 `$T/work/_ext/lemo-opuscar`） |
+| `motion-canvas` | `renderers/motion-canvas/`：Motion Canvas 3.17 场景（`src/scene.tsx`），不用编辑器 UI，`src/main.ts` 用 core 的 `bootstrap` + `Renderer` 的 PlaybackManager/Stage 逐帧 seek，`capture.mjs` 用无头 Chrome 截帧送 ffmpeg | title / bullets / code / bars / stat + 字幕 + 进度条 + 5 种转场；其它 4 种直接报错并列出支持的类型 | MIT；`cd $T/renderers/motion-canvas && npm install`（首跑自动 vite build） |
+| `hyperframes` | 同一个 `renderers/html` 页面，加 HyperFrames 合成属性（`data-composition-id/start/duration/width/height`），画面由 HyperFrames 运行时的 `hf-seek` 事件驱动，`hyperframes render` / `snapshot` 录制 | 9 种全部 | Apache-2.0，Node ≥ 22；`mkdir <dir> && cd <dir> && npm init -y && npm install hyperframes@0.9.72`，设 `HYPERFRAMES_HOME=<dir>`（默认 `$T/work/_ext/hyperframes`）。调用时自动关遥测和更新检查（`HYPERFRAMES_NO_TELEMETRY=1`、`DO_NOT_TRACK=1`、`HYPERFRAMES_NO_UPDATE_CHECK=1`）；**不要用** publish / auth / cloud / share 等联网命令 |
+
+Lemo / Motion Canvas / HyperFrames 都用本机 Chrome（`PLAYWRIGHT_CHROME` / `PUPPETEER_EXECUTABLE_PATH`，默认找 `/usr/bin/google-chrome`），音频由 `renderers.py` 用 ffmpeg 混进去。单独预览 HTML 页面：`python renderers/html/build_page.py --tokens t.json --script s.json --outdir demo/`，浏览器打开 `demo/index.html`。
 
 ## 第 7 步：compare 迭代（2–3 轮）
 
@@ -223,6 +242,14 @@ $T/run.sh compare /abs/ref.mp4 /abs/work /abs/work/replica_r1.mp4 "round 1: toke
 - `refs/` 里的原片帧只作内部对照，**不得**随模板、成片或资产包对外分发。
 - 量产时：`--tokens $T/styles/<name>/style-tokens.json` 加新的 script.json 就行。
 
+### 导出到动效资源库：export-index
+
+```bash
+$T/run.sh export-index [--styles-dir $T/styles] [-o $T/styles/asset-index.json] [--taxonomy x.md] [--strict]
+```
+
+把 `styles/*/` 汇总成一个 manifest（格式 `cvsd-asset-index/1`，校验 `$T/schema/asset-index.schema.json`）。每个风格一条：名称、路径、tokens 摘要（画布、色板、字体族与字号、入场方式/时长/缓动/转场、镜头时长与入场密度）、元件（模板段落类型 + 分类编号 + 是否在分类表里查得到）、`taxonomy_ids`、provenance 计数（seen/inferred/unknown）和未测字段、`refs/` 路径、license/attribution（读 `attribution.json`；`refs_distributable` 固定 false）。另带一个 `motion_center` 块，字段与 Mini-0618/motion-resource-center- 仓库 `motion_center/core.py` 的 `add_resource()` 一致（title / url / source_pool / category / styles / description / prompt / license / source_url），那个仓库没有单独的 asset-index 格式（2026-11-19 核对过），所以对齐它的资源记录字段。没填 attribution.json 的风格会打 WARNING，`--strict` 时退出码 1。
+
 ## 事实与推测怎么写
 
 - tokens：看 `provenance.<字段>.status`。给人汇报时，seen 的附时间码或帧文件，inferred 的写“推测”和依据，unknown 的写“未测到”。
@@ -235,12 +262,42 @@ $T/run.sh compare /abs/ref.mp4 /abs/work /abs/work/replica_r1.mp4 "round 1: toke
 - 事件时长按能量阈值测，ease-out 的尾巴会被截掉，测出来通常比真实时长短 10–25%，靠 compare 的 M6 校正。
 - OCR（tesseract）读不出超大标题，也会漏读彩色代码（底部字幕区另做一遍反色 OCR 来补漏），字号阶梯里的 display 常常是推测值，打字速度通常偏低。
 - 转场类型只能区分 slide / zoom / 其它；wipe 和 fade 需要目测。字体身份测不出来，只有气质推测。
+- 渲染后端：Motion Canvas 后端目前只实现 5 种核心段落；HTML 页面（Lemo/HyperFrames）与 Remotion 模板是逐组件移植，同脚本同 tokens 下画面接近但不逐像素一致（spring 用闭式解、字体抗锯齿、JPEG 截帧）。HyperFrames 在没有 chrome-headless-shell 时退回截图模式（较慢，结果仍确定）。引擎实测（5 段脚本、同一份 tokens 与冻结验收）：Remotion / HyperFrames 首轮 must 全过；Motion Canvas 按 gap 建议改一次时长后通过；Lemo 录制的成片 M6 卡在 0.295（第 5 个入场事件比同一页面在 HyperFrames 下少 1 帧），改 base、fast 档都不动，ledger 判 STALLED——Lemo 后端能出片，但 M6 这一项要人工判断。
+- 入场事件密度按运动能量事件计，同一爆发内多个元素同时入场只算一次，换选题后内容量不同密度自然会变，所以只放 should。
+- 字幕三项依赖 tesseract 能读出字幕行；底条为半透明时 U1 测到的是混合后的底色。
 - 元件：模板现有 9 种段落（标题卡、要点、代码打字机、柱状图、大数字、证据截图框、时间线、对比双栏、流程图）+ 字幕条、进度条、关键词高亮、5 种转场。图标动画、地图、3D、人物/角色、Lottie 类元件还没有。
 - 四个知识片元件的检测器是像素启发式：证据框要求截图区域占画面 ≥10% 且有纹理（纯色 UI 截图可能认不出），时间线要求一条横线上 ≥3 个圆点（竖向时间线认不出），对比双栏要求两块等高的 surface 色面板，流程图要求 ≥3 个同色节点排成一行/一列（菱形、曲线连线认不出）。认不出时 tokens 记 unknown，对应验收项降为 should + not-testable。
 - 证据框的 Ken Burns 推进会让分析把一个段落切成两个镜头，镜头节奏（S4）会偏。
 - 静帧预检只看 3 帧，抓不到动效和节奏问题；元件和字号仍要靠全片 compare。
 - 换选题时，并排对比只比风格；像素差和 SSIM 只有在同内容复刻时才有意义。
 - 测试用的参考片是本工具自己渲染的，分数偏乐观；真实外部视频还没测过。
+
+## 测试（装依赖 + 运行）
+
+测试脚本 `$T/tests/test_cli.py`，全部本地运行、不联网（除了首次 npm install）。依赖：Python venv（上面的 pip 包，含 `jsonschema`）、ffmpeg、tesseract（含 chi_sim）、Node ≥ 22、Chrome、`template/` 和 `renderers/motion-canvas/` 的 npm 依赖；后端测试还需要 Lemo 和 HyperFrames 的本地 checkout（见第 6 步，没装时这两项判 FAIL 并给出原因）。测试会用 `work/run9`（9 段回归的产物）和 `work/eng_base`（引擎对比的验收清单），没有就先跑一次第 7 步的回归。
+
+Linux / macOS：
+
+```bash
+cd $T
+python3 -m venv .venv && .venv/bin/pip install opencv-python-headless numpy scikit-learn pillow matplotlib jsonschema scipy pyyaml
+sudo apt-get install -y ffmpeg tesseract-ocr tesseract-ocr-chi-sim      # macOS: brew install ffmpeg tesseract tesseract-lang
+(cd template && npm install) && (cd renderers/motion-canvas && npm install)
+.venv/bin/python tests/test_cli.py          # 全量（约 5–8 分钟）
+.venv/bin/python tests/test_cli.py --fast   # 跳过账本、compare 和后端渲染项
+```
+
+Windows（PowerShell，依赖按上文“Windows 完整步骤”装好）：
+
+```powershell
+cd <工具目录>\code-video-style-distill
+.venv\Scripts\python.exe -m pip install jsonschema
+cd template; npm install; cd ..\renderers\motion-canvas; npm install; cd ..\..
+$env:RIGHTS_OK = "1"
+.venv\Scripts\python.exe tests\test_cli.py --fast
+```
+
+注意：第 1 项会调用 `bash run.sh`，Windows 上没有 bash 时这一项会失败，其余项走 `cvsd.py`。
 
 ## 出处
 

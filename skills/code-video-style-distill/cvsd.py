@@ -9,6 +9,7 @@ run.sh is now a thin wrapper around this file). Paths use pathlib; no bash neede
   python cvsd.py stillcheck <work> <script.json> [--renderer remotion]          # 3 settled stills: palette + layout gate
   python cvsd.py render     <work> <script.json> <out.mp4> [--renderer remotion]
   python cvsd.py compare    <ref.mp4> <work> <replica.mp4> [--note "..."] [compare.py flags...]
+  python cvsd.py export-index [--styles-dir styles] [-o styles/asset-index.json] [--strict]  # styles/*/ -> asset-index manifest
   python cvsd.py beat       <out.wav> [--bpm 100] [--seconds 60]                 # ffmpeg click track for tests
   python cvsd.py all        <ref.mp4> <work> <style-name> <script.json> [--skip-review] [--rounds N] [--force] [--no-wait]
   python cvsd.py resume     <ref.mp4> <work> <style-name> <script.json> [--rounds N] [--no-wait]
@@ -243,7 +244,11 @@ def cmd_resume(a):
     return 0
 
 
-CMDS = {"precheck": cmd_precheck, "analyze": cmd_analyze, "distill": cmd_distill, "checklist": cmd_checklist, "stillcheck": cmd_stillcheck,
+def cmd_export_index(a):
+    return py("export_index.py", *a)
+
+
+CMDS = {"export-index": cmd_export_index, "precheck": cmd_precheck, "analyze": cmd_analyze, "distill": cmd_distill, "checklist": cmd_checklist, "stillcheck": cmd_stillcheck,
         "render": cmd_render, "compare": cmd_compare, "beat": cmd_beat, "all": cmd_all, "resume": cmd_resume}
 
 if __name__ == "__main__":

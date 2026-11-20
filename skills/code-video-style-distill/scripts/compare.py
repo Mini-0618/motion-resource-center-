@@ -300,6 +300,20 @@ def main():
     def pcs_seen(key):
         return pcs.get(key) if pprov.get(f"components_style.{key}", {}).get("status") == "seen" else None
     M["knowledge_components_rep"] = {k: pcs_seen(k) for k in ("evidence", "timeline", "compare", "flow")}
+    # Chinese subtitle conventions (U1–U3) + entrance-event density (S10)
+    sub_rep = pcs_seen("subtitle") or {}
+    b_bg = (items_by_metric.get("subtitle_bar_delta_e", {}).get("baseline") or {}).get("bg")
+    M["subtitle_bar_delta_e"] = round(float(delta_e2000(lab(b_bg), lab(sub_rep["bg"]))), 2) if b_bg and sub_rep.get("bg") else None
+    b_sz = (items_by_metric.get("subtitle_size_ratio_err", {}).get("baseline") or {}).get("size_px") or M["subtitle_size"]["ref"]
+    M["subtitle_size_ratio_err"] = round(abs(M["subtitle_size"]["rep_scaled"] / b_sz - 1), 3) if b_sz and M["subtitle_size"]["rep_scaled"] else None
+    PUN = set("，。、；：！？,.;:!?\"'“”‘’（）()《》*")
+    sub_lines = [l["text"] for l in (PA.get("ocr", {}).get("lines") or []) if l["pos_pct"]["y"] > 78 and abs(l["pos_pct"]["cx"] - 50) < 6]
+    M["subtitle_lines_rep"] = sub_lines[:40]
+    M["subtitle_max_line_chars"] = max((sum(1 for c in t if c.strip() and c not in PUN) for t in sub_lines), default=None)
+    b_den = (items_by_metric.get("entrance_density_ratio_err", {}).get("baseline") or {}).get("entrance_events_per_min")
+    p_den = (PT.get("rhythm") or {}).get("entrance_events_per_min")
+    M["entrance_density"] = {"ref": b_den, "rep": p_den}
+    M["entrance_density_ratio_err"] = round(abs(p_den / b_den - 1), 3) if b_den and p_den is not None else None
     rs = RT["typography"]["scale_px"]
     k_ = rm["height"] / pm["height"]  # compare type sizes relative to canvas height
     ps = {k: v * k_ for k, v in PT["typography"]["scale_px"].items()}
@@ -485,6 +499,18 @@ def main():
 
 def suggest(r, M, T, RT, PT):
     m = r["metric"]
+    if m == "subtitle_bar_delta_e":
+        return f"components_style.subtitle.bg 改成基准 {(r.get('baseline') or {}).get('bg')}，bg_opacity 设 1.0（底条需实色才能被测得）"
+    if m == "subtitle_size_ratio_err":
+        ss = M.get("subtitle_size", {})
+        cur = T["typography"]["scale_px"].get("caption")
+        return (f"typography.scale_px.caption（当前 {cur}px）按比例调到 ≈{round(cur * ss['ref'] / ss['rep_scaled'])}px"
+                if cur and ss.get("ref") and ss.get("rep_scaled") else "按参考字幕字号调整 typography.scale_px.caption")
+    if m == "subtitle_max_line_chars":
+        return "字幕超过 18 字：设置 components_style.subtitle.max_chars=18（模板默认 18），或在脚本里用 caption_cues 手动拆条"
+    if m == "entrance_density_ratio_err":
+        d = M.get("entrance_density", {})
+        return f"入场密度 参考 {d.get('ref')} 次/分 vs 复刻 {d.get('rep')} 次/分：调整每段要点/条目数量或 motion.stagger_s（受脚本内容量影响）"
     if m == "bg_delta_e":
         return f"palette.bg 改成参考实测值（参考 {RT['palette']['bg']}，复刻 {PT['palette']['bg']}）"
     if m in ("palette_weighted_delta_e", "role_colors_max_delta_e"):
@@ -494,8 +520,13 @@ def suggest(r, M, T, RT, PT):
         return f"调整 motion.easing.enter.cubic_bezier（当前 {T['motion']['easing']['enter']['cubic_bezier']}）；参考曲线 {M['entrance_profile_ref']}，复刻 {M['entrance_profile_rep']}：峰值越靠前越接近 ease-out"
     if m == "entrance_duration_ratio_err":
         ref, rep = M["entrance_duration_ref_s"], M["entrance_duration_rep_s"]
-        cur = T["motion"]["durations_s"]["base"]
-        return f"motion.durations_s.base 当前 {cur}s，按比例改成 ≈{round(cur * ref / rep, 3)}s（参考事件 {ref}s / 复刻 {rep}s）"
+        tiers = {k: v for k, v in T["motion"]["durations_s"].items() if isinstance(v, (int, float))}
+        # the median event comes from whichever tier is closest to it: scaling 'base' does nothing when the
+        # median event is a 'fast' one (seen in the engine comparison: base 0.455 -> 0.645 left the median at 0.2s)
+        k = min(tiers, key=lambda t: abs(tiers[t] - rep)) if tiers else "base"
+        cur = tiers.get(k, T["motion"]["durations_s"].get("base"))
+        return (f"motion.durations_s.{k} 当前 {cur}s，按比例改成 ≈{round(cur * ref / rep, 3)}s（参考事件中位 {ref}s / 复刻 {rep}s；"
+                f"改离复刻中位最近的档位 {k}，档位 {tiers}）")
     if m == "margin_left_diff_pct":
         return f"layout.margins_pct.left / alignment 对齐参考（{M['alignment']}）"
     b = r.get("baseline") or {}

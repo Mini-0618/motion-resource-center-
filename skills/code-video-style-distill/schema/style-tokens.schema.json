@@ -534,6 +534,13 @@
         },
         "pacing_rule": {
           "type": "string"
+        },
+        "entrance_events_per_min": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "入场事件密度：非转场运动事件数 / 时长(分钟)"
         }
       }
     },

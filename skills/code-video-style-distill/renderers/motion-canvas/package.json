@@ -1,0 +1,14 @@
+{
+  "name": "cvsd-motion-canvas-backend",
+  "private": true,
+  "type": "module",
+  "description": "code-video-style-distill render backend on Motion Canvas (MIT). Frames captured headlessly through the Player API.",
+  "license": "MIT",
+  "dependencies": {
+    "@motion-canvas/core": "3.17.2",
+    "@motion-canvas/2d": "3.17.2",
+    "@motion-canvas/vite-plugin": "3.17.2",
+    "vite": "^4.5.0",
+    "playwright-core": "^1.49.0"
+  }
+}

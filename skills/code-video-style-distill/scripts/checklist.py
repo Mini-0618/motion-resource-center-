@@ -54,6 +54,16 @@ def source_level(prov, paths, best=False):
     return (max if best else min)(levels, key=lambda s: RANK.get(s, 0))
 
 
+def sub_ocr_size(A_):
+    """median OCR ink size of bottom-centred lines (subtitle band); None without OCR."""
+    ls = [l["est_font_size_px"] for l in ((A_.get("ocr") or {}).get("lines") or [])
+          if l["pos_pct"]["y"] > 78 and abs(l["pos_pct"]["cx"] - 50) < 6 and l.get("est_font_size_px")]
+    if not ls:
+        return None
+    ls.sort()
+    return round(float(ls[len(ls) // 2]), 1)
+
+
 def ref_measured_tokens(ref_dir):
     """distill the reference analysis WITHOUT overrides (cached in <ref_dir>/_distill)."""
     p = os.path.join(ref_dir, "_distill", "style-tokens.json")
@@ -139,6 +149,19 @@ def build(tokens, A, script=None, same_content=False, ref_tokens=None):
             add(f"C{n}b", "must", "流程图节点≥3 且方向一致", "flow_geometry_ok", "==", True, "node_count≥3 且 orientation 与基准相同", ra["contact_sheet"], pth,
                 component=c, baseline={"orientation": cs.get("orientation")})
 
+    # Chinese short-video subtitle conventions (only when the script has captions)
+    if "subtitle_bar" in req:
+        rsub = (RT.get("components_style") or {}).get("subtitle", {})
+        sp = ["components_style.subtitle"]
+        add("U1", "must", "字幕底条色一致", "subtitle_bar_delta_e", "<=", 8.0,
+            "复刻片字幕行局部底色（components_style.subtitle.bg，需复刻侧 seen）与冻结基准 ΔE2000", ra["contact_sheet"], sp,
+            component="subtitle_bar", baseline={"bg": rsub.get("bg")})
+        add("U2", "must", "字幕字号接近", "subtitle_size_ratio_err", "<=", 0.15,
+            "底部居中 OCR 行的墨迹字号中位数比 |rep/ref - 1|（按画布高度归一；任一侧无 OCR → not-testable）", ra["contact_sheet"], sp,
+            component="subtitle_bar", baseline={"size_px": sub_ocr_size(A)})
+        add("U3", "must", "单条字幕 ≤18 字（一屏一行）", "subtitle_max_line_chars", "<=", 18,
+            "复刻片底部居中 OCR 行去空格/标点后的字数最大值（无 OCR → not-testable）；模板按 ≤18 字自动拆条", ra["contact_sheet"], sp,
+            component="subtitle_bar")
     add("S1", "should", "正文字号接近", "body_size_ratio_err", "<=", 0.15, "OCR 墨迹高度估计的正文字号比（任一侧无 OCR 或默认值 → not-testable）",
         ra["contact_sheet"], ["typography.scale_px.body"])
     add("S2", "should", "标题字号接近", "h1_size_ratio_err", "<=", 0.20, "OCR 标题层字号比（任一侧无 OCR 或默认值 → not-testable）", ra["contact_sheet"],
@@ -150,6 +173,9 @@ def build(tokens, A, script=None, same_content=False, ref_tokens=None):
     add("S6", "should", "装饰元素一致（背景网格）", "decor_match", "==", True, "背景网格线检测结果相同", ra["contact_sheet"], ["layout.decor.grid_lines"])
     add("S7", "should", "音画卡点比例接近（双方都有音轨时）", "av_sync_ratio_diff", "<=", 0.20, "视觉事件落在 80ms 内音频起音点的比例差", ra["motion_energy_csv"],
         ["rhythm.av_sync"])
+    add("S10", "should", "入场事件密度接近（次/分钟）", "entrance_density_ratio_err", "<=", 0.35,
+        "非转场运动事件数/分钟之比 |rep/ref - 1|（受脚本内容量影响，故为 should）", ra["motion_energy_csv"], ["rhythm.entrance_events_per_min"],
+        baseline={"entrance_events_per_min": (RT.get("rhythm") or {}).get("entrance_events_per_min")})
     add("S8" if same_content else "O1", "should" if same_content else "out", "整条运动能量曲线相关（仅同内容复刻有意义）",
         "timeline_energy_corr", ">=", 0.60, "两条运动能量曲线按归一化时间重采样 200 点后 Pearson r", ra["motion_energy_csv"], [])
     add("S9" if same_content else "O2", "should" if same_content else "out", "同时间点画面结构相似（仅同内容）", "mean_ssim", ">=", 0.85,

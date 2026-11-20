@@ -92,3 +92,43 @@ export function compStyle(T: any, name: string) {
   };
   return {...base[name], ...((T.components_style || {})[name] || {})};
 }
+
+// ---- Chinese subtitle rule: one cue = one line of <= maxChars characters (default 18).
+// Long captions are split into consecutive cues (prefer punctuation, never inside a Latin word),
+// trailing ，。、；： are dropped, and **highlight** marks survive the split.
+const PUNCT = '，。、；：！？,.;:!?';
+export function countChars(s: string) {
+  return [...s.replace(/\*\*/g, '')].filter((c) => c.trim() !== '').length;
+}
+export function splitCaption(text: string, maxChars = 18): string[] {
+  const parts = parseHighlight(text);
+  const chars: {c: string; hi: boolean}[] = [];
+  parts.forEach((p) => [...p.t].forEach((c) => chars.push({c, hi: p.hi})));
+  const out: {c: string; hi: boolean}[][] = [];
+  let cur: {c: string; hi: boolean}[] = [];
+  const n = (a: {c: string}[]) => a.filter((x) => x.c.trim() !== '').length;
+  for (let i = 0; i < chars.length; i++) {
+    cur.push(chars[i]);
+    const isP = PUNCT.includes(chars[i].c);
+    if (isP && n(cur) >= Math.min(8, maxChars)) { out.push(cur); cur = []; continue; }
+    if (n(cur) >= maxChars) {
+      // back off to the last punctuation / space / non-Latin boundary
+      let cut = cur.length;
+      for (let k = cur.length - 1; k > 0; k--) {
+        const a = cur[k - 1].c, b = cur[k].c;
+        if (PUNCT.includes(a) || a === ' ' || !(/[A-Za-z0-9_]/.test(a) && /[A-Za-z0-9_]/.test(b))) { cut = k; break; }
+      }
+      if (i + 1 < chars.length && /[A-Za-z0-9_]/.test(chars[i].c) && /[A-Za-z0-9_]/.test(chars[i + 1].c)) {
+        out.push(cur.slice(0, cut)); cur = cur.slice(cut);
+      } else { out.push(cur); cur = []; }
+    }
+  }
+  if (n(cur)) out.push(cur);
+  return out.map((seg) => {
+    let s = '';
+    let hi = false;
+    seg.forEach((x) => { if (x.hi !== hi) { s += '**'; hi = x.hi; } s += x.c; });
+    if (hi) s += '**';
+    return s.replace(/^\s+|\s+$/g, '').replace(/[，。、；：,.;:]+(\*\*)?$/, '$1').replace(/^(\*\*)?[，。、；：！？,.;:!?\s]+/, '$1');
+  }).filter((s) => countChars(s) > 0);
+}

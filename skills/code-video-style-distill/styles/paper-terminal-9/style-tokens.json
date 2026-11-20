@@ -4,8 +4,8 @@
   "description": "Style base distilled from reference9.mp4",
   "source": {
     "video": "$T/examples/reference-fixture-9/reference9.mp4",
-    "analysis_dir": "$T/work/run9/ref_analysis",
-    "distilled_at": "2026-11-20T12:27:27+08:00",
+    "analysis_dir": "$T/work/run10/ref_analysis",
+    "distilled_at": "2026-11-20T13:46:24+08:00",
     "duration_s": 43.2
   },
   "canvas": {
@@ -311,6 +311,7 @@
       "match_ratio": 0.222,
       "median_offset_ms": -37.0
     },
+    "entrance_events_per_min": 22.22,
     "pacing_rule": "平均每 3.6 s 一个镜头；镜头内元素约每 0.5 s 入场一个"
   },
   "components": [
@@ -337,7 +338,11 @@
         "video": [
           "V-13"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "V-13": "字幕、配音与音画同步"
+        }
       },
       "params": {
         "bg": "#3D3D3B",
@@ -360,7 +365,12 @@
           "V-01",
           "V-15"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "V-01": "文字与动态排版",
+          "V-15": "封面、片头、片尾与品牌包装"
+        }
       },
       "params": {}
     },
@@ -380,7 +390,13 @@
           "V-01",
           "V-10"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-09": "信息与内容组件",
+          "V-01": "文字与动态排版",
+          "V-10": "MG 图形动画"
+        }
       },
       "params": {}
     },
@@ -399,7 +415,13 @@
           "V-05",
           "V-09"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "V-04": "新闻、论文与证据展示",
+          "V-05": "产品演示与屏幕录制",
+          "V-09": "2.5D、视差与镜头运动"
+        }
       },
       "params": {
         "box_pct": [
@@ -427,7 +449,13 @@
           "V-05",
           "V-09"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "V-04": "新闻、论文与证据展示",
+          "V-05": "产品演示与屏幕录制",
+          "V-09": "2.5D、视差与镜头运动"
+        }
       },
       "params": {
         "box_pct": [
@@ -464,7 +492,13 @@
           "V-03",
           "V-04"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-09": "信息与内容组件",
+          "V-03": "信息图与逻辑解释",
+          "V-04": "新闻、论文与证据展示"
+        }
       },
       "params": {
         "node_count": 4,
@@ -491,7 +525,12 @@
         "video": [
           "V-05"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-09": "信息与内容组件",
+          "V-05": "产品演示与屏幕录制"
+        }
       },
       "params": {}
     },
@@ -510,7 +549,12 @@
         "video": [
           "V-05"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-09": "信息与内容组件",
+          "V-05": "产品演示与屏幕录制"
+        }
       },
       "params": {}
     },
@@ -530,7 +574,13 @@
           "V-03",
           "V-05"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-09": "信息与内容组件",
+          "V-03": "信息图与逻辑解释",
+          "V-05": "产品演示与屏幕录制"
+        }
       },
       "params": {
         "panel_fill": "#1F2330",
@@ -555,7 +605,13 @@
           "V-03",
           "V-10"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-09": "信息与内容组件",
+          "V-03": "信息图与逻辑解释",
+          "V-10": "MG 图形动画"
+        }
       },
       "params": {
         "node_count": 4,
@@ -582,7 +638,12 @@
         "video": [
           "V-02"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-04": "数据仪表盘动效",
+          "V-02": "数据图表动画"
+        }
       },
       "params": {
         "bars": [
@@ -623,7 +684,13 @@
           "V-02",
           "V-01"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-04": "数据仪表盘动效",
+          "V-02": "数据图表动画",
+          "V-01": "文字与动态排版"
+        }
       },
       "params": {}
     },
@@ -643,7 +710,12 @@
           "V-01",
           "V-13"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "V-01": "文字与动态排版",
+          "V-13": "字幕、配音与音画同步"
+        }
       },
       "params": {
         "syntax": "use **keyword** in script.json text"
@@ -662,7 +734,12 @@
         "video": [
           "V-15"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-01": "基础交互动效",
+          "V-15": "封面、片头、片尾与品牌包装"
+        }
       },
       "params": {
         "position": "top"
@@ -681,7 +758,12 @@
         "video": [
           "V-07"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "$T/references/motion-taxonomy.md",
+        "verified": true,
+        "names": {
+          "UI-02": "页面与布局转场",
+          "V-07": "电影化转场"
+        }
       },
       "params": {}
     }
@@ -768,7 +850,7 @@
       "method": "visual review (manual override)",
       "evidence": [
         {
-          "file": "$T/work/run9/overrides.json"
+          "file": "$T/work/run10/overrides.json"
         }
       ],
       "confidence": 0.6
@@ -778,7 +860,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "file": "work/run9/ref_analysis/meta.json"
+          "file": "work/run10/ref_analysis/meta.json"
         }
       ],
       "method": "ffprobe"
@@ -788,7 +870,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "file": "work/run9/ref_analysis/meta.json"
+          "file": "work/run10/ref_analysis/meta.json"
         }
       ],
       "method": "ffprobe"
@@ -798,7 +880,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "file": "work/run9/ref_analysis/meta.json"
+          "file": "work/run10/ref_analysis/meta.json"
         }
       ],
       "method": "ffprobe"
@@ -1031,16 +1113,16 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene002_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png"
         }
       ],
       "method": "left-aligned boxes 0.879, centred 0.276"
@@ -1055,7 +1137,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png"
         }
       ],
       "method": "rows/cols of faint (ΔE 1.2–12) pixels repeating at a regular period",
@@ -1071,16 +1153,16 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene002_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png"
         }
       ],
       "method": "best-fit column grid to box left edges",
@@ -1091,16 +1173,16 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene002_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png"
         }
       ],
       "method": "lowest foreground edge (subtitle)"
@@ -1110,16 +1192,16 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene002_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png"
         }
       ],
       "method": "5th percentile of foreground-box left edges"
@@ -1129,16 +1211,16 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene002_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png"
         }
       ],
       "method": "mirrored from left (content does not reach right edge)"
@@ -1148,16 +1230,16 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene002_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png"
         }
       ],
       "method": "clipped bottom margin; vertical centring assumed"
@@ -1167,7 +1249,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene005_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene005_settled.png",
           "box": [
             290,
             452,
@@ -1183,16 +1265,16 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene002_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png"
         }
       ],
       "method": "min(margins)"
@@ -1202,7 +1284,7 @@
       "method": "round 1 gap M6: ref event 0.2835s / replica 0.2s, scaled 0.321→0.455",
       "evidence": [
         {
-          "file": "work/run9/compare_r1/gap-report.md"
+          "file": "work/run9/compare_r1/gap-report.md (carried over from run9 review)"
         }
       ],
       "confidence": 0.9
@@ -1217,7 +1299,7 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+          "file": "$T/work/run10/ref_analysis/motion_energy.csv"
         },
         {
           "tc": "00:00:00.000",
@@ -1256,7 +1338,7 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+          "file": "$T/work/run10/ref_analysis/motion_energy.csv"
         },
         {
           "tc": "00:00:00.000",
@@ -1300,7 +1382,7 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+          "file": "$T/work/run10/ref_analysis/motion_energy.csv"
         },
         {
           "tc": "00:00:01.200",
@@ -1344,7 +1426,7 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+          "file": "$T/work/run10/ref_analysis/motion_energy.csv"
         },
         {
           "tc": "00:00:00.000",
@@ -1378,7 +1460,7 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+          "file": "$T/work/run10/ref_analysis/motion_energy.csv"
         },
         {
           "tc": "00:00:00.000",
@@ -1392,7 +1474,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+          "file": "$T/work/run10/ref_analysis/motion_energy.csv"
         },
         {
           "tc": "00:00:03.033",
@@ -1426,7 +1508,7 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+          "file": "$T/work/run10/ref_analysis/motion_energy.csv"
         },
         {
           "tc": "00:00:03.033",
@@ -1474,7 +1556,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/palette_global.png"
+          "file": "$T/work/run10/ref_analysis/palette_global.png"
         }
       ],
       "method": "second distinct chromatic cluster (ΔE2000>15 from primary)",
@@ -1485,16 +1567,16 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene002_settled.png"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png"
         }
       ],
       "method": "mode of quantised frame-border pixels",
@@ -1524,7 +1606,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/palette_global.png"
+          "file": "$T/work/run10/ref_analysis/palette_global.png"
         }
       ],
       "method": "global k-means (k=8, Lab), merged ΔE<4"
@@ -1534,7 +1616,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/palette_global.png"
+          "file": "$T/work/run10/ref_analysis/palette_global.png"
         }
       ],
       "method": "most frequent chromatic k-means cluster (Lab) of foreground pixels",
@@ -1545,7 +1627,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene006_settled.png",
           "box": [
             176,
             408,
@@ -1561,23 +1643,23 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png",
           "ocr_line": "三条铁律"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene004_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene004_settled.png",
           "ocr_line": "一次发布的时间线"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene006_settled.png",
           "ocr_line": "开一个功能分支"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene009_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene009_settled.png",
           "ocr_line": "R流程"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene010_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene010_settled.png",
           "ocr_line": "合并冲突次数《每月)"
         }
       ],
@@ -1588,11 +1670,11 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene000_settled.png",
           "ocr_line": "三分钟讲清feature/release/hotfix"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene011_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene011_settled.png",
           "ocr_line": "平均发布周期短"
         }
       ],
@@ -1603,7 +1685,7 @@
       "confidence": 0.6,
       "evidence": [
         {
-          "file": "work/run9/ref_analysis/audio_onsets.csv"
+          "file": "work/run10/ref_analysis/audio_onsets.csv"
         }
       ],
       "method": "spectral-flux autocorrelation"
@@ -1639,12 +1721,23 @@
       ],
       "method": "nearest audio onset to each cut/entrance"
     },
+    "rhythm.entrance_events_per_min": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "analysis.json#motion.events"
+        }
+      ],
+      "method": "non-transition motion events / duration × 60 (scripts/distill.py entrance_density)",
+      "note": "events are motion-energy bursts: simultaneous entrances inside one burst count once"
+    },
     "rhythm.motion_onset_interval_s": {
       "status": "inferred",
       "confidence": 0.6,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+          "file": "$T/work/run10/ref_analysis/motion_energy.csv"
         }
       ],
       "method": "median interval between motion onsets"
@@ -1659,7 +1752,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/scenes.csv"
+          "file": "$T/work/run10/ref_analysis/scenes.csv"
         },
         {
           "tc": "00:00:03.133"
@@ -1684,7 +1777,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "file": "$T/work/run9/ref_analysis/scenes.csv"
+          "file": "$T/work/run10/ref_analysis/scenes.csv"
         },
         {
           "tc": "00:00:03.133"
@@ -1736,7 +1829,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png",
           "ocr_line": "直接推了main",
           "bbox": [
             265,
@@ -1746,7 +1839,7 @@
           ]
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene004_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene004_settled.png",
           "ocr_line": "开分支",
           "bbox": [
             336,
@@ -1756,7 +1849,7 @@
           ]
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene004_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene004_settled.png",
           "ocr_line": "提PR",
           "bbox": [
             727,
@@ -1779,15 +1872,15 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene006_settled.png",
           "ocr_line": "terminal"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene006_settled.png",
           "ocr_line": "git switch -c"
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene006_settled.png",
           "ocr_line": "git add"
         }
       ],
@@ -1798,7 +1891,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene002_settled.png",
           "ocr_line": "事故现",
           "bbox": [
             194,
@@ -1808,7 +1901,7 @@
           ]
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene008_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene008_settled.png",
           "ocr_line": "Merge还是Rebase",
           "bbox": [
             195,
@@ -1818,7 +1911,7 @@
           ]
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png",
           "ocr_line": "三条铁律",
           "bbox": [
             197,
@@ -1835,7 +1928,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene001_settled.png",
           "ocr_line": "三条铁律",
           "bbox": [
             197,
@@ -1845,7 +1938,7 @@
           ]
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene004_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene004_settled.png",
           "ocr_line": "一次发布的时间线",
           "bbox": [
             195,
@@ -1855,7 +1948,7 @@
           ]
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene009_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene009_settled.png",
           "ocr_line": "R流程",
           "bbox": [
             244,
@@ -1872,7 +1965,7 @@
       "confidence": 0.9,
       "evidence": [
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene003_settled.png",
           "ocr_line": "事故现场",
           "bbox": [
             194,
@@ -1882,7 +1975,7 @@
           ]
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene005_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene005_settled.png",
           "ocr_line": "开一个功能分支",
           "bbox": [
             211,
@@ -1892,7 +1985,7 @@
           ]
         },
         {
-          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "frame": "$T/work/run10/ref_analysis/keyframes/scene006_settled.png",
           "ocr_line": "开一个功能分支",
           "bbox": [
             195,
@@ -1964,7 +2057,7 @@
   "fidelity_notes": {
     "rule": "seen = measured from pixels/audio with evidence; inferred = derived by heuristic or visual judgement; unknown = not measured (≠ absent). Rule adapted from aicodeking/leanrea (MIT).",
     "status_counts": {
-      "seen": 43,
+      "seen": 44,
       "inferred": 27,
       "unknown": 8
     },
@@ -2005,6 +2098,7 @@
       "palette.text",
       "palette.text_muted",
       "rhythm.av_sync",
+      "rhythm.entrance_events_per_min",
       "rhythm.shot_mean_s",
       "rhythm.shot_median_s",
       "typography.scale_px.body",

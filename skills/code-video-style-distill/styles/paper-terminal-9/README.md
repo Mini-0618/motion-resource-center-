@@ -1,7 +1,7 @@
 # 风格底座：paper-terminal-9
 
 - 来源视频：`$T/examples/reference-fixture-9/reference9.mp4`（1920x1080 @ 30.0fps，43.2s）
-- 蒸馏时间：2026-11-20T12:27:27+08:00
+- 蒸馏时间：2026-11-20T13:46:24+08:00
 - refs/ 里的关键帧只作内部比对参考，不得随模板或成片分发。
 
 ## 色板
@@ -41,7 +41,7 @@
 
 ## 来源统计
 
-{'seen': 43, 'inferred': 27, 'unknown': 8}
+{'seen': 44, 'inferred': 27, 'unknown': 8}
 
 ## 待目测补全
 

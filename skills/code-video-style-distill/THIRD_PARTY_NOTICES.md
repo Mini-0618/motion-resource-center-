@@ -25,7 +25,11 @@ VIDEO.md 规范署名（CC BY 4.0）：“VIDEO.md specification” © videomd c
 | OpenCV / NumPy / scikit-learn / Pillow / SciPy | Apache-2.0 / BSD / HPND | 分析脚本（pip 安装在 .venv） |
 | Tesseract OCR | Apache-2.0 | 文字与字号（本机命令行调用） |
 | Remotion 4 | Remotion License（公司自有许可证，个人和小团队免费，较大公司商用需买授权） | 当前默认渲染后端 `template/`；通过 `scripts/renderers.py` 接口调用，可替换 |
-| Motion Canvas（MIT）/ HyperFrames（Apache-2.0） | — | 尚未接入，只在 `scripts/renderers.py` 预留后端位置；未使用其代码 |
+| Motion Canvas 3.17.2（MIT，© Motion Canvas contributors） | MIT | `renderers/motion-canvas` 后端：npm 依赖 `@motion-canvas/core`、`@motion-canvas/2d`（只作为库调用，不拷贝源码）；`src/main.ts` 仿照其 `Renderer.renderFrame()` 的调用顺序自写 |
+| Vite 4 / playwright-core | MIT / Apache-2.0 | Motion Canvas 场景打包与无头 Chrome 截帧（npm 依赖） |
+| Lemo-Opuscar（lemomo-ai/lemo-opuscar，© 2026 Lemomo (LemoLab)） | 代码 MIT；文档 CC BY-NC 4.0；影片/海报 CC BY 4.0；Clawd 与商标不授权 | `lemo` 后端：只调用使用者本地 checkout 里的 `core/render/video.mjs`、`still.mjs`（MIT），工具目录里**不包含**它的任何文件；`renderers/html/runtime.js` 只实现它公开的页面契约（READY / DUR / render(t) / TEXTS），代码自写；未拷贝其 *.md 文档、风格提示词、影片或 Clawd |
+| HyperFrames 0.9.72（heygen-com/hyperframes） | Apache-2.0 | `hyperframes` 后端：调用使用者本地安装的 `hyperframes render` / `snapshot`；页面只加它文档里的合成属性和 `hf-seek` 监听，未拷贝其代码；调用时关闭遥测与更新检查，不使用 publish / auth / cloud 等联网功能 |
 
-知识片元件（evidence / timeline / compare / flow）的组件与像素检测器（`template/src/components/{Evidence,Timeline,CompareColumns,Flow}.tsx`、`scripts/components_detect.py`）为本工具自写；分类编号来自用户自己的动效库分类表 `/workspace/ip-team/deliverables/motion/taxonomy-from-user.md`。
+知识片元件（evidence / timeline / compare / flow）的组件与像素检测器（`template/src/components/{Evidence,Timeline,CompareColumns,Flow}.tsx`、`scripts/components_detect.py`）为本工具自写；分类编号来自用户（加伊莎）自己的动效库分类表，已整理成 `references/motion-taxonomy.md` 随 Skill 打包，只含编号、分类名和方法关键词（用户自有内容，不含第三方素材）。
+`export-index` 输出里的 `motion_center` 块字段对齐 Mini-0618/motion-resource-center-（用户自己的仓库）`motion_center/core.py` 的 `add_resource()` 参数名。
 `examples/assets/placeholder-evidence-*.png` 由代码生成，无第三方素材。

@@ -42,3 +42,7 @@
 全局：`transition`、`audio {src, volume}`（路径相对 script.json）。进度条由 `components_style.progress_bar` 控制。
 
 加新元件：在 `src/components/` 写组件，在 `src/Main.tsx` 的 `REGISTRY` 注册，只从 `T`（tokens）取样式。
+
+## 字幕（中文口径）
+
+`caption` 超过 18 个字（不计空格；`**高亮**` 标记不计）时自动拆成连续的单行字幕：优先在标点处断、不拆英文单词、去掉行尾逗号句号，按字数分配显示时长；`caption_cues` 里过长的条目在各自时间窗内拆分。上限改 `components_style.subtitle.max_chars`。同一规则在 `renderers/html/runtime.js`、`renderers/motion-canvas/src/lib.ts`、`scripts/subtitle_rules.py` 里各有一份实现，改一处要同步三处。

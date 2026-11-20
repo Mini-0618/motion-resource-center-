@@ -1,0 +1,545 @@
+{
+  "schema": "cvsd-asset-index/1",
+  "generated_at": "2026-11-20T13:50:21+08:00",
+  "tool": "code-video-style-distill",
+  "styles_dir": "$T/styles",
+  "taxonomy_source": "$T/references/motion-taxonomy.md",
+  "alignment": "motion_center block = fields of Mini-0618/motion-resource-center- add_resource(); no separate asset-index format exists there (checked 2026-11-19)",
+  "count": 2,
+  "warnings": [],
+  "assets": [
+    {
+      "id": "cvsd-style:paper-terminal-9",
+      "name": "paper-terminal-9",
+      "path": "paper-terminal-9",
+      "version": 1,
+      "created_at": "2026-11-20T13:46:24+08:00",
+      "description": "Style base distilled from reference9.mp4",
+      "source": {
+        "video_file": "reference9.mp4",
+        "duration_s": 43.2
+      },
+      "tokens_file": "paper-terminal-9/style-tokens.json",
+      "tokens_summary": {
+        "canvas": {
+          "width": 1920,
+          "height": 1080,
+          "fps": 30
+        },
+        "palette": {
+          "bg": "#F3EFE6",
+          "surface": "#1F2330",
+          "primary": "#E45730",
+          "accent": "#3085A9",
+          "text": "#1E1C1D",
+          "text_muted": "#6E6B6B"
+        },
+        "typography": {
+          "families": {
+            "display": "\"Inter Tight\", \"Noto Sans CJK SC\", \"Source Han Sans SC\", sans-serif",
+            "body": "\"Inter\", \"Noto Sans CJK SC\", \"Source Han Sans SC\", \"HarmonyOS Sans SC\", sans-serif",
+            "mono": "\"JetBrains Mono\", \"Noto Sans Mono CJK SC\", monospace"
+          },
+          "scale_px": {
+            "display": 106,
+            "h1": 88,
+            "h2": 61,
+            "body": 36,
+            "caption": 29,
+            "code": 37
+          },
+          "font_policy": "free/open substitutes only; no reference font files"
+        },
+        "motion": {
+          "enter_style": "slide-up",
+          "durations_s": {
+            "fast": 0.195,
+            "base": 0.455,
+            "slow": 0.867
+          },
+          "stagger_s": 0.5,
+          "easing_enter": [
+            0.22,
+            0.4,
+            0.2,
+            1.05
+          ],
+          "transition": "slide"
+        },
+        "rhythm": {
+          "shot_mean_s": 3.6,
+          "entrance_events_per_min": 22.22
+        }
+      },
+      "components": [
+        {
+          "type": "subtitle_bar",
+          "template_segment": null,
+          "confidence": 0.8,
+          "taxonomy_ids": [
+            "V-13"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "title_card",
+          "template_segment": "title",
+          "confidence": 0.6,
+          "taxonomy_ids": [
+            "V-01",
+            "V-15"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "bullet_list",
+          "template_segment": "bullets",
+          "confidence": 0.7,
+          "taxonomy_ids": [
+            "UI-09",
+            "V-01",
+            "V-10"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "evidence_frame",
+          "template_segment": "evidence",
+          "confidence": 0.75,
+          "taxonomy_ids": [
+            "V-04",
+            "V-05",
+            "V-09"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "evidence_frame",
+          "template_segment": "evidence",
+          "confidence": 0.75,
+          "taxonomy_ids": [
+            "V-04",
+            "V-05",
+            "V-09"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "timeline",
+          "template_segment": "timeline",
+          "confidence": 0.75,
+          "taxonomy_ids": [
+            "UI-09",
+            "V-03",
+            "V-04"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "code_block",
+          "template_segment": "code",
+          "confidence": 0.8,
+          "taxonomy_ids": [
+            "UI-09",
+            "V-05"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "code_block",
+          "template_segment": "code",
+          "confidence": 0.55,
+          "taxonomy_ids": [
+            "UI-09",
+            "V-05"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "compare_columns",
+          "template_segment": "compare",
+          "confidence": 0.75,
+          "taxonomy_ids": [
+            "UI-09",
+            "V-03",
+            "V-05"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "flow_chart",
+          "template_segment": "flow",
+          "confidence": 0.75,
+          "taxonomy_ids": [
+            "UI-09",
+            "V-03",
+            "V-10"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "bar_chart",
+          "template_segment": "bars",
+          "confidence": 0.75,
+          "taxonomy_ids": [
+            "UI-04",
+            "V-02"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "number_counter",
+          "template_segment": "stat",
+          "confidence": 0.7,
+          "taxonomy_ids": [
+            "UI-04",
+            "V-02",
+            "V-01"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "keyword_highlight",
+          "template_segment": null,
+          "confidence": 0.65,
+          "taxonomy_ids": [
+            "V-01",
+            "V-13"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "progress_bar",
+          "template_segment": null,
+          "confidence": 0.7,
+          "taxonomy_ids": [
+            "UI-01",
+            "V-15"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "transition",
+          "template_segment": null,
+          "confidence": 0.7,
+          "taxonomy_ids": [
+            "UI-02",
+            "V-07"
+          ],
+          "taxonomy_verified": true
+        }
+      ],
+      "taxonomy_ids": [
+        "UI-01",
+        "UI-02",
+        "UI-04",
+        "UI-09",
+        "V-01",
+        "V-02",
+        "V-03",
+        "V-04",
+        "V-05",
+        "V-07",
+        "V-09",
+        "V-10",
+        "V-13",
+        "V-15"
+      ],
+      "provenance": {
+        "counts": {
+          "seen": 44,
+          "inferred": 26,
+          "unknown": 8
+        },
+        "unknowns": [
+          "layout.decor.glow",
+          "layout.decor.noise",
+          "motion.easing.emphasis",
+          "motion.easing.exit",
+          "motion.enter_distance_px",
+          "typography.families",
+          "typography.letter_spacing_em",
+          "typography.line_height"
+        ]
+      },
+      "refs": [
+        "paper-terminal-9/refs/contact_sheet.png",
+        "paper-terminal-9/refs/motion_energy.png",
+        "paper-terminal-9/refs/palette_global.png",
+        "paper-terminal-9/refs/scene000_settled.png",
+        "paper-terminal-9/refs/scene001_settled.png",
+        "paper-terminal-9/refs/scene002_settled.png",
+        "paper-terminal-9/refs/scene003_settled.png",
+        "paper-terminal-9/refs/scene004_settled.png",
+        "paper-terminal-9/refs/scene005_settled.png",
+        "paper-terminal-9/refs/scene006_settled.png",
+        "paper-terminal-9/refs/scene007_settled.png",
+        "paper-terminal-9/refs/scene008_settled.png",
+        "paper-terminal-9/refs/scene009_settled.png",
+        "paper-terminal-9/refs/scene010_settled.png",
+        "paper-terminal-9/refs/scene011_settled.png"
+      ],
+      "license": {
+        "style_tokens_license": "MIT (same as the tool)",
+        "reference_rights": "own work — generated placeholder content",
+        "source_label": "self-generated test fixture (examples/reference-fixture-9, rendered by this tool)",
+        "attribution": "code-video-style-distill test fixture",
+        "refs_distributable": false,
+        "notes": "style = measured parameters only; no reference footage, logos, characters or font files are included"
+      },
+      "motion_center": {
+        "title": "风格底座 paper-terminal-9",
+        "url": "cvsd-style://paper-terminal-9",
+        "source_pool": "evergreen",
+        "category": "UI-01",
+        "styles": [
+          "paper-terminal-9",
+          "bar_chart",
+          "bullet_list",
+          "code_block",
+          "compare_columns",
+          "evidence_frame",
+          "flow_chart",
+          "keyword_highlight",
+          "number_counter",
+          "progress_bar",
+          "subtitle_bar",
+          "timeline",
+          "title_card",
+          "transition"
+        ],
+        "description": "Style base distilled from reference9.mp4",
+        "prompt": "用风格底座 paper-terminal-9 渲染新选题：背景 #F3EFE6，主色 #E45730，入场 slide-up；元件 subtitle_bar, title_card, bullet_list, evidence_frame, evidence_frame, timeline, code_block, code_block, compare_columns, flow_chart, bar_chart, number_counter, keyword_highlight, progress_bar, transition",
+        "license": "MIT (same as the tool)",
+        "source_url": "self-generated test fixture (examples/reference-fixture-9, rendered by this tool)"
+      }
+    },
+    {
+      "id": "cvsd-style:paper-terminal-fixture",
+      "name": "paper-terminal-fixture",
+      "path": "paper-terminal-fixture",
+      "version": 1,
+      "created_at": "2026-11-20T09:52:37+08:00",
+      "description": "Style base distilled from reference.mp4",
+      "source": {
+        "video_file": "reference.mp4",
+        "duration_s": 22.805
+      },
+      "tokens_file": "paper-terminal-fixture/style-tokens.json",
+      "tokens_summary": {
+        "canvas": {
+          "width": 1920,
+          "height": 1080,
+          "fps": 30
+        },
+        "palette": {
+          "bg": "#F3EFE6",
+          "surface": "#1F2330",
+          "primary": "#E4572E",
+          "accent": "#2E87AB",
+          "text": "#1E1C1D",
+          "text_muted": "#6E6B6B"
+        },
+        "typography": {
+          "families": {
+            "display": "\"Inter Tight\", \"Noto Sans CJK SC\", \"Source Han Sans SC\", sans-serif",
+            "body": "\"Inter\", \"Noto Sans CJK SC\", \"Source Han Sans SC\", \"HarmonyOS Sans SC\", sans-serif",
+            "mono": "\"JetBrains Mono\", \"Noto Sans Mono CJK SC\", monospace"
+          },
+          "scale_px": {
+            "display": 141,
+            "h1": 88,
+            "h2": 61,
+            "body": 48,
+            "caption": 36,
+            "code": 33
+          },
+          "font_policy": "free/open substitutes only; no reference font files"
+        },
+        "motion": {
+          "enter_style": "slide-up",
+          "durations_s": {
+            "fast": 0.189,
+            "base": 0.5,
+            "slow": 0.867
+          },
+          "stagger_s": 0.733,
+          "easing_enter": [
+            0.25,
+            0.2,
+            0.12,
+            1.1
+          ],
+          "transition": "slide"
+        },
+        "rhythm": {
+          "shot_mean_s": 4.56,
+          "entrance_events_per_min": null
+        }
+      },
+      "components": [
+        {
+          "type": "subtitle_bar",
+          "template_segment": null,
+          "confidence": 0.8,
+          "taxonomy_ids": [
+            "V-13"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "title_card",
+          "template_segment": "title",
+          "confidence": 0.6,
+          "taxonomy_ids": [
+            "V-01",
+            "V-15"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "bullet_list",
+          "template_segment": "bullets",
+          "confidence": 0.7,
+          "taxonomy_ids": [
+            "UI-09",
+            "V-01",
+            "V-10"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "code_block",
+          "template_segment": "code",
+          "confidence": 0.8,
+          "taxonomy_ids": [
+            "UI-09",
+            "V-05"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "bar_chart",
+          "template_segment": "bars",
+          "confidence": 0.75,
+          "taxonomy_ids": [
+            "UI-04",
+            "V-02"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "number_counter",
+          "template_segment": "stat",
+          "confidence": 0.7,
+          "taxonomy_ids": [
+            "UI-04",
+            "V-02",
+            "V-01"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "keyword_highlight",
+          "template_segment": null,
+          "confidence": 0.65,
+          "taxonomy_ids": [
+            "V-01",
+            "V-13"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "progress_bar",
+          "template_segment": null,
+          "confidence": 0.7,
+          "taxonomy_ids": [
+            "UI-01",
+            "V-15"
+          ],
+          "taxonomy_verified": true
+        },
+        {
+          "type": "transition",
+          "template_segment": null,
+          "confidence": 0.7,
+          "taxonomy_ids": [
+            "UI-02",
+            "V-07"
+          ],
+          "taxonomy_verified": true
+        }
+      ],
+      "taxonomy_ids": [
+        "UI-01",
+        "UI-02",
+        "UI-04",
+        "UI-09",
+        "V-01",
+        "V-02",
+        "V-05",
+        "V-07",
+        "V-10",
+        "V-13",
+        "V-15"
+      ],
+      "provenance": {
+        "counts": {
+          "seen": 33,
+          "inferred": 26,
+          "unknown": 8
+        },
+        "unknowns": [
+          "layout.decor.glow",
+          "layout.decor.noise",
+          "motion.easing.emphasis",
+          "motion.easing.exit",
+          "motion.enter_distance_px",
+          "typography.families",
+          "typography.letter_spacing_em",
+          "typography.line_height"
+        ]
+      },
+      "refs": [
+        "paper-terminal-fixture/refs/contact_sheet.png",
+        "paper-terminal-fixture/refs/motion_energy.png",
+        "paper-terminal-fixture/refs/palette_global.png",
+        "paper-terminal-fixture/refs/scene000_settled.png",
+        "paper-terminal-fixture/refs/scene001_settled.png",
+        "paper-terminal-fixture/refs/scene002_settled.png",
+        "paper-terminal-fixture/refs/scene003_settled.png",
+        "paper-terminal-fixture/refs/scene004_settled.png"
+      ],
+      "license": {
+        "style_tokens_license": "MIT (same as the tool)",
+        "reference_rights": "own work — generated placeholder content",
+        "source_label": "self-generated test fixture (examples/reference-fixture-9, rendered by this tool)",
+        "attribution": "code-video-style-distill test fixture",
+        "refs_distributable": false,
+        "notes": "style = measured parameters only; no reference footage, logos, characters or font files are included"
+      },
+      "motion_center": {
+        "title": "风格底座 paper-terminal-fixture",
+        "url": "cvsd-style://paper-terminal-fixture",
+        "source_pool": "evergreen",
+        "category": "UI-01",
+        "styles": [
+          "paper-terminal-fixture",
+          "bar_chart",
+          "bullet_list",
+          "code_block",
+          "keyword_highlight",
+          "number_counter",
+          "progress_bar",
+          "subtitle_bar",
+          "title_card",
+          "transition"
+        ],
+        "description": "Style base distilled from reference.mp4",
+        "prompt": "用风格底座 paper-terminal-fixture 渲染新选题：背景 #F3EFE6，主色 #E4572E，入场 slide-up；元件 subtitle_bar, title_card, bullet_list, code_block, bar_chart, number_counter, keyword_highlight, progress_bar, transition",
+        "license": "MIT (same as the tool)",
+        "source_url": "self-generated test fixture (examples/reference-fixture-9, rendered by this tool)"
+      }
+    }
+  ]
+}
