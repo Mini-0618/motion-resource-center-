@@ -1,0 +1,24 @@
+{
+  "name": "fixture-paper-terminal",
+  "canvas": {"width": 1920, "height": 1080, "fps": 30},
+  "palette": {"bg": "#F4EFE6", "surface": "#1F2430", "primary": "#E4572E", "accent": "#2E86AB", "text": "#1D1D1F", "text_muted": "#6B6B70", "extra": ["#76B041", "#F2C14E"]},
+  "typography": {
+    "families": {
+      "display": {"css": "\"Inter Tight\", \"Noto Sans CJK SC\", sans-serif"},
+      "body": {"css": "\"Inter\", \"Noto Sans CJK SC\", sans-serif"},
+      "mono": {"css": "\"JetBrains Mono\", \"Noto Sans Mono CJK SC\", monospace"}
+    },
+    "scale_px": {"display": 132, "h1": 80, "h2": 56, "body": 44, "caption": 34, "code": 32},
+    "weights": {"display": 900, "h1": 800, "body": 500}
+  },
+  "layout": {"margins_pct": {"left": 10, "right": 10, "top": 12, "bottom": 12}, "alignment": "left", "radius_px": 20, "decor": {"grid_lines": true, "glow": false}},
+  "motion": {
+    "durations_s": {"fast": 0.2, "base": 0.45, "slow": 0.8},
+    "easing": {"enter": {"cubic_bezier": [0.22, 1, 0.36, 1]}, "exit": {"cubic_bezier": [0.64, 0, 0.78, 0]}},
+    "spring": {"damping": 11, "stiffness": 140, "mass": 1},
+    "enter_style": "slide-up", "title_enter_style": "spring-pop", "enter_distance_px": 60, "stagger_s": 0.6,
+    "transition": {"type": "slide", "duration_s": 0.6},
+    "typing_cps": 22
+  },
+  "components_style": {"subtitle": {"position": "bottom", "bg": "#1D1D1F", "bg_opacity": 0.85}, "progress_bar": true}
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Git 工作流三分钟",
+  "audio": {"src": "click-100bpm.wav", "volume": 0.8},
+  "segments": [
+    {"type": "title", "duration_s": 3.6, "kicker": "EP.07 · DEV TIPS", "title": "Git **分支**工作流", "subtitle": "三分钟讲清 feature / release / hotfix", "caption": "今天聊聊团队里最常用的 Git 分支模型"},
+    {"type": "bullets", "duration_s": 4.8, "heading": "三条铁律", "items": ["main 永远**可发布**", "功能都在 feature 分支开发", "合并前必须 **Code Review**"], "caption": "记住这三条，冲突少一半"},
+    {"type": "code", "duration_s": 6.0, "heading": "开一个功能分支", "language": "bash", "filename": "terminal", "code": "git switch -c feature/login\n# 写代码...\ngit add .\ngit commit -m \"feat: login page\"\ngit push -u origin feature/login", "highlight_lines": [1], "caption": "一条命令创建并切换分支"},
+    {"type": "bars", "duration_s": 4.8, "heading": "合并冲突次数（每月）", "unit": "", "data": [{"label": "无规范", "value": 42}, {"label": "Git Flow", "value": 17}, {"label": "主干开发", "value": 9, "highlight": true}], "caption": "规范之后，冲突明显下降"},
+    {"type": "stat", "duration_s": 3.6, "heading": "平均发布周期缩短", "value": 63, "suffix": "%", "label": "来自 12 个团队的内部统计（虚构示例数据）", "caption": "这就是分支规范的价值"}
+  ]
+}

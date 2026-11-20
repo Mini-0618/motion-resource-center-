@@ -1,0 +1,6 @@
+{
+  "motion": {"durations_s": {"base": 0.5}},
+  "_provenance": {
+    "motion.durations_s.base": {"status": "inferred", "method": "compare round 1 gap report (M6): scaled 0.367 × ref/rep event ratio", "evidence": [{"file": "work/run2/compare_r1/gap-report.md"}]}
+  }
+}

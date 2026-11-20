@@ -1,0 +1,8 @@
+{
+  "typography": {"families": {"display": {"css": "\"Inter Tight\", \"Noto Sans CJK SC\", sans-serif", "vibe": "粗黑几何无衬线（目测）"}}, "weights": {"display": 900}},
+  "layout": {"decor": {"glow": false}},
+  "motion": {"transition": {"type": "slide", "duration_s": 0.6}},
+  "_provenance": {
+    "typography.weights.display": {"status": "inferred", "confidence": 0.7, "method": "visual review of contact_sheet.png", "evidence": [{"frame": "ref_analysis/keyframes/scene000_settled.png", "tc": "00:00:02.783"}]}
+  }
+}

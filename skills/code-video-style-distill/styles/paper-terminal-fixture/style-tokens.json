@@ -1,0 +1,1645 @@
+{
+  "name": "paper-terminal-fixture",
+  "version": 1,
+  "description": "Style base distilled from reference.mp4",
+  "source": {
+    "video": "examples/reference-fixture/reference.mp4",
+    "analysis_dir": "work/run2/ref_analysis",
+    "distilled_at": "2026-11-20T09:52:37+08:00",
+    "duration_s": 22.805
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "aspect": "1920:1080"
+  },
+  "palette": {
+    "bg": "#F3EFE6",
+    "text": "#1E1C1D",
+    "text_muted": "#6E6B6B",
+    "surface": "#1F2330",
+    "code_text": "#EFF3FC",
+    "primary": "#E4572E",
+    "accent": "#2E87AB",
+    "measured_swatches": [
+      {
+        "hex": "#F3EFE6",
+        "ratio": 0.8864
+      },
+      {
+        "hex": "#202431",
+        "ratio": 0.0607
+      },
+      {
+        "hex": "#C5C2BC",
+        "ratio": 0.018
+      },
+      {
+        "hex": "#3D3E3C",
+        "ratio": 0.0144
+      },
+      {
+        "hex": "#E4572E",
+        "ratio": 0.0094
+      },
+      {
+        "hex": "#777775",
+        "ratio": 0.0069
+      },
+      {
+        "hex": "#EBA486",
+        "ratio": 0.0031
+      },
+      {
+        "hex": "#2E87AB",
+        "ratio": 0.0012
+      }
+    ]
+  },
+  "typography": {
+    "vibe": "CJK 无衬线（黑体系）；技术感：代码块用等宽字体",
+    "families": {
+      "display": {
+        "css": "\"Inter Tight\", \"Noto Sans CJK SC\", \"Source Han Sans SC\", sans-serif",
+        "vibe": "粗黑几何无衬线（推测）",
+        "free_substitutes": [
+          "Inter / Inter Tight (SIL OFL 1.1)",
+          "Geist (SIL OFL 1.1)",
+          "Manrope (SIL OFL 1.1)",
+          "Noto Sans CJK SC / 思源黑体 Source Han Sans SC (SIL OFL 1.1)",
+          "HarmonyOS Sans SC (华为免费商用许可，使用前核对条款)",
+          "MiSans (小米免费商用许可，使用前核对条款)"
+        ],
+        "license_note": "只用开源/免费可商用替代字体，不复制参考片的字体文件"
+      },
+      "body": {
+        "css": "\"Inter\", \"Noto Sans CJK SC\", \"Source Han Sans SC\", \"HarmonyOS Sans SC\", sans-serif",
+        "vibe": "中性无衬线（推测）",
+        "free_substitutes": [
+          "Noto Sans CJK SC / 思源黑体 Source Han Sans SC (SIL OFL 1.1)",
+          "HarmonyOS Sans SC (华为免费商用许可，使用前核对条款)",
+          "MiSans (小米免费商用许可，使用前核对条款)",
+          "Inter / Inter Tight (SIL OFL 1.1)",
+          "Geist (SIL OFL 1.1)",
+          "Manrope (SIL OFL 1.1)"
+        ]
+      },
+      "mono": {
+        "css": "\"JetBrains Mono\", \"Noto Sans Mono CJK SC\", monospace",
+        "vibe": "等宽代码字体",
+        "free_substitutes": [
+          "JetBrains Mono (SIL OFL 1.1)",
+          "Fira Code (SIL OFL 1.1)",
+          "Noto Sans Mono CJK SC (SIL OFL 1.1)"
+        ]
+      }
+    },
+    "scale_px": {
+      "display": 141,
+      "h1": 88,
+      "h2": 61,
+      "body": 48,
+      "caption": 36,
+      "code": 33
+    },
+    "weights": {
+      "display": 900,
+      "h1": 800,
+      "body": 500
+    },
+    "letter_spacing_em": -0.01,
+    "line_height": 1.35,
+    "font_substitutions": [
+      {
+        "role": "display",
+        "observed_vibe": "粗黑几何无衬线（推测）",
+        "original_font": "unknown",
+        "substitute": "Inter Tight",
+        "license": "SIL OFL 1.1",
+        "alternatives": [
+          "Inter / Inter Tight (SIL OFL 1.1)",
+          "Geist (SIL OFL 1.1)",
+          "Manrope (SIL OFL 1.1)",
+          "Noto Sans CJK SC / 思源黑体 Source Han Sans SC (SIL OFL 1.1)"
+        ],
+        "size_px": 141,
+        "adjust": "先对照参考关键帧调字号/字距/字重，再确认许可证；不得使用参考片的字体文件"
+      },
+      {
+        "role": "body",
+        "observed_vibe": "中性无衬线（推测）",
+        "original_font": "unknown",
+        "substitute": "Inter",
+        "license": "SIL OFL 1.1",
+        "alternatives": [
+          "Noto Sans CJK SC / 思源黑体 Source Han Sans SC (SIL OFL 1.1)",
+          "HarmonyOS Sans SC (华为免费商用许可，使用前核对条款)",
+          "MiSans (小米免费商用许可，使用前核对条款)",
+          "Inter / Inter Tight (SIL OFL 1.1)"
+        ],
+        "size_px": 48,
+        "adjust": "先对照参考关键帧调字号/字距/字重，再确认许可证；不得使用参考片的字体文件"
+      },
+      {
+        "role": "mono",
+        "observed_vibe": "等宽代码字体",
+        "original_font": "unknown",
+        "substitute": "JetBrains Mono",
+        "license": "SIL OFL 1.1",
+        "alternatives": [
+          "JetBrains Mono (SIL OFL 1.1)",
+          "Fira Code (SIL OFL 1.1)",
+          "Noto Sans Mono CJK SC (SIL OFL 1.1)"
+        ],
+        "size_px": 33,
+        "adjust": "先对照参考关键帧调字号/字距/字重，再确认许可证；不得使用参考片的字体文件"
+      }
+    ]
+  },
+  "layout": {
+    "margins_pct": {
+      "left": 10.1,
+      "right": 10.1,
+      "top": 9.44,
+      "bottom": 9.44
+    },
+    "alignment": "left",
+    "safe_area_pct": {
+      "x": 10.1,
+      "y": 9.44
+    },
+    "grid": {
+      "columns": 12,
+      "gutter_pct": 2.0,
+      "fit_ratio": 0.741
+    },
+    "common_left_edges_px": [
+      194.4,
+      738.8,
+      339.0,
+      1488.0
+    ],
+    "decor": {
+      "grid_lines": true,
+      "glow": false,
+      "noise": false
+    },
+    "radius_px": 17
+  },
+  "motion": {
+    "durations_s": {
+      "fast": 0.189,
+      "base": 0.5,
+      "slow": 0.867
+    },
+    "easing": {
+      "family_guess": "ease-out",
+      "enter": {
+        "cubic_bezier": [
+          0.25,
+          0.2,
+          0.12,
+          1.1
+        ]
+      },
+      "exit": {
+        "cubic_bezier": [
+          0.7,
+          0,
+          0.84,
+          0
+        ]
+      },
+      "emphasis": {
+        "cubic_bezier": [
+          0.34,
+          1.56,
+          0.64,
+          1
+        ]
+      }
+    },
+    "spring": {
+      "damping": 12,
+      "stiffness": 140,
+      "mass": 1
+    },
+    "enter_style": "slide-up",
+    "title_enter_style": "spring-pop",
+    "enter_distance_px": 40,
+    "stagger_s": 0.733,
+    "transition": {
+      "type": "slide",
+      "duration_s": 0.3
+    },
+    "typing_cps": 15.4,
+    "easings": {
+      "enter": "cubic-bezier(0.25, 0.2, 0.12, 1.1)",
+      "exit": "cubic-bezier(0.7, 0, 0.84, 0)",
+      "emphasis": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      "spring": "spring(damping=12, stiffness=140, mass=1)"
+    },
+    "keyframes": {
+      "enter": {
+        "duration_s": 0.5,
+        "easing": "enter",
+        "frames": [
+          {
+            "offset": 0,
+            "opacity": 0,
+            "transform": "translateY(40px)"
+          },
+          {
+            "offset": 1,
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ]
+      },
+      "title_enter": {
+        "duration_s": 0.867,
+        "easing": "spring",
+        "frames": [
+          {
+            "offset": 0,
+            "opacity": 0,
+            "transform": "scale(0.6)"
+          },
+          {
+            "offset": 0.6,
+            "opacity": 1,
+            "transform": "scale(1.06)"
+          },
+          {
+            "offset": 1,
+            "opacity": 1,
+            "transform": "scale(1)"
+          }
+        ]
+      },
+      "transition_in": {
+        "duration_s": 0.3,
+        "easing": "enter",
+        "frames": [
+          {
+            "offset": 0,
+            "transform": "translateX(100%)"
+          },
+          {
+            "offset": 1,
+            "transform": "translateX(0)"
+          }
+        ]
+      },
+      "typewriter": {
+        "chars_per_s": 15.4,
+        "caret_blink_s": 0.5
+      }
+    }
+  },
+  "rhythm": {
+    "shot_mean_s": 4.56,
+    "shot_median_s": 4.867,
+    "motion_onset_interval_s": 2.267,
+    "visual_bpm": 105.9,
+    "audio_bpm": 99.4,
+    "av_sync": {
+      "rule": "音画为松散同步：只有少数切点落在起音点上",
+      "match_ratio": 0.455,
+      "median_offset_ms": -29.0
+    },
+    "pacing_rule": "平均每 4.56 s 一个镜头；镜头内元素约每 0.733 s 入场一个"
+  },
+  "components": [
+    {
+      "type": "subtitle_bar",
+      "template_segment": null,
+      "scenes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "evidence": "centred OCR lines at y>78% in 4/5 scenes, e.g. '记住这三条，冲突少一半'",
+      "confidence": 0.8,
+      "taxonomy": {
+        "ui": [],
+        "video": [
+          "V-13"
+        ],
+        "source": "optional: set CVSD_TAXONOMY_MD to a local taxonomy notes file"
+      },
+      "params": {
+        "bg": "#3D3D3B",
+        "color": "#FDFDFB",
+        "position": "bottom",
+        "y_pct": 85.3
+      }
+    },
+    {
+      "type": "title_card",
+      "template_segment": "title",
+      "scenes": [
+        0
+      ],
+      "evidence": "≤3 text lines with large heading @ 00:00:00.000",
+      "confidence": 0.6,
+      "taxonomy": {
+        "ui": [],
+        "video": [
+          "V-01",
+          "V-15"
+        ],
+        "source": "optional: set CVSD_TAXONOMY_MD to a local taxonomy notes file"
+      },
+      "params": {}
+    },
+    {
+      "type": "bullet_list",
+      "template_segment": "bullets",
+      "scenes": [
+        1
+      ],
+      "evidence": "3 stacked same-size lines, left x≈257px, 2 staggered entrances @ 00:00:03.133",
+      "confidence": 0.7,
+      "taxonomy": {
+        "ui": [
+          "UI-09"
+        ],
+        "video": [
+          "V-01",
+          "V-10"
+        ],
+        "source": "optional: set CVSD_TAXONOMY_MD to a local taxonomy notes file"
+      },
+      "params": {}
+    },
+    {
+      "type": "code_block",
+      "template_segment": "code",
+      "scenes": [
+        2
+      ],
+      "evidence": "uniform panel #1F2330 + 1 code-like OCR lines @ 00:00:08.233",
+      "confidence": 0.8,
+      "taxonomy": {
+        "ui": [
+          "UI-09"
+        ],
+        "video": [
+          "V-05"
+        ],
+        "source": "optional: set CVSD_TAXONOMY_MD to a local taxonomy notes file"
+      },
+      "params": {}
+    },
+    {
+      "type": "bar_chart",
+      "template_segment": "bars",
+      "scenes": [
+        3
+      ],
+      "evidence": "3 aligned solid rectangles in scene003_settled.png",
+      "confidence": 0.75,
+      "taxonomy": {
+        "ui": [
+          "UI-04"
+        ],
+        "video": [
+          "V-02"
+        ],
+        "source": "optional: set CVSD_TAXONOMY_MD to a local taxonomy notes file"
+      },
+      "params": {
+        "bars": [
+          [
+            496,
+            500,
+            958,
+            48
+          ],
+          [
+            496,
+            582,
+            388,
+            48
+          ],
+          [
+            496,
+            664,
+            206,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "type": "number_counter",
+      "template_segment": "stat",
+      "scenes": [
+        4
+      ],
+      "evidence": "large numeric OCR '65%' (218.1px) @ 00:00:18.700",
+      "confidence": 0.7,
+      "taxonomy": {
+        "ui": [
+          "UI-04"
+        ],
+        "video": [
+          "V-02",
+          "V-01"
+        ],
+        "source": "optional: set CVSD_TAXONOMY_MD to a local taxonomy notes file"
+      },
+      "params": {}
+    },
+    {
+      "type": "keyword_highlight",
+      "template_segment": null,
+      "scenes": [
+        1,
+        2
+      ],
+      "evidence": "3 OCR lines mixing neutral + chromatic ink, e.g. '国main永远可发布'",
+      "confidence": 0.65,
+      "taxonomy": {
+        "ui": [],
+        "video": [
+          "V-01",
+          "V-13"
+        ],
+        "source": "optional: set CVSD_TAXONOMY_MD to a local taxonomy notes file"
+      },
+      "params": {
+        "syntax": "use **keyword** in script.json text"
+      }
+    },
+    {
+      "type": "progress_bar",
+      "template_segment": null,
+      "scenes": [],
+      "evidence": "5 thin edge bars with growing widths [240, 658, 1142, 1554, 1898]",
+      "confidence": 0.7,
+      "taxonomy": {
+        "ui": [
+          "UI-01"
+        ],
+        "video": [
+          "V-15"
+        ],
+        "source": "optional: set CVSD_TAXONOMY_MD to a local taxonomy notes file"
+      },
+      "params": {
+        "position": "top"
+      }
+    },
+    {
+      "type": "transition",
+      "template_segment": null,
+      "scenes": [],
+      "evidence": "4 motion events straddling cuts at ['00:00:03.033', '00:00:07.833', '00:00:13.700', '00:00:18.600']",
+      "confidence": 0.7,
+      "taxonomy": {
+        "ui": [
+          "UI-02"
+        ],
+        "video": [
+          "V-07"
+        ],
+        "source": "optional: set CVSD_TAXONOMY_MD to a local taxonomy notes file"
+      },
+      "params": {}
+    }
+  ],
+  "components_style": {
+    "progress_bar": true,
+    "subtitle": {
+      "position": "bottom",
+      "bg": "#3D3D3B",
+      "bg_opacity": 1.0,
+      "color": "#FDFDFB"
+    }
+  },
+  "provenance": {
+    "canvas.fps": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/meta.json"
+        }
+      ],
+      "method": "ffprobe"
+    },
+    "canvas.height": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/meta.json"
+        }
+      ],
+      "method": "ffprobe"
+    },
+    "canvas.width": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/meta.json"
+        }
+      ],
+      "method": "ffprobe"
+    },
+    "components[0]:subtitle_bar": {
+      "status": "seen",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "evidence": "centred OCR lines at y>78% in 4/5 scenes, e.g. '记住这三条，冲突少一半'"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[1]:title_card": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "evidence": "≤3 text lines with large heading @ 00:00:00.000"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[2]:bullet_list": {
+      "status": "seen",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence": "3 stacked same-size lines, left x≈257px, 2 staggered entrances @ 00:00:03.133"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[3]:code_block": {
+      "status": "seen",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "evidence": "uniform panel #1F2330 + 1 code-like OCR lines @ 00:00:08.233"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[4]:bar_chart": {
+      "status": "seen",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "evidence": "3 aligned solid rectangles in scene003_settled.png"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[5]:number_counter": {
+      "status": "seen",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence": "large numeric OCR '65%' (218.1px) @ 00:00:18.700"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[6]:keyword_highlight": {
+      "status": "inferred",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "evidence": "3 OCR lines mixing neutral + chromatic ink, e.g. '国main永远可发布'"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[7]:progress_bar": {
+      "status": "seen",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence": "5 thin edge bars with growing widths [240, 658, 1142, 1554, 1898]"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[8]:transition": {
+      "status": "seen",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence": "4 motion events straddling cuts at ['00:00:03.033', '00:00:07.833', '00:00:13.700', '00:00:18.600']"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components_style.progress_bar": {
+      "status": "seen",
+      "confidence": 0.9,
+      "method": "edge-bar detection"
+    },
+    "components_style.subtitle": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "evidence": "centred OCR lines at y>78% in 4/5 scenes, e.g. '记住这三条，冲突少一半'"
+        }
+      ],
+      "method": "local background + ink of subtitle OCR lines"
+    },
+    "layout.alignment": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "left-aligned boxes 0.852, centred 0.222"
+    },
+    "layout.decor.glow": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "radial glow not measured automatically — check contact sheet"
+    },
+    "layout.decor.grid_lines": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png"
+        }
+      ],
+      "method": "rows/cols of faint (ΔE 1.2–12) pixels repeating at a regular period",
+      "note": "period≈80.0px"
+    },
+    "layout.decor.noise": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "film grain/noise not measured"
+    },
+    "layout.grid": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "best-fit column grid to box left edges",
+      "note": "gutter is a default"
+    },
+    "layout.margins_pct.bottom": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "lowest foreground edge (subtitle)"
+    },
+    "layout.margins_pct.left": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "5th percentile of foreground-box left edges"
+    },
+    "layout.margins_pct.right": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "mirrored from left (content does not reach right edge)"
+    },
+    "layout.margins_pct.top": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "clipped bottom margin; vertical centring assumed"
+    },
+    "layout.radius_px": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png",
+          "box": [
+            176,
+            408,
+            1574,
+            422
+          ]
+        }
+      ],
+      "method": "diagonal scan from panel corner to first surface pixel"
+    },
+    "layout.safe_area_pct": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "min(margins)"
+    },
+    "motion.durations_s.base": {
+      "status": "inferred",
+      "method": "compare round 1 gap report (M6): scaled 0.367 × ref/rep event ratio",
+      "evidence": [
+        {
+          "file": "work/run2/compare_r1/gap-report.md"
+        }
+      ],
+      "confidence": 0.6
+    },
+    "motion.easing.emphasis": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "default overshoot"
+    },
+    "motion.easing.enter": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:00.000",
+          "event_duration_s": 0.867
+        },
+        {
+          "tc": "00:00:01.200",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:04.533",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:05.400",
+          "event_duration_s": 0.367
+        }
+      ],
+      "method": "least-squares cubic-bezier fit to cumulative optical-flow speed per event (median)"
+    },
+    "motion.easing.exit": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "exits not separately measured"
+    },
+    "motion.easing.family_guess": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:00.000",
+          "event_duration_s": 0.867
+        },
+        {
+          "tc": "00:00:01.200",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:04.533",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:05.400",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:15.033",
+          "event_duration_s": 0.233
+        },
+        {
+          "tc": "00:00:15.633",
+          "event_duration_s": 0.133
+        }
+      ],
+      "method": "velocity-profile peak position / oscillation"
+    },
+    "motion.easings": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "CSS strings derived from motion.easing / spring"
+    },
+    "motion.enter_distance_px": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "default (flow magnitude not converted to distance)"
+    },
+    "motion.enter_style": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:01.200",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:04.533",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:05.400",
+          "event_duration_s": 0.367
+        }
+      ],
+      "method": "majority optical-flow direction of entrance events"
+    },
+    "motion.keyframes": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "keyframe tracks reconstructed from enter_style / transition type + measured durations"
+    },
+    "motion.spring": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "generic under-damped spring; not fitted"
+    },
+    "motion.stagger_s": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:00.000",
+          "event_duration_s": 0.867
+        },
+        {
+          "tc": "00:00:01.200",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:04.533",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:05.400",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:15.033",
+          "event_duration_s": 0.233
+        },
+        {
+          "tc": "00:00:15.633",
+          "event_duration_s": 0.133
+        }
+      ],
+      "method": "median interval between entrance onsets within a scene"
+    },
+    "motion.title_enter_style": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:00.000",
+          "event_duration_s": 0.867
+        }
+      ],
+      "method": "easing family of first event in scene 0"
+    },
+    "motion.transition.duration_s": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:03.033",
+          "event_duration_s": 0.9
+        },
+        {
+          "tc": "00:00:07.833",
+          "event_duration_s": 0.733
+        },
+        {
+          "tc": "00:00:13.700",
+          "event_duration_s": 1.167
+        },
+        {
+          "tc": "00:00:18.600",
+          "event_duration_s": 1.2
+        }
+      ],
+      "method": "frames with energy ≥20% of peak around the cut"
+    },
+    "motion.transition.type": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:03.033",
+          "event_duration_s": 0.9
+        },
+        {
+          "tc": "00:00:07.833",
+          "event_duration_s": 0.733
+        },
+        {
+          "tc": "00:00:13.700",
+          "event_duration_s": 1.167
+        },
+        {
+          "tc": "00:00:18.600",
+          "event_duration_s": 1.2
+        }
+      ],
+      "method": "optical-flow direction during events spanning a cut",
+      "note": "wipe vs fade cannot be told apart by flow; check keyframes"
+    },
+    "motion.typing_cps": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "tc": "00:00:08.233",
+          "chars_ocr": 75,
+          "typing_span_s": 4.88
+        }
+      ],
+      "method": "OCR code chars / ink-growth span inside code panel (5%→97% of final ink)",
+      "note": "OCR misses characters → value is likely LOW"
+    },
+    "palette.accent": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/palette_global.png"
+        }
+      ],
+      "method": "second distinct chromatic cluster (ΔE2000>15 from primary)",
+      "note": "role is inferred"
+    },
+    "palette.bg": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "mode of quantised frame-border pixels",
+      "note": "border share 0.909"
+    },
+    "palette.code_text": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "ocr_line": "三分钟讲清feature/release/hotfix"
+        },
+        {
+          "ocr_line": "三条铁律"
+        },
+        {
+          "ocr_line": "国main永远可发布"
+        },
+        {
+          "ocr_line": "功能都在feature分支开发"
+        }
+      ],
+      "method": "ink colour of OCR lines inside surface"
+    },
+    "palette.measured_swatches": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/palette_global.png"
+        }
+      ],
+      "method": "global k-means (k=8, Lab), merged ΔE<4"
+    },
+    "palette.primary": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/palette_global.png"
+        }
+      ],
+      "method": "most frequent chromatic k-means cluster (Lab) of foreground pixels",
+      "note": "role assignment (primary vs accent) is inferred; the colour value is measured"
+    },
+    "palette.surface": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png",
+          "box": [
+            176,
+            408,
+            1574,
+            422
+          ]
+        }
+      ],
+      "method": "median colour inside large uniform foreground box"
+    },
+    "palette.text": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png",
+          "ocr_line": "三条铁律"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png",
+          "ocr_line": "开一个功能分支"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png",
+          "ocr_line": "合并冲突次数《每月)"
+        }
+      ],
+      "method": "dominant ink colour of OCR lines on bg"
+    },
+    "palette.text_muted": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png",
+          "ocr_line": "三分钟讲清feature/release/hotfix"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene004_settled.png",
+          "ocr_line": "平均发布周期缩短"
+        }
+      ],
+      "method": "ink colour of lower-contrast OCR lines"
+    },
+    "rhythm.audio_bpm": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/audio_onsets.csv"
+        }
+      ],
+      "method": "spectral-flux autocorrelation"
+    },
+    "rhythm.av_sync": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "pairs": [
+            {
+              "visual_s": 1.2,
+              "audio_s": 1.184,
+              "offset_ms": -16.0
+            },
+            {
+              "visual_s": 5.4,
+              "audio_s": 5.387,
+              "offset_ms": -13.0
+            },
+            {
+              "visual_s": 13.833,
+              "audio_s": 13.793,
+              "offset_ms": -40.0
+            },
+            {
+              "visual_s": 15.033,
+              "audio_s": 15.0,
+              "offset_ms": -33.0
+            }
+          ]
+        }
+      ],
+      "method": "nearest audio onset to each cut/entrance"
+    },
+    "rhythm.motion_onset_interval_s": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/motion_energy.csv"
+        }
+      ],
+      "method": "median interval between motion onsets"
+    },
+    "rhythm.pacing_rule": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "summary of shot + stagger stats"
+    },
+    "rhythm.shot_mean_s": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/scenes.csv"
+        },
+        {
+          "tc": "00:00:03.133"
+        },
+        {
+          "tc": "00:00:08.233"
+        },
+        {
+          "tc": "00:00:13.833"
+        },
+        {
+          "tc": "00:00:18.700"
+        }
+      ],
+      "method": "detected cuts"
+    },
+    "rhythm.shot_median_s": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run2/ref_analysis/scenes.csv"
+        },
+        {
+          "tc": "00:00:03.133"
+        },
+        {
+          "tc": "00:00:08.233"
+        },
+        {
+          "tc": "00:00:13.833"
+        },
+        {
+          "tc": "00:00:18.700"
+        }
+      ],
+      "method": "detected cuts"
+    },
+    "rhythm.visual_bpm": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "60 / onset interval folded into 60–180"
+    },
+    "typography.families": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "font identity cannot be measured from pixels",
+      "note": "families are free substitutes chosen by vibe; original font name is UNKNOWN — confirm vibe on contact sheet"
+    },
+    "typography.font_substitutions": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "vibe → free substitute table (references/font-alternatives.md)",
+      "note": "original font identity is UNKNOWN; never ship the original font file"
+    },
+    "typography.letter_spacing_em": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "default"
+    },
+    "typography.line_height": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "default"
+    },
+    "typography.scale_px.body": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png",
+          "ocr_line": "功能都在feature分支开发",
+          "bbox": [
+            257,
+            577,
+            522,
+            55
+          ]
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png",
+          "ocr_line": "合并前必须CodeReview",
+          "bbox": [
+            258,
+            661,
+            507,
+            56
+          ]
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene004_settled.png",
+          "ocr_line": "来自12个团队的内部统计",
+          "bbox": [
+            194,
+            682,
+            506,
+            64
+          ]
+        }
+      ],
+      "method": "most frequent OCR line size (ink height / 0.88 CJK, /0.72 Latin)",
+      "note": "font size from ink height is an estimate (±10%)"
+    },
+    "typography.scale_px.caption": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png",
+          "ocr_line": "cr",
+          "bbox": [
+            340,
+            593,
+            42,
+            25
+          ]
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene003_settled.png",
+          "ocr_line": "主干开发",
+          "bbox": [
+            334,
+            660,
+            150,
+            63
+          ]
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene000_settled.png",
+          "ocr_line": "三分钟讲清feature/release/hotfix",
+          "bbox": [
+            195,
+            668,
+            697,
+            41
+          ]
+        }
+      ],
+      "method": "OCR size cluster below body"
+    },
+    "typography.scale_px.code": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png",
+          "ocr_line": "terminal"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png",
+          "ocr_line": "git switch -c"
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png",
+          "ocr_line": "git commit -m \"feat: Login page\""
+        }
+      ],
+      "method": "code-line ink height / 0.95 (mono lines span ascender→descender)"
+    },
+    "typography.scale_px.display": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "h1 × 1.6 (display line not read by OCR — check contact sheet)"
+    },
+    "typography.scale_px.h1": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png",
+          "ocr_line": "三条铁律",
+          "bbox": [
+            197,
+            362,
+            313,
+            110
+          ]
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png",
+          "ocr_line": "开一个功能分支",
+          "bbox": [
+            195,
+            302,
+            387,
+            79
+          ]
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene004_settled.png",
+          "ocr_line": "平均发布周期缩短",
+          "bbox": [
+            195,
+            357,
+            443,
+            77
+          ]
+        }
+      ],
+      "method": "largest OCR heading cluster above body"
+    },
+    "typography.scale_px.h2": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene002_settled.png",
+          "ocr_line": "开一个功能分支",
+          "bbox": [
+            195,
+            302,
+            387,
+            79
+          ]
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene004_settled.png",
+          "ocr_line": "平均发布周期缩短",
+          "bbox": [
+            195,
+            357,
+            443,
+            77
+          ]
+        },
+        {
+          "frame": "work/run2/ref_analysis/keyframes/scene001_settled.png",
+          "ocr_line": "国main永远可发布",
+          "bbox": [
+            192,
+            497,
+            395,
+            43
+          ]
+        }
+      ],
+      "method": "OCR cluster between h1 and body"
+    },
+    "typography.vibe": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "OCR script mix + code detection"
+    },
+    "typography.weights": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "ocr_line": "三条铁律"
+        }
+      ],
+      "method": "heading/body ink-coverage ratio = 1.28",
+      "note": "weight from ink coverage is a rough guess; confirm on the contact sheet"
+    }
+  },
+  "unknowns": [
+    {
+      "path": "layout.decor.glow",
+      "why": "radial glow not measured automatically — check contact sheet"
+    },
+    {
+      "path": "layout.decor.noise",
+      "why": "film grain/noise not measured"
+    },
+    {
+      "path": "motion.easing.emphasis",
+      "why": "default overshoot"
+    },
+    {
+      "path": "motion.easing.exit",
+      "why": "exits not separately measured"
+    },
+    {
+      "path": "motion.enter_distance_px",
+      "why": "default (flow magnitude not converted to distance)"
+    },
+    {
+      "path": "typography.families",
+      "why": "font identity cannot be measured from pixels"
+    },
+    {
+      "path": "typography.letter_spacing_em",
+      "why": "default"
+    },
+    {
+      "path": "typography.line_height",
+      "why": "default"
+    }
+  ],
+  "fidelity_notes": {
+    "rule": "seen = measured from pixels/audio with evidence; inferred = derived by heuristic or visual judgement; unknown = not measured (≠ absent). Rule adapted from aicodeking/leanrea (MIT).",
+    "status_counts": {
+      "seen": 33,
+      "inferred": 26,
+      "unknown": 8
+    },
+    "measured": [
+      "canvas.fps",
+      "canvas.height",
+      "canvas.width",
+      "components[0]:subtitle_bar",
+      "components[2]:bullet_list",
+      "components[3]:code_block",
+      "components[4]:bar_chart",
+      "components[5]:number_counter",
+      "components[7]:progress_bar",
+      "components[8]:transition",
+      "components_style.progress_bar",
+      "components_style.subtitle",
+      "layout.decor.grid_lines",
+      "layout.margins_pct.bottom",
+      "layout.margins_pct.left",
+      "layout.radius_px",
+      "motion.transition.duration_s",
+      "palette.accent",
+      "palette.bg",
+      "palette.code_text",
+      "palette.measured_swatches",
+      "palette.primary",
+      "palette.surface",
+      "palette.text",
+      "palette.text_muted",
+      "rhythm.av_sync",
+      "rhythm.shot_mean_s",
+      "rhythm.shot_median_s",
+      "typography.scale_px.body",
+      "typography.scale_px.caption",
+      "typography.scale_px.code",
+      "typography.scale_px.h1",
+      "typography.scale_px.h2"
+    ],
+    "inferred": [
+      "components[1]:title_card",
+      "components[6]:keyword_highlight",
+      "layout.alignment",
+      "layout.grid",
+      "layout.margins_pct.right",
+      "layout.margins_pct.top",
+      "layout.safe_area_pct",
+      "motion.durations_s.base",
+      "motion.easing.enter",
+      "motion.easing.family_guess",
+      "motion.easings",
+      "motion.enter_style",
+      "motion.keyframes",
+      "motion.spring",
+      "motion.stagger_s",
+      "motion.title_enter_style",
+      "motion.transition.type",
+      "motion.typing_cps",
+      "rhythm.audio_bpm",
+      "rhythm.motion_onset_interval_s",
+      "rhythm.pacing_rule",
+      "rhythm.visual_bpm",
+      "typography.font_substitutions",
+      "typography.scale_px.display",
+      "typography.vibe",
+      "typography.weights"
+    ],
+    "defaults": [
+      "layout.decor.glow",
+      "layout.decor.noise",
+      "motion.easing.emphasis",
+      "motion.easing.exit",
+      "motion.enter_distance_px",
+      "typography.families",
+      "typography.letter_spacing_em",
+      "typography.line_height"
+    ],
+    "needs_visual_review": [
+      "typography.families / vibe: 用 Read 看 contact_sheet.png，判断字形气质（几何/人文/圆体/宋体/手写）并选免费替代",
+      "typography.scale_px.display: 大标题经常读不出来，对照关键帧目测",
+      "layout.decor: 背景网格、光斑、噪点、描边、阴影等装饰",
+      "motion.transition.type: wipe/fade/slide 需看 entry/mid 关键帧确认",
+      "components: 检测器漏掉的元件（图标、箭头、流程图、标注框…）"
+    ],
+    "manual_overrides": [
+      "motion.durations_s.base"
+    ],
+    "not_pixel_identical_because": [
+      "原字体文件不复制，只用免费替代字体",
+      "原素材/logo/角色不搬运",
+      "随机种子、抗锯齿和编码损伤不可复原",
+      "缓动曲线是从像素运动反推的近似"
+    ]
+  }
+}
