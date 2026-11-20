@@ -75,3 +75,20 @@ export function textOn(surface: string, P: any) {
   if (ratio >= 4.5) return P.text;
   return ls < 0.3 ? '#F2F5FA' : '#15171C';
 }
+
+// Defaults for the knowledge-video components; every value inherits from palette / motion / layout
+// unless style-tokens.json -> components_style.<name> overrides it.
+export function compStyle(T: any, name: string) {
+  const P = T.palette, M = T.motion, L = T.layout;
+  const base: Record<string, any> = {
+    evidence: {frame_color: P.text, frame_stroke_px: 3, radius_px: L.radius_px, highlight_color: P.accent, highlight_stroke_px: 6,
+      source_color: P.text_muted, zoom_scale: 1.12, enter_s: M.durations_s.base, highlight_delay_s: 0.9, max_w_pct: 72, max_h_pct: 62},
+    timeline: {line_color: P.text_muted, line_px: 4, node_color: P.primary, node_size_px: 28, date_color: P.primary, label_color: P.text,
+      enter_stagger_s: Math.max(M.stagger_s, 0.25), enter_s: M.durations_s.base},
+    compare: {panel_fill: P.surface, panel_text: null, title_color: P.accent, gap_pct: 4, radius_px: L.radius_px, highlight_color: P.primary,
+      enter_stagger_s: Math.max(M.stagger_s * 0.6, 0.2), enter_s: M.durations_s.base},
+    flow: {node_fill: P.surface, node_stroke: P.primary, node_stroke_px: 3, node_text: null, radius_px: L.radius_px, arrow_color: P.text_muted,
+      arrow_px: 4, step_s: Math.max(M.stagger_s, 0.35), enter_s: M.durations_s.base},
+  };
+  return {...base[name], ...((T.components_style || {})[name] || {})};
+}

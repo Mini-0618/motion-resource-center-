@@ -506,6 +506,26 @@ def ocr_frame(png, lang, out_tsv_base):
         run(["tesseract", src, out_tsv_base + variant, "-l", use, "--psm", "11", "tsv"], check=False)
         lines_all += _parse_tsv(out_tsv_base + variant + ".tsv")
     os.remove(inv_png)
+    # targeted pass on the bottom band (subtitle bars: light text on a dark pill is often missed by the full-frame pass)
+    H0 = img.shape[0]
+    y0 = int(H0 * 0.72)
+    band_png = out_tsv_base + "_band.png"
+    cv2.imwrite(band_png, 255 - img[y0:])
+    run(["tesseract", band_png, out_tsv_base + "_band", "-l", use, "--psm", "6", "tsv"], check=False)
+    os.remove(band_png)
+    for l in _parse_tsv(out_tsv_base + "_band.tsv"):
+        l["bbox"] = [l["bbox"][0], l["bbox"][1] + y0, l["bbox"][2], l["bbox"][3]]
+        bx, by, bw, bh = l["bbox"]
+        dup = False
+        for o in lines_all:
+            ox, oy, ow, oh = o["bbox"]
+            ix = max(0, min(bx + bw, ox + ow) - max(bx, ox))
+            iy = max(0, min(by + bh, oy + oh) - max(by, oy))
+            if ix * iy > 0.3 * min(bw * bh, ow * oh) and (l["text"][:4] in o["text"] or o["text"][:4] in l["text"]):
+                dup = True
+                break
+        if not dup:
+            lines_all.append(l)
     rgb = cv2.cvtColor(cv2.imread(png), cv2.COLOR_BGR2RGB)
     for l in lines_all:
         x, y, w, h = l["bbox"]
@@ -916,7 +936,7 @@ def main():
             audio["av_sync"] = sync_points(audio["onsets_s"], sorted(vis))
 
     analysis = {
-        "tool": "code-video-style-distill/analyze.py", "version": 1,
+        "tool": "code-video-style-distill/analyze.py", "version": 1, "params": {k: v for k, v in vars(args).items() if k not in ("video", "out")},
         "source": meta, "sample_fps": fps,
         "background": {"rgb": bg_rgb, "hex": rgb_to_hex(bg_rgb), "border_mode_share": round(bg_conf, 3), "measured": True},
         "palette_global": [{k: v for k, v in c.items() if k != "lab"} for c in pal],

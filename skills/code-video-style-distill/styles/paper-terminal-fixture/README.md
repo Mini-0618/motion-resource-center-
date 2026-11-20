@@ -1,6 +1,6 @@
 # 风格底座：paper-terminal-fixture
 
-- 来源视频：`examples/reference-fixture/reference.mp4`（视频/音频未随本仓库分发）（1920x1080 @ 30.0fps，22.805s）
+- 来源视频：`$T/examples/reference-fixture/reference.mp4`（1920x1080 @ 30.0fps，22.805s）
 - 蒸馏时间：2026-11-20T09:52:37+08:00
 - refs/ 里的关键帧只作内部比对参考，不得随模板或成片分发。
 
@@ -48,5 +48,5 @@
 ## 验收
 
 - 测试参考：`examples/reference-fixture/reference.mp4`（本工具自渲染的测试片，不是外部视频）。
-- 迭代账本：`work/run2/iteration-ledger.md`（本地运行产物，未随本仓库分发），状态 DONE（第 2、3 轮 must 全过），总分 95.7/100；唯一未过的是 should 档 S7（音画卡点比例）。
+- 迭代账本：`work/run2/iteration-ledger.md`，状态 DONE（第 2、3 轮 must 全过），总分 95.7/100；唯一未过的是 should 档 S7（音画卡点比例）。
 - 最终修正：`overrides.json`（motion.durations_s.base 0.367 → 0.5）。

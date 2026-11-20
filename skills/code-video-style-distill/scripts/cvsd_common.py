@@ -202,3 +202,22 @@ def write_json(path, obj):
 def read_json(path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
+
+def minor_chromatic(images_rgb, bg_rgb, min_px=150, chroma_min=25, de_bg=8):
+    """small-but-present chromatic colours (keyword text, nodes, outlines) that k-means swallows.
+    3-bit RGB bins over non-background chromatic pixels; bins with >= min_px pixels -> median colour."""
+    px = np.concatenate([np.asarray(i).reshape(-1, 3) for i in images_rgb])
+    px = px[delta_e2000(srgb_to_lab(px.astype(float)), srgb_to_lab(np.asarray(bg_rgb, float))) > de_bg]
+    if not len(px):
+        return []
+    px = px[(px.max(-1).astype(int) - px.min(-1).astype(int)) > chroma_min]
+    if not len(px):
+        return []
+    q = (px // 32).astype(np.int32)
+    key = q[:, 0] * 64 + q[:, 1] * 8 + q[:, 2]
+    out = []
+    for kv, cnt in zip(*np.unique(key, return_counts=True)):
+        if cnt >= min_px:
+            out.append({"hex": rgb_to_hex(np.median(px[key == kv], 0)), "ratio": round(float(cnt) / len(px), 4)})
+    return out

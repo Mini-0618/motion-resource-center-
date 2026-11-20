@@ -1,11 +1,68 @@
 {
   "title": "Python asyncio 入门",
-  "audio": {"src": "../reference-fixture/click-100bpm.wav", "volume": 0.8},
   "segments": [
-    {"type": "title", "duration_s": 3.6, "kicker": "EP.08 · PYTHON", "title": "一分钟看懂 **asyncio**", "subtitle": "并发不是并行：事件循环怎么调度协程", "caption": "今天用一分钟讲清 asyncio 的核心"},
-    {"type": "bullets", "duration_s": 4.8, "heading": "三个关键词", "items": ["**协程**：async def 定义", "**await**：让出控制权", "**事件循环**负责调度"], "caption": "记住这三个词就够了"},
-    {"type": "code", "duration_s": 6.0, "heading": "并发抓取三个网页", "language": "python", "filename": "main.py", "code": "import asyncio\n\nasync def fetch(i):\n    await asyncio.sleep(1)\n    return i\n\nprint(asyncio.run(main()))", "highlight_lines": [4], "caption": "await 期间，别的任务可以继续跑"},
-    {"type": "bars", "duration_s": 4.8, "heading": "耗时对比（秒）", "unit": "s", "decimals": 1, "data": [{"label": "串行", "value": 3.0}, {"label": "线程池", "value": 1.2}, {"label": "asyncio", "value": 1.0, "highlight": true}], "caption": "I/O 密集型任务，asyncio 最省"},
-    {"type": "stat", "duration_s": 3.6, "heading": "吞吐量提升", "value": 3, "suffix": "×", "label": "示例数据，仅用于演示", "caption": "这就是异步的价值"}
+    {
+      "type": "title",
+      "duration_s": 3.6,
+      "kicker": "EP.08 · PYTHON",
+      "title": "一分钟看懂 **asyncio**",
+      "subtitle": "并发不是并行：事件循环怎么调度协程",
+      "caption": "今天用一分钟讲清 asyncio 的核心"
+    },
+    {
+      "type": "bullets",
+      "duration_s": 4.8,
+      "heading": "三个关键词",
+      "items": [
+        "**协程**：async def 定义",
+        "**await**：让出控制权",
+        "**事件循环**负责调度"
+      ],
+      "caption": "记住这三个词就够了"
+    },
+    {
+      "type": "code",
+      "duration_s": 6.0,
+      "heading": "并发抓取三个网页",
+      "language": "python",
+      "filename": "main.py",
+      "code": "import asyncio\n\nasync def fetch(i):\n    await asyncio.sleep(1)\n    return i\n\nprint(asyncio.run(main()))",
+      "highlight_lines": [
+        4
+      ],
+      "caption": "await 期间，别的任务可以继续跑"
+    },
+    {
+      "type": "bars",
+      "duration_s": 4.8,
+      "heading": "耗时对比（秒）",
+      "unit": "s",
+      "decimals": 1,
+      "data": [
+        {
+          "label": "串行",
+          "value": 3.0
+        },
+        {
+          "label": "线程池",
+          "value": 1.2
+        },
+        {
+          "label": "asyncio",
+          "value": 1.0,
+          "highlight": true
+        }
+      ],
+      "caption": "I/O 密集型任务，asyncio 最省"
+    },
+    {
+      "type": "stat",
+      "duration_s": 3.6,
+      "heading": "吞吐量提升",
+      "value": 3,
+      "suffix": "×",
+      "label": "示例数据，仅用于演示",
+      "caption": "这就是异步的价值"
+    }
   ]
 }

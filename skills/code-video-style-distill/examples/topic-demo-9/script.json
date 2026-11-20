@@ -1,0 +1,15 @@
+{
+  "title": "Python asyncio 入门（9 种段落示例）",
+  "audio": {"src": "beat-100bpm.wav", "volume": 0.8},
+  "segments": [
+    {"type": "title", "duration_s": 3.6, "kicker": "EP.12 · PYTHON", "title": "**asyncio** 一次讲透", "subtitle": "协程、事件循环、并发任务", "caption": "今天把 asyncio 讲明白"},
+    {"type": "bullets", "duration_s": 4.8, "heading": "先记住三件事", "items": ["协程用 **async def** 定义", "await 让出控制权", "事件循环负责**调度**"], "caption": "三个概念撑起整个 asyncio"},
+    {"type": "evidence", "duration_s": 5.0, "heading": "官方文档怎么说", "image": "../assets/placeholder-evidence-2.png", "source": "自生成占位图（测试用，正式使用请换成有权截图并写明出处）", "highlight": {"x": 6, "y": 28, "w": 55, "h": 20}, "annotation": "重点看这一段", "caption": "文档里这一句最关键"},
+    {"type": "timeline", "duration_s": 5.0, "heading": "asyncio 的演进", "events": [{"date": "3.4", "label": "asyncio 入库"}, {"date": "3.5", "label": "async/await"}, {"date": "3.7", "label": "asyncio.run"}, {"date": "3.11", "label": "TaskGroup"}], "caption": "十年里一步步变好用"},
+    {"type": "code", "duration_s": 6.0, "heading": "第一个协程", "language": "python", "filename": "main.py", "code": "import asyncio\n\nasync def hello():\n    await asyncio.sleep(1)\n    print(\"hello\")\n\nasyncio.run(hello())", "highlight_lines": [3], "caption": "async def 定义协程"},
+    {"type": "compare", "duration_s": 5.4, "heading": "同步 vs 异步", "left": {"title": "同步", "items": ["一个一个等", "IO 时 CPU 闲着", "写法直观"]}, "right": {"title": "异步", "items": ["等待时去干别的", "IO 密集快很多", "要会 await"]}, "highlight_rows": [1], "caption": "IO 密集就用异步"},
+    {"type": "flow", "duration_s": 5.0, "heading": "一个请求的旅程", "steps": ["创建任务", "进入循环", "await IO", "回调完成"], "direction": "horizontal", "caption": "事件循环一圈圈地转"},
+    {"type": "bars", "duration_s": 4.8, "heading": "100 个请求耗时（秒）", "data": [{"label": "同步", "value": 31}, {"label": "线程池", "value": 6}, {"label": "asyncio", "value": 2, "highlight": true}], "caption": "示例数据，仅用于测试"},
+    {"type": "stat", "duration_s": 3.6, "heading": "吞吐量提升", "value": 15, "suffix": "x", "label": "示例数据，仅用于测试", "caption": "这就是异步的威力"}
+  ]
+}

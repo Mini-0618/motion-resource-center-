@@ -557,6 +557,10 @@
               "subtitle_bar",
               "progress_bar",
               "transition",
+              "evidence_frame",
+              "timeline",
+              "compare_columns",
+              "flow_chart",
               "other"
             ]
           },
@@ -608,7 +612,227 @@
       }
     },
     "components_style": {
-      "type": "object"
+      "type": "object",
+      "description": "Per-component style. Values come from detection in the reference (provenance components_style.<k> = seen) or default mapping from palette/motion/layout (unknown). Template defaults: template/src/theme.ts compStyle().",
+      "properties": {
+        "progress_bar": {
+          "type": "boolean"
+        },
+        "subtitle": {
+          "type": "object"
+        },
+        "evidence": {
+          "type": "object",
+          "required": [
+            "frame_color",
+            "highlight_color",
+            "enter_s"
+          ],
+          "properties": {
+            "frame_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "frame_stroke_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "radius_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "highlight_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "highlight_stroke_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "source_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "zoom_scale": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "enter_s": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "highlight_delay_s": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "measured": {
+              "type": "object"
+            }
+          }
+        },
+        "timeline": {
+          "type": "object",
+          "required": [
+            "line_color",
+            "node_color",
+            "node_size_px",
+            "enter_stagger_s"
+          ],
+          "properties": {
+            "line_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "line_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "node_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "node_size_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "date_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "label_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "enter_stagger_s": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "enter_s": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "measured": {
+              "type": "object"
+            }
+          }
+        },
+        "compare": {
+          "type": "object",
+          "required": [
+            "panel_fill",
+            "gap_pct",
+            "highlight_color",
+            "enter_stagger_s"
+          ],
+          "properties": {
+            "panel_fill": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "panel_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "title_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "gap_pct": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 30
+            },
+            "radius_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "highlight_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "enter_stagger_s": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "enter_s": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "measured": {
+              "type": "object"
+            }
+          }
+        },
+        "flow": {
+          "type": "object",
+          "required": [
+            "node_fill",
+            "node_stroke",
+            "arrow_color",
+            "step_s"
+          ],
+          "properties": {
+            "node_fill": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "node_stroke": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "node_stroke_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "node_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "radius_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "arrow_color": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "arrow_px": {
+              "type": "number",
+              "minimum": 0
+            },
+            "step_s": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "enter_s": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "orientation": {
+              "enum": [
+                "horizontal",
+                "vertical"
+              ]
+            },
+            "measured": {
+              "type": "object"
+            }
+          }
+        }
+      }
     },
     "fidelity_notes": {
       "type": "object",

@@ -27,14 +27,15 @@ import cv2
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import components_detect as CD  # noqa: E402
 from cvsd_common import (read_json, write_json, srgb_to_lab, delta_e2000, hex_to_rgb, rgb_to_hex,  # noqa: E402
                          contrast_ratio, chroma, tc)
 
 TOOL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCHEMA = os.path.join(TOOL_DIR, "schema", "style-tokens.schema.json")
 TAXONOMY_CANDIDATES = [
-    os.environ.get("CVSD_TAXONOMY_MD") or "",
-    os.path.join(TOOL_DIR, "references", "taxonomy-from-user.md"),
+    "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md",
+    "/workspace/ip-team/deliverables/motion/README.md",
 ]
 
 # component -> (template segment, UI ids, V ids). Category names in taxonomy-from-user.md.
@@ -48,7 +49,15 @@ TAXO = {
     "subtitle_bar": (None, [], ["V-13"]),
     "progress_bar": (None, ["UI-01"], ["V-15"]),
     "transition": (None, ["UI-02"], ["V-07"]),
+    # knowledge-video components (taxonomy-from-user.md: UI-09 时间线组件/对比面板/可视化流程图;
+    # V-03 流程图/时间线/对比矩阵; V-04 证据展示/截图/新闻事件时间轴; V-05 局部高亮/前后对比; V-09 摄像机推进; V-10 线条连接)
+    "evidence_frame": ("evidence", [], ["V-04", "V-05", "V-09"]),
+    "timeline": ("timeline", ["UI-09"], ["V-03", "V-04"]),
+    "compare_columns": ("compare", ["UI-09"], ["V-03", "V-05"]),
+    "flow_chart": ("flow", ["UI-09"], ["V-03", "V-10"]),
 }
+# component type -> components_style key
+COMP_STYLE_KEY = {"evidence_frame": "evidence", "timeline": "timeline", "compare_columns": "compare", "flow_chart": "flow"}
 
 FREE_FONTS = {
     "sans_cjk": ["Noto Sans CJK SC / 思源黑体 Source Han Sans SC (SIL OFL 1.1)", "HarmonyOS Sans SC (华为免费商用许可，使用前核对条款)",
@@ -640,6 +649,24 @@ def detect_components(A, P, pal):
         sl = [l for l in body_lines if l["scene"] == s["index"]]
         evs = [e for e in A["motion"]["events"] if s["start_s"] <= e["start_s"] < s["end_s"] and not e["is_transition"]]
         kf = s["keyframes"]["settled"]["path"]
+        # knowledge components first (their panels are surfaces and would look like code blocks)
+        hit = None
+        for t, fn in (("evidence_frame", lambda: CD.detect_evidence(kf, pal["bg"])),
+                      ("compare_columns", lambda: CD.detect_compare(kf, pal.get("surface", pal["bg"]))),
+                      ("flow_chart", lambda: CD.detect_flow(kf, pal.get("surface", pal["bg"]), pal["bg"])),
+                      ("timeline", lambda: CD.detect_timeline(kf, pal["bg"]))):
+            try:
+                prm = fn()
+            except Exception as ex:  # a detector bug must not kill the whole distill
+                print(f"[distill] detector {t} failed on {os.path.basename(kf)}: {ex}")
+                prm = None
+            if prm:
+                hit = (t, prm)
+                break
+        if hit:
+            t, prm = hit
+            add(t, [s["index"]], f"{t} pixel detector on {os.path.basename(kf)} @ {s['start_tc']}: {json.dumps(prm, ensure_ascii=False)[:160]}", 0.75, prm)
+            continue
         # code block
         sf = [x for x in surfs if x["frame"] == os.path.basename(kf)]
         codey = [l for l in sl if l.get("codey")]
@@ -683,6 +710,45 @@ def detect_components(A, P, pal):
     if tr:
         add("transition", [], f"{len(tr)} motion events straddling cuts at {[e['start_tc'] for e in tr][:4]}", 0.7)
     return comps
+
+
+def knowledge_style(key, found, pal, layout, motion):
+    """components_style.<key>: measured params when the reference shows the component, else defaults
+    derived from palette / motion / layout (status unknown)."""
+    base = motion["durations_s"]["base"]
+    stg = motion.get("stagger_s", 0.4)
+    D = {
+        "evidence": {"frame_color": pal["text"], "frame_stroke_px": 3, "radius_px": layout.get("radius_px", 12), "highlight_color": pal["accent"],
+                     "highlight_stroke_px": 6, "source_color": pal.get("text_muted", pal["text"]), "zoom_scale": 1.12, "enter_s": base,
+                     "highlight_delay_s": 0.9},
+        "timeline": {"line_color": pal.get("text_muted", pal["text"]), "line_px": 4, "node_color": pal["primary"], "node_size_px": 28,
+                     "date_color": pal["primary"], "label_color": pal["text"], "enter_stagger_s": max(stg, 0.25), "enter_s": base},
+        "compare": {"panel_fill": pal.get("surface", pal["bg"]), "title_color": pal["accent"], "gap_pct": 4, "radius_px": layout.get("radius_px", 12),
+                    "highlight_color": pal["primary"], "enter_stagger_s": max(stg * 0.6, 0.2), "enter_s": base},
+        "flow": {"node_fill": pal.get("surface", pal["bg"]), "node_stroke": pal["primary"], "node_stroke_px": 3, "radius_px": layout.get("radius_px", 12),
+                 "arrow_color": pal.get("text_muted", pal["text"]), "arrow_px": 4, "step_s": max(stg, 0.35), "enter_s": base, "orientation": "horizontal"},
+    }[key]
+    if not found:
+        return D, "unknown", []
+    p = {}
+    for c in found:  # merge across detections: a scene caught before the highlight/annotation appeared lacks those keys
+        for k, v in c["params"].items():
+            if p.get(k) in (None, 0):
+                p[k] = v
+    keep = {"evidence": ["frame_color", "highlight_color", "highlight_stroke_px"],
+            "timeline": ["line_color", "line_px", "node_color", "node_size_px"],
+            "compare": ["panel_fill", "gap_pct", "radius_px", "highlight_color"],
+            "flow": ["node_fill", "node_stroke", "arrow_color", "radius_px", "orientation"]}[key]
+    out = dict(D)
+    for k in keep:
+        if p.get(k) not in (None, 0):
+            out[k] = p[k]
+    if key == "timeline":
+        out["date_color"] = out["node_color"]
+    for k in ("node_count", "box_pct", "highlight_box_pct", "line_span_pct", "panel_w_pct", "node_w_pct"):
+        if k in p:
+            out.setdefault("measured", {})[k] = p[k]
+    return out, "seen", [{"evidence": c["evidence"]} for c in found[:3]]
 
 
 def find_bars(png, hexes, W, H):
@@ -772,6 +838,10 @@ def main():
         comp_style["subtitle"] = {"position": "bottom", "bg_opacity": 0.6}
         P.set("components_style.subtitle", "unknown", [], "default")
     P.set("components_style.progress_bar", "seen" if comp_style["progress_bar"] else "unknown", [], "edge-bar detection")
+    for t, key in COMP_STYLE_KEY.items():
+        comp_style[key], st, ev = knowledge_style(key, [c for c in comps if c["type"] == t], palette, layout, motion)
+        P.set(f"components_style.{key}", st, ev, f"{t} pixel detector (scripts/components_detect.py)" if st == "seen" else
+              "not detected in reference → default mapping from palette/motion/layout (unknown ≠ absent)")
     for i, c in enumerate(comps):
         P.set(f"components[{i}]:{c['type']}", "seen" if c["confidence"] >= 0.7 else "inferred", [{"evidence": c["evidence"]}], "heuristic detector",
               "taxonomy mapping is a manual table" + ("" if TAXO_SRC else " — taxonomy file NOT found, ids unverified"), confidence=c["confidence"])

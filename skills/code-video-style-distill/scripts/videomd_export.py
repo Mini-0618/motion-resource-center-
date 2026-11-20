@@ -135,8 +135,8 @@ def main():
         fh.write("---\n" + yaml_dump(card) + "\n---\n\n" + body)
     print(f"[videomd] wrote {out}/VIDEO.md ({len(scenes)} shots)")
     # optional: validate with a LOCAL read-only copy of the reference checker if present (not installed)
-    ref = os.environ.get("VIDEOMD_SRC", "")
-    if ref and os.path.isdir(os.path.join(ref, "videomd")):
+    ref = os.environ.get("VIDEOMD_SRC", "/workspace/ip-team/research/rea/videomd/src")
+    if os.path.isdir(os.path.join(ref, "videomd")):
         sys.path.insert(0, ref)
         try:
             import videomd

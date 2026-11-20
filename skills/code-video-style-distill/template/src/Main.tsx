@@ -7,6 +7,10 @@ import {BarChart, StatCounter} from './components/BarChart';
 import {CodeBlock} from './components/CodeBlock';
 import {Subtitle, ProgressBar} from './components/Subtitle';
 import {TransitionIn} from './components/Transition';
+import {Evidence} from './components/Evidence';
+import {Timeline} from './components/Timeline';
+import {CompareColumns} from './components/CompareColumns';
+import {Flow} from './components/Flow';
 
 const REGISTRY: Record<string, React.FC<any>> = {
   title: TitleCard,
@@ -14,6 +18,10 @@ const REGISTRY: Record<string, React.FC<any>> = {
   bars: BarChart,
   stat: StatCounter,
   code: CodeBlock,
+  evidence: Evidence,
+  timeline: Timeline,
+  compare: CompareColumns,
+  flow: Flow,
 };
 
 export function timeline(script: any, fps: number, T: any) {

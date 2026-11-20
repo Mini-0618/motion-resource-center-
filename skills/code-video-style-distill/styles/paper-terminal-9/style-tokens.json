@@ -1,0 +1,2073 @@
+{
+  "name": "paper-terminal-9",
+  "version": 1,
+  "description": "Style base distilled from reference9.mp4",
+  "source": {
+    "video": "$T/examples/reference-fixture-9/reference9.mp4",
+    "analysis_dir": "$T/work/run9/ref_analysis",
+    "distilled_at": "2026-11-20T12:27:27+08:00",
+    "duration_s": 43.2
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "aspect": "1920:1080"
+  },
+  "palette": {
+    "bg": "#F3EFE6",
+    "text": "#1E1C1D",
+    "text_muted": "#6E6B6B",
+    "surface": "#1F2330",
+    "code_text": "#EFF3FC",
+    "primary": "#E45730",
+    "accent": "#3085A9",
+    "measured_swatches": [
+      {
+        "hex": "#F3EFE6",
+        "ratio": 0.8449
+      },
+      {
+        "hex": "#202431",
+        "ratio": 0.0641
+      },
+      {
+        "hex": "#8F9094",
+        "ratio": 0.0239
+      },
+      {
+        "hex": "#3D3E3C",
+        "ratio": 0.0228
+      },
+      {
+        "hex": "#5E6267",
+        "ratio": 0.0193
+      },
+      {
+        "hex": "#C7C6C3",
+        "ratio": 0.0152
+      },
+      {
+        "hex": "#E45730",
+        "ratio": 0.0063
+      },
+      {
+        "hex": "#EBA488",
+        "ratio": 0.0034
+      }
+    ]
+  },
+  "typography": {
+    "vibe": "CJK 无衬线（黑体系）；技术感：代码块用等宽字体",
+    "families": {
+      "display": {
+        "css": "\"Inter Tight\", \"Noto Sans CJK SC\", \"Source Han Sans SC\", sans-serif",
+        "vibe": "粗黑几何无衬线（推测）",
+        "free_substitutes": [
+          "Inter / Inter Tight (SIL OFL 1.1)",
+          "Geist (SIL OFL 1.1)",
+          "Manrope (SIL OFL 1.1)",
+          "Noto Sans CJK SC / 思源黑体 Source Han Sans SC (SIL OFL 1.1)",
+          "HarmonyOS Sans SC (华为免费商用许可，使用前核对条款)",
+          "MiSans (小米免费商用许可，使用前核对条款)"
+        ],
+        "license_note": "只用开源/免费可商用替代字体，不复制参考片的字体文件"
+      },
+      "body": {
+        "css": "\"Inter\", \"Noto Sans CJK SC\", \"Source Han Sans SC\", \"HarmonyOS Sans SC\", sans-serif",
+        "vibe": "中性无衬线（推测）",
+        "free_substitutes": [
+          "Noto Sans CJK SC / 思源黑体 Source Han Sans SC (SIL OFL 1.1)",
+          "HarmonyOS Sans SC (华为免费商用许可，使用前核对条款)",
+          "MiSans (小米免费商用许可，使用前核对条款)",
+          "Inter / Inter Tight (SIL OFL 1.1)",
+          "Geist (SIL OFL 1.1)",
+          "Manrope (SIL OFL 1.1)"
+        ]
+      },
+      "mono": {
+        "css": "\"JetBrains Mono\", \"Noto Sans Mono CJK SC\", monospace",
+        "vibe": "等宽代码字体",
+        "free_substitutes": [
+          "JetBrains Mono (SIL OFL 1.1)",
+          "Fira Code (SIL OFL 1.1)",
+          "Noto Sans Mono CJK SC (SIL OFL 1.1)"
+        ]
+      }
+    },
+    "scale_px": {
+      "display": 106,
+      "h1": 88,
+      "h2": 61,
+      "body": 36,
+      "caption": 29,
+      "code": 37
+    },
+    "weights": {
+      "display": 800,
+      "h1": 700,
+      "body": 500
+    },
+    "letter_spacing_em": -0.01,
+    "line_height": 1.35,
+    "font_substitutions": [
+      {
+        "role": "display",
+        "observed_vibe": "粗黑几何无衬线（推测）",
+        "original_font": "unknown",
+        "substitute": "Inter Tight",
+        "license": "SIL OFL 1.1",
+        "alternatives": [
+          "Inter / Inter Tight (SIL OFL 1.1)",
+          "Geist (SIL OFL 1.1)",
+          "Manrope (SIL OFL 1.1)",
+          "Noto Sans CJK SC / 思源黑体 Source Han Sans SC (SIL OFL 1.1)"
+        ],
+        "size_px": 106,
+        "adjust": "先对照参考关键帧调字号/字距/字重，再确认许可证；不得使用参考片的字体文件"
+      },
+      {
+        "role": "body",
+        "observed_vibe": "中性无衬线（推测）",
+        "original_font": "unknown",
+        "substitute": "Inter",
+        "license": "SIL OFL 1.1",
+        "alternatives": [
+          "Noto Sans CJK SC / 思源黑体 Source Han Sans SC (SIL OFL 1.1)",
+          "HarmonyOS Sans SC (华为免费商用许可，使用前核对条款)",
+          "MiSans (小米免费商用许可，使用前核对条款)",
+          "Inter / Inter Tight (SIL OFL 1.1)"
+        ],
+        "size_px": 36,
+        "adjust": "先对照参考关键帧调字号/字距/字重，再确认许可证；不得使用参考片的字体文件"
+      },
+      {
+        "role": "mono",
+        "observed_vibe": "等宽代码字体",
+        "original_font": "unknown",
+        "substitute": "JetBrains Mono",
+        "license": "SIL OFL 1.1",
+        "alternatives": [
+          "JetBrains Mono (SIL OFL 1.1)",
+          "Fira Code (SIL OFL 1.1)",
+          "Noto Sans Mono CJK SC (SIL OFL 1.1)"
+        ],
+        "size_px": 37,
+        "adjust": "先对照参考关键帧调字号/字距/字重，再确认许可证；不得使用参考片的字体文件"
+      }
+    ]
+  },
+  "layout": {
+    "margins_pct": {
+      "left": 10.1,
+      "right": 10.1,
+      "top": 9.44,
+      "bottom": 9.44
+    },
+    "alignment": "left",
+    "safe_area_pct": {
+      "x": 9.9,
+      "y": 9.44
+    },
+    "grid": {
+      "columns": 12,
+      "gutter_pct": 2.0,
+      "fit_ratio": 0.759
+    },
+    "common_left_edges_px": [
+      195.8,
+      737.3,
+      342.0,
+      1496.5,
+      796.7,
+      379.0
+    ],
+    "decor": {
+      "grid_lines": true,
+      "glow": false,
+      "noise": false
+    },
+    "radius_px": 14
+  },
+  "motion": {
+    "durations_s": {
+      "fast": 0.195,
+      "base": 0.455,
+      "slow": 0.867
+    },
+    "easing": {
+      "family_guess": "ease-out",
+      "enter": {
+        "cubic_bezier": [
+          0.22,
+          0.4,
+          0.2,
+          1.05
+        ]
+      },
+      "exit": {
+        "cubic_bezier": [
+          0.7,
+          0,
+          0.84,
+          0
+        ]
+      },
+      "emphasis": {
+        "cubic_bezier": [
+          0.34,
+          1.56,
+          0.64,
+          1
+        ]
+      }
+    },
+    "spring": {
+      "damping": 12,
+      "stiffness": 140,
+      "mass": 1
+    },
+    "enter_style": "slide-up",
+    "title_enter_style": "spring-pop",
+    "enter_distance_px": 40,
+    "stagger_s": 0.5,
+    "transition": {
+      "type": "slide",
+      "duration_s": 0.267
+    },
+    "typing_cps": 16.0,
+    "easings": {
+      "enter": "cubic-bezier(0.22, 0.4, 0.2, 1.05)",
+      "exit": "cubic-bezier(0.7, 0, 0.84, 0)",
+      "emphasis": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      "spring": "spring(damping=12, stiffness=140, mass=1)"
+    },
+    "keyframes": {
+      "enter": {
+        "duration_s": 0.455,
+        "easing": "enter",
+        "frames": [
+          {
+            "offset": 0,
+            "opacity": 0,
+            "transform": "translateY(40px)"
+          },
+          {
+            "offset": 1,
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ]
+      },
+      "title_enter": {
+        "duration_s": 0.867,
+        "easing": "spring",
+        "frames": [
+          {
+            "offset": 0,
+            "opacity": 0,
+            "transform": "scale(0.6)"
+          },
+          {
+            "offset": 0.6,
+            "opacity": 1,
+            "transform": "scale(1.06)"
+          },
+          {
+            "offset": 1,
+            "opacity": 1,
+            "transform": "scale(1)"
+          }
+        ]
+      },
+      "transition_in": {
+        "duration_s": 0.267,
+        "easing": "enter",
+        "frames": [
+          {
+            "offset": 0,
+            "transform": "translateX(100%)"
+          },
+          {
+            "offset": 1,
+            "transform": "translateX(0)"
+          }
+        ]
+      },
+      "typewriter": {
+        "chars_per_s": 16.0,
+        "caret_blink_s": 0.5
+      }
+    }
+  },
+  "rhythm": {
+    "shot_mean_s": 3.6,
+    "shot_median_s": 4.45,
+    "motion_onset_interval_s": 0.867,
+    "visual_bpm": 69.2,
+    "audio_bpm": 99.4,
+    "av_sync": {
+      "rule": "音画为松散同步：只有少数切点落在起音点上",
+      "match_ratio": 0.222,
+      "median_offset_ms": -37.0
+    },
+    "pacing_rule": "平均每 3.6 s 一个镜头；镜头内元素约每 0.5 s 入场一个"
+  },
+  "components": [
+    {
+      "type": "subtitle_bar",
+      "template_segment": null,
+      "scenes": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "evidence": "centred OCR lines at y>78% in 11/12 scenes, e.g. '今天聊聊团队里最党用的Git分支模型'",
+      "confidence": 0.8,
+      "taxonomy": {
+        "ui": [],
+        "video": [
+          "V-13"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {
+        "bg": "#3D3D3B",
+        "color": "#FDFDFB",
+        "position": "bottom",
+        "y_pct": 85.3
+      }
+    },
+    {
+      "type": "title_card",
+      "template_segment": "title",
+      "scenes": [
+        0
+      ],
+      "evidence": "≤3 text lines with large heading @ 00:00:00.000",
+      "confidence": 0.6,
+      "taxonomy": {
+        "ui": [],
+        "video": [
+          "V-01",
+          "V-15"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {}
+    },
+    {
+      "type": "bullet_list",
+      "template_segment": "bullets",
+      "scenes": [
+        1
+      ],
+      "evidence": "3 stacked same-size lines, left x≈258px, 2 staggered entrances @ 00:00:03.133",
+      "confidence": 0.7,
+      "taxonomy": {
+        "ui": [
+          "UI-09"
+        ],
+        "video": [
+          "V-01",
+          "V-10"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {}
+    },
+    {
+      "type": "evidence_frame",
+      "template_segment": "evidence",
+      "scenes": [
+        2
+      ],
+      "evidence": "evidence_frame pixel detector on scene002_settled.png @ 00:00:07.933: {\"box_pct\": [10.0, 20.7, 72.0, 62.0], \"frame_color\": \"#1E1B1B\", \"textured_ratio\": 0.77}",
+      "confidence": 0.75,
+      "taxonomy": {
+        "ui": [],
+        "video": [
+          "V-04",
+          "V-05",
+          "V-09"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {
+        "box_pct": [
+          10.0,
+          20.7,
+          72.0,
+          62.0
+        ],
+        "frame_color": "#1E1B1B",
+        "textured_ratio": 0.77
+      }
+    },
+    {
+      "type": "evidence_frame",
+      "template_segment": "evidence",
+      "scenes": [
+        3
+      ],
+      "evidence": "evidence_frame pixel detector on scene003_settled.png @ 00:00:09.167: {\"box_pct\": [10.0, 20.7, 66.3, 62.0], \"frame_color\": \"#1C1C1F\", \"textured_ratio\": 0.67, \"highlight_color\": \"#2F83A5\", \"highlight_stroke_px\": 7, \"highlight_box_p",
+      "confidence": 0.75,
+      "taxonomy": {
+        "ui": [],
+        "video": [
+          "V-04",
+          "V-05",
+          "V-09"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {
+        "box_pct": [
+          10.0,
+          20.7,
+          66.3,
+          62.0
+        ],
+        "frame_color": "#1C1C1F",
+        "textured_ratio": 0.67,
+        "highlight_color": "#2F83A5",
+        "highlight_stroke_px": 7,
+        "highlight_box_pct": [
+          0.6,
+          11.0,
+          72.7,
+          24.5
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "template_segment": "timeline",
+      "scenes": [
+        4
+      ],
+      "evidence": "timeline pixel detector on scene004_settled.png @ 00:00:12.867: {\"node_count\": 4, \"node_color\": \"#E2562E\", \"node_size_px\": 28, \"line_color\": \"#6E6B70\", \"line_px\": 4, \"line_y_pct\": 56.1, \"line_span_pct\": 80.0}",
+      "confidence": 0.75,
+      "taxonomy": {
+        "ui": [
+          "UI-09"
+        ],
+        "video": [
+          "V-03",
+          "V-04"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {
+        "node_count": 4,
+        "node_color": "#E2562E",
+        "node_size_px": 28,
+        "line_color": "#6E6B70",
+        "line_px": 4,
+        "line_y_pct": 56.1,
+        "line_span_pct": 80.0
+      }
+    },
+    {
+      "type": "code_block",
+      "template_segment": "code",
+      "scenes": [
+        6
+      ],
+      "evidence": "uniform panel #1F2330 + 1 code-like OCR lines @ 00:00:18.233",
+      "confidence": 0.8,
+      "taxonomy": {
+        "ui": [
+          "UI-09"
+        ],
+        "video": [
+          "V-05"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {}
+    },
+    {
+      "type": "code_block",
+      "template_segment": "code",
+      "scenes": [
+        7
+      ],
+      "evidence": "uniform panel #B5B1AF + 0 code-like OCR lines @ 00:00:23.833",
+      "confidence": 0.55,
+      "taxonomy": {
+        "ui": [
+          "UI-09"
+        ],
+        "video": [
+          "V-05"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {}
+    },
+    {
+      "type": "compare_columns",
+      "template_segment": "compare",
+      "scenes": [
+        8
+      ],
+      "evidence": "compare_columns pixel detector on scene008_settled.png @ 00:00:24.233: {\"panel_fill\": \"#1F2330\", \"gap_pct\": 3.33, \"radius_px\": 20, \"panel_w_pct\": 38.3}",
+      "confidence": 0.75,
+      "taxonomy": {
+        "ui": [
+          "UI-09"
+        ],
+        "video": [
+          "V-03",
+          "V-05"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {
+        "panel_fill": "#1F2330",
+        "gap_pct": 3.33,
+        "radius_px": 20,
+        "panel_w_pct": 38.3
+      }
+    },
+    {
+      "type": "flow_chart",
+      "template_segment": "flow",
+      "scenes": [
+        9
+      ],
+      "evidence": "flow_chart pixel detector on scene009_settled.png @ 00:00:29.233: {\"node_count\": 4, \"orientation\": \"horizontal\", \"node_fill\": \"#1F2330\", \"node_stroke\": \"#D25C3D\", \"arrow_color\": \"#6D6B6D\", \"radius_px\": 27, \"node_w_pct\": 16.9}",
+      "confidence": 0.75,
+      "taxonomy": {
+        "ui": [
+          "UI-09"
+        ],
+        "video": [
+          "V-03",
+          "V-10"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {
+        "node_count": 4,
+        "orientation": "horizontal",
+        "node_fill": "#1F2330",
+        "node_stroke": "#D25C3D",
+        "arrow_color": "#6D6B6D",
+        "radius_px": 27,
+        "node_w_pct": 16.9
+      }
+    },
+    {
+      "type": "bar_chart",
+      "template_segment": "bars",
+      "scenes": [
+        10
+      ],
+      "evidence": "3 aligned solid rectangles in scene010_settled.png",
+      "confidence": 0.75,
+      "taxonomy": {
+        "ui": [
+          "UI-04"
+        ],
+        "video": [
+          "V-02"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {
+        "bars": [
+          [
+            496,
+            500,
+            958,
+            48
+          ],
+          [
+            496,
+            582,
+            388,
+            48
+          ],
+          [
+            496,
+            664,
+            206,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "type": "number_counter",
+      "template_segment": "stat",
+      "scenes": [
+        11
+      ],
+      "evidence": "large numeric OCR '65%' (218.1px) @ 00:00:39.100",
+      "confidence": 0.7,
+      "taxonomy": {
+        "ui": [
+          "UI-04"
+        ],
+        "video": [
+          "V-02",
+          "V-01"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {}
+    },
+    {
+      "type": "keyword_highlight",
+      "template_segment": null,
+      "scenes": [
+        0,
+        1,
+        6
+      ],
+      "evidence": "4 OCR lines mixing neutral + chromatic ink, e.g. 'ERS'",
+      "confidence": 0.65,
+      "taxonomy": {
+        "ui": [],
+        "video": [
+          "V-01",
+          "V-13"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {
+        "syntax": "use **keyword** in script.json text"
+      }
+    },
+    {
+      "type": "progress_bar",
+      "template_segment": null,
+      "scenes": [],
+      "evidence": "12 thin edge bars with growing widths [128, 346, 390, 574, 784]",
+      "confidence": 0.7,
+      "taxonomy": {
+        "ui": [
+          "UI-01"
+        ],
+        "video": [
+          "V-15"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {
+        "position": "top"
+      }
+    },
+    {
+      "type": "transition",
+      "template_segment": null,
+      "scenes": [],
+      "evidence": "7 motion events straddling cuts at ['00:00:03.033', '00:00:07.833', '00:00:17.800', '00:00:23.700']",
+      "confidence": 0.7,
+      "taxonomy": {
+        "ui": [
+          "UI-02"
+        ],
+        "video": [
+          "V-07"
+        ],
+        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+      },
+      "params": {}
+    }
+  ],
+  "components_style": {
+    "progress_bar": true,
+    "subtitle": {
+      "position": "bottom",
+      "bg": "#3D3D3B",
+      "bg_opacity": 1.0,
+      "color": "#FDFDFB"
+    },
+    "evidence": {
+      "frame_color": "#1E1B1B",
+      "frame_stroke_px": 3,
+      "radius_px": 14,
+      "highlight_color": "#2F83A5",
+      "highlight_stroke_px": 7,
+      "source_color": "#6E6B6B",
+      "zoom_scale": 1.12,
+      "enter_s": 0.321,
+      "highlight_delay_s": 0.9,
+      "measured": {
+        "box_pct": [
+          10.0,
+          20.7,
+          72.0,
+          62.0
+        ],
+        "highlight_box_pct": [
+          0.6,
+          11.0,
+          72.7,
+          24.5
+        ]
+      }
+    },
+    "timeline": {
+      "line_color": "#6E6B70",
+      "line_px": 4,
+      "node_color": "#E2562E",
+      "node_size_px": 28,
+      "date_color": "#E2562E",
+      "label_color": "#1E1C1D",
+      "enter_stagger_s": 0.5,
+      "enter_s": 0.321,
+      "measured": {
+        "node_count": 4,
+        "line_span_pct": 80.0
+      }
+    },
+    "compare": {
+      "panel_fill": "#1F2330",
+      "title_color": "#3085A9",
+      "gap_pct": 3.33,
+      "radius_px": 20,
+      "highlight_color": "#E45730",
+      "enter_stagger_s": 0.3,
+      "enter_s": 0.321,
+      "measured": {
+        "panel_w_pct": 38.3
+      }
+    },
+    "flow": {
+      "node_fill": "#1F2330",
+      "node_stroke": "#D25C3D",
+      "node_stroke_px": 3,
+      "radius_px": 27,
+      "arrow_color": "#6D6B6D",
+      "arrow_px": 4,
+      "step_s": 0.5,
+      "enter_s": 0.321,
+      "orientation": "horizontal",
+      "measured": {
+        "node_count": 4,
+        "node_w_pct": 16.9
+      }
+    }
+  },
+  "_readme": "round 2: apply gap-report round 1 (M6, source level seen)",
+  "provenance": {
+    "_readme": {
+      "status": "inferred",
+      "method": "visual review (manual override)",
+      "evidence": [
+        {
+          "file": "$T/work/run9/overrides.json"
+        }
+      ],
+      "confidence": 0.6
+    },
+    "canvas.fps": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run9/ref_analysis/meta.json"
+        }
+      ],
+      "method": "ffprobe"
+    },
+    "canvas.height": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run9/ref_analysis/meta.json"
+        }
+      ],
+      "method": "ffprobe"
+    },
+    "canvas.width": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "work/run9/ref_analysis/meta.json"
+        }
+      ],
+      "method": "ffprobe"
+    },
+    "components[0]:subtitle_bar": {
+      "status": "seen",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "evidence": "centred OCR lines at y>78% in 11/12 scenes, e.g. '今天聊聊团队里最党用的Git分支模型'"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[10]:bar_chart": {
+      "status": "seen",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "evidence": "3 aligned solid rectangles in scene010_settled.png"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[11]:number_counter": {
+      "status": "seen",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence": "large numeric OCR '65%' (218.1px) @ 00:00:39.100"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[12]:keyword_highlight": {
+      "status": "inferred",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "evidence": "4 OCR lines mixing neutral + chromatic ink, e.g. 'ERS'"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[13]:progress_bar": {
+      "status": "seen",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence": "12 thin edge bars with growing widths [128, 346, 390, 574, 784]"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[14]:transition": {
+      "status": "seen",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence": "7 motion events straddling cuts at ['00:00:03.033', '00:00:07.833', '00:00:17.800', '00:00:23.700']"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[1]:title_card": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "evidence": "≤3 text lines with large heading @ 00:00:00.000"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[2]:bullet_list": {
+      "status": "seen",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence": "3 stacked same-size lines, left x≈258px, 2 staggered entrances @ 00:00:03.133"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[3]:evidence_frame": {
+      "status": "seen",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "evidence": "evidence_frame pixel detector on scene002_settled.png @ 00:00:07.933: {\"box_pct\": [10.0, 20.7, 72.0, 62.0], \"frame_color\": \"#1E1B1B\", \"textured_ratio\": 0.77}"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[4]:evidence_frame": {
+      "status": "seen",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "evidence": "evidence_frame pixel detector on scene003_settled.png @ 00:00:09.167: {\"box_pct\": [10.0, 20.7, 66.3, 62.0], \"frame_color\": \"#1C1C1F\", \"textured_ratio\": 0.67, \"highlight_color\": \"#2F83A5\", \"highlight_stroke_px\": 7, \"highlight_box_p"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[5]:timeline": {
+      "status": "seen",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "evidence": "timeline pixel detector on scene004_settled.png @ 00:00:12.867: {\"node_count\": 4, \"node_color\": \"#E2562E\", \"node_size_px\": 28, \"line_color\": \"#6E6B70\", \"line_px\": 4, \"line_y_pct\": 56.1, \"line_span_pct\": 80.0}"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[6]:code_block": {
+      "status": "seen",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "evidence": "uniform panel #1F2330 + 1 code-like OCR lines @ 00:00:18.233"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[7]:code_block": {
+      "status": "inferred",
+      "confidence": 0.55,
+      "evidence": [
+        {
+          "evidence": "uniform panel #B5B1AF + 0 code-like OCR lines @ 00:00:23.833"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[8]:compare_columns": {
+      "status": "seen",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "evidence": "compare_columns pixel detector on scene008_settled.png @ 00:00:24.233: {\"panel_fill\": \"#1F2330\", \"gap_pct\": 3.33, \"radius_px\": 20, \"panel_w_pct\": 38.3}"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components[9]:flow_chart": {
+      "status": "seen",
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "evidence": "flow_chart pixel detector on scene009_settled.png @ 00:00:29.233: {\"node_count\": 4, \"orientation\": \"horizontal\", \"node_fill\": \"#1F2330\", \"node_stroke\": \"#D25C3D\", \"arrow_color\": \"#6D6B6D\", \"radius_px\": 27, \"node_w_pct\": 16.9}"
+        }
+      ],
+      "method": "heuristic detector",
+      "note": "taxonomy mapping is a manual table"
+    },
+    "components_style.compare": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "evidence": "compare_columns pixel detector on scene008_settled.png @ 00:00:24.233: {\"panel_fill\": \"#1F2330\", \"gap_pct\": 3.33, \"radius_px\": 20, \"panel_w_pct\": 38.3}"
+        }
+      ],
+      "method": "compare_columns pixel detector (scripts/components_detect.py)"
+    },
+    "components_style.evidence": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "evidence": "evidence_frame pixel detector on scene002_settled.png @ 00:00:07.933: {\"box_pct\": [10.0, 20.7, 72.0, 62.0], \"frame_color\": \"#1E1B1B\", \"textured_ratio\": 0.77}"
+        },
+        {
+          "evidence": "evidence_frame pixel detector on scene003_settled.png @ 00:00:09.167: {\"box_pct\": [10.0, 20.7, 66.3, 62.0], \"frame_color\": \"#1C1C1F\", \"textured_ratio\": 0.67, \"highlight_color\": \"#2F83A5\", \"highlight_stroke_px\": 7, \"highlight_box_p"
+        }
+      ],
+      "method": "evidence_frame pixel detector (scripts/components_detect.py)"
+    },
+    "components_style.flow": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "evidence": "flow_chart pixel detector on scene009_settled.png @ 00:00:29.233: {\"node_count\": 4, \"orientation\": \"horizontal\", \"node_fill\": \"#1F2330\", \"node_stroke\": \"#D25C3D\", \"arrow_color\": \"#6D6B6D\", \"radius_px\": 27, \"node_w_pct\": 16.9}"
+        }
+      ],
+      "method": "flow_chart pixel detector (scripts/components_detect.py)"
+    },
+    "components_style.progress_bar": {
+      "status": "seen",
+      "confidence": 0.9,
+      "method": "edge-bar detection"
+    },
+    "components_style.subtitle": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "evidence": "centred OCR lines at y>78% in 11/12 scenes, e.g. '今天聊聊团队里最党用的Git分支模型'"
+        }
+      ],
+      "method": "local background + ink of subtitle OCR lines"
+    },
+    "components_style.timeline": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "evidence": "timeline pixel detector on scene004_settled.png @ 00:00:12.867: {\"node_count\": 4, \"node_color\": \"#E2562E\", \"node_size_px\": 28, \"line_color\": \"#6E6B70\", \"line_px\": 4, \"line_y_pct\": 56.1, \"line_span_pct\": 80.0}"
+        }
+      ],
+      "method": "timeline pixel detector (scripts/components_detect.py)"
+    },
+    "layout.alignment": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "left-aligned boxes 0.879, centred 0.276"
+    },
+    "layout.decor.glow": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "radial glow not measured automatically — check contact sheet"
+    },
+    "layout.decor.grid_lines": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+        }
+      ],
+      "method": "rows/cols of faint (ΔE 1.2–12) pixels repeating at a regular period",
+      "note": "period≈80.0px"
+    },
+    "layout.decor.noise": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "film grain/noise not measured"
+    },
+    "layout.grid": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "best-fit column grid to box left edges",
+      "note": "gutter is a default"
+    },
+    "layout.margins_pct.bottom": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "lowest foreground edge (subtitle)"
+    },
+    "layout.margins_pct.left": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "5th percentile of foreground-box left edges"
+    },
+    "layout.margins_pct.right": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "mirrored from left (content does not reach right edge)"
+    },
+    "layout.margins_pct.top": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "clipped bottom margin; vertical centring assumed"
+    },
+    "layout.radius_px": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene005_settled.png",
+          "box": [
+            290,
+            452,
+            1376,
+            284
+          ]
+        }
+      ],
+      "method": "diagonal scan from panel corner to first surface pixel"
+    },
+    "layout.safe_area_pct": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "min(margins)"
+    },
+    "motion.durations_s.base": {
+      "status": "seen",
+      "method": "round 1 gap M6: ref event 0.2835s / replica 0.2s, scaled 0.321→0.455",
+      "evidence": [
+        {
+          "file": "work/run9/compare_r1/gap-report.md"
+        }
+      ],
+      "confidence": 0.9
+    },
+    "motion.easing.emphasis": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "default overshoot"
+    },
+    "motion.easing.enter": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:00.000",
+          "event_duration_s": 0.867
+        },
+        {
+          "tc": "00:00:01.200",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:04.533",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:05.400",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:24.967",
+          "event_duration_s": 0.233
+        },
+        {
+          "tc": "00:00:25.300",
+          "event_duration_s": 0.3
+        }
+      ],
+      "method": "least-squares cubic-bezier fit to cumulative optical-flow speed per event (median)"
+    },
+    "motion.easing.exit": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "exits not separately measured"
+    },
+    "motion.easing.family_guess": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:00.000",
+          "event_duration_s": 0.867
+        },
+        {
+          "tc": "00:00:01.200",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:04.533",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:05.400",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:14.733",
+          "event_duration_s": 0.1
+        },
+        {
+          "tc": "00:00:24.967",
+          "event_duration_s": 0.233
+        }
+      ],
+      "method": "velocity-profile peak position / oscillation"
+    },
+    "motion.easings": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "CSS strings derived from motion.easing / spring"
+    },
+    "motion.enter_distance_px": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "default (flow magnitude not converted to distance)"
+    },
+    "motion.enter_style": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:01.200",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:04.533",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:05.400",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:24.967",
+          "event_duration_s": 0.233
+        },
+        {
+          "tc": "00:00:25.300",
+          "event_duration_s": 0.3
+        },
+        {
+          "tc": "00:00:25.667",
+          "event_duration_s": 0.3
+        }
+      ],
+      "method": "majority optical-flow direction of entrance events"
+    },
+    "motion.keyframes": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "keyframe tracks reconstructed from enter_style / transition type + measured durations"
+    },
+    "motion.spring": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "generic under-damped spring; not fitted"
+    },
+    "motion.stagger_s": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:00.000",
+          "event_duration_s": 0.867
+        },
+        {
+          "tc": "00:00:01.200",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:04.533",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:05.400",
+          "event_duration_s": 0.367
+        },
+        {
+          "tc": "00:00:14.733",
+          "event_duration_s": 0.1
+        },
+        {
+          "tc": "00:00:24.967",
+          "event_duration_s": 0.233
+        }
+      ],
+      "method": "median interval between entrance onsets within a scene"
+    },
+    "motion.title_enter_style": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:00.000",
+          "event_duration_s": 0.867
+        }
+      ],
+      "method": "easing family of first event in scene 0"
+    },
+    "motion.transition.duration_s": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:03.033",
+          "event_duration_s": 0.9
+        },
+        {
+          "tc": "00:00:07.833",
+          "event_duration_s": 5.833
+        },
+        {
+          "tc": "00:00:17.800",
+          "event_duration_s": 0.767
+        },
+        {
+          "tc": "00:00:23.700",
+          "event_duration_s": 1.133
+        },
+        {
+          "tc": "00:00:29.200",
+          "event_duration_s": 0.933
+        },
+        {
+          "tc": "00:00:34.200",
+          "event_duration_s": 1.0
+        }
+      ],
+      "method": "frames with energy ≥20% of peak around the cut"
+    },
+    "motion.transition.type": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+        },
+        {
+          "tc": "00:00:03.033",
+          "event_duration_s": 0.9
+        },
+        {
+          "tc": "00:00:07.833",
+          "event_duration_s": 5.833
+        },
+        {
+          "tc": "00:00:17.800",
+          "event_duration_s": 0.767
+        },
+        {
+          "tc": "00:00:23.700",
+          "event_duration_s": 1.133
+        },
+        {
+          "tc": "00:00:29.200",
+          "event_duration_s": 0.933
+        },
+        {
+          "tc": "00:00:34.200",
+          "event_duration_s": 1.0
+        }
+      ],
+      "method": "optical-flow direction during events spanning a cut",
+      "note": "wipe vs fade cannot be told apart by flow; check keyframes"
+    },
+    "motion.typing_cps": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "tc": "00:00:18.233",
+          "chars_ocr": 79,
+          "typing_span_s": 4.93
+        }
+      ],
+      "method": "OCR code chars / ink-growth span inside code panel (5%→97% of final ink)",
+      "note": "OCR misses characters → value is likely LOW"
+    },
+    "palette.accent": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/palette_global.png"
+        }
+      ],
+      "method": "second distinct chromatic cluster (ΔE2000>15 from primary)",
+      "note": "role is inferred"
+    },
+    "palette.bg": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png"
+        }
+      ],
+      "method": "mode of quantised frame-border pixels",
+      "note": "border share 0.911"
+    },
+    "palette.code_text": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "ocr_line": "三分钟讲清feature/release/hotfix"
+        },
+        {
+          "ocr_line": "三条铁律"
+        },
+        {
+          "ocr_line": "main永远可发布"
+        },
+        {
+          "ocr_line": "回功能都在feature分支开发"
+        }
+      ],
+      "method": "ink colour of OCR lines inside surface"
+    },
+    "palette.measured_swatches": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/palette_global.png"
+        }
+      ],
+      "method": "global k-means (k=8, Lab), merged ΔE<4"
+    },
+    "palette.primary": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/palette_global.png"
+        }
+      ],
+      "method": "most frequent chromatic k-means cluster (Lab) of foreground pixels",
+      "note": "role assignment (primary vs accent) is inferred; the colour value is measured"
+    },
+    "palette.surface": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "box": [
+            176,
+            408,
+            1572,
+            422
+          ]
+        }
+      ],
+      "method": "median colour inside large uniform foreground box"
+    },
+    "palette.text": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png",
+          "ocr_line": "三条铁律"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene004_settled.png",
+          "ocr_line": "一次发布的时间线"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "ocr_line": "开一个功能分支"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene009_settled.png",
+          "ocr_line": "R流程"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene010_settled.png",
+          "ocr_line": "合并冲突次数《每月)"
+        }
+      ],
+      "method": "dominant ink colour of OCR lines on bg"
+    },
+    "palette.text_muted": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene000_settled.png",
+          "ocr_line": "三分钟讲清feature/release/hotfix"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene011_settled.png",
+          "ocr_line": "平均发布周期短"
+        }
+      ],
+      "method": "ink colour of lower-contrast OCR lines"
+    },
+    "rhythm.audio_bpm": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "work/run9/ref_analysis/audio_onsets.csv"
+        }
+      ],
+      "method": "spectral-flux autocorrelation"
+    },
+    "rhythm.av_sync": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "pairs": [
+            {
+              "visual_s": 1.2,
+              "audio_s": 1.184,
+              "offset_ms": -16.0
+            },
+            {
+              "visual_s": 5.4,
+              "audio_s": 5.387,
+              "offset_ms": -13.0
+            },
+            {
+              "visual_s": 26.433,
+              "audio_s": 26.401,
+              "offset_ms": -32.0
+            },
+            {
+              "visual_s": 34.267,
+              "audio_s": 34.203,
+              "offset_ms": -64.0
+            }
+          ]
+        }
+      ],
+      "method": "nearest audio onset to each cut/entrance"
+    },
+    "rhythm.motion_onset_interval_s": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/motion_energy.csv"
+        }
+      ],
+      "method": "median interval between motion onsets"
+    },
+    "rhythm.pacing_rule": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "summary of shot + stagger stats"
+    },
+    "rhythm.shot_mean_s": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/scenes.csv"
+        },
+        {
+          "tc": "00:00:03.133"
+        },
+        {
+          "tc": "00:00:07.933"
+        },
+        {
+          "tc": "00:00:09.167"
+        },
+        {
+          "tc": "00:00:12.867"
+        },
+        {
+          "tc": "00:00:17.900"
+        }
+      ],
+      "method": "detected cuts"
+    },
+    "rhythm.shot_median_s": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "file": "$T/work/run9/ref_analysis/scenes.csv"
+        },
+        {
+          "tc": "00:00:03.133"
+        },
+        {
+          "tc": "00:00:07.933"
+        },
+        {
+          "tc": "00:00:09.167"
+        },
+        {
+          "tc": "00:00:12.867"
+        },
+        {
+          "tc": "00:00:17.900"
+        }
+      ],
+      "method": "detected cuts"
+    },
+    "rhythm.visual_bpm": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "60 / onset interval folded into 60–180"
+    },
+    "typography.families": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "font identity cannot be measured from pixels",
+      "note": "families are free substitutes chosen by vibe; original font name is UNKNOWN — confirm vibe on contact sheet"
+    },
+    "typography.font_substitutions": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "vibe → free substitute table (references/font-alternatives.md)",
+      "note": "original font identity is UNKNOWN; never ship the original font file"
+    },
+    "typography.letter_spacing_em": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "default"
+    },
+    "typography.line_height": {
+      "status": "unknown",
+      "confidence": 0.2,
+      "method": "default"
+    },
+    "typography.scale_px.body": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png",
+          "ocr_line": "直接推了main",
+          "bbox": [
+            265,
+            476,
+            200,
+            45
+          ]
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene004_settled.png",
+          "ocr_line": "开分支",
+          "bbox": [
+            336,
+            655,
+            96,
+            31
+          ]
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene004_settled.png",
+          "ocr_line": "提PR",
+          "bbox": [
+            727,
+            655,
+            82,
+            31
+          ]
+        }
+      ],
+      "method": "most frequent OCR line size (ink height / 0.88 CJK, /0.72 Latin)",
+      "note": "font size from ink height is an estimate (±10%)"
+    },
+    "typography.scale_px.caption": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "body × 0.8"
+    },
+    "typography.scale_px.code": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "ocr_line": "terminal"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "ocr_line": "git switch -c"
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "ocr_line": "git add"
+        }
+      ],
+      "method": "code-line ink height / 0.95 (mono lines span ascender→descender)"
+    },
+    "typography.scale_px.display": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene002_settled.png",
+          "ocr_line": "事故现",
+          "bbox": [
+            194,
+            142,
+            163,
+            93
+          ]
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene008_settled.png",
+          "ocr_line": "Merge还是Rebase",
+          "bbox": [
+            195,
+            288,
+            695,
+            84
+          ]
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png",
+          "ocr_line": "三条铁律",
+          "bbox": [
+            197,
+            362,
+            313,
+            110
+          ]
+        }
+      ],
+      "method": "largest OCR size cluster (≥2.4× body)"
+    },
+    "typography.scale_px.h1": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene001_settled.png",
+          "ocr_line": "三条铁律",
+          "bbox": [
+            197,
+            362,
+            313,
+            110
+          ]
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene004_settled.png",
+          "ocr_line": "一次发布的时间线",
+          "bbox": [
+            195,
+            348,
+            629,
+            78
+          ]
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene009_settled.png",
+          "ocr_line": "R流程",
+          "bbox": [
+            244,
+            423,
+            214,
+            76
+          ]
+        }
+      ],
+      "method": "largest OCR heading cluster above body"
+    },
+    "typography.scale_px.h2": {
+      "status": "seen",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene003_settled.png",
+          "ocr_line": "事故现场",
+          "bbox": [
+            194,
+            142,
+            218,
+            54
+          ]
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene005_settled.png",
+          "ocr_line": "开一个功能分支",
+          "bbox": [
+            211,
+            330,
+            387,
+            79
+          ]
+        },
+        {
+          "frame": "$T/work/run9/ref_analysis/keyframes/scene006_settled.png",
+          "ocr_line": "开一个功能分支",
+          "bbox": [
+            195,
+            302,
+            387,
+            79
+          ]
+        }
+      ],
+      "method": "OCR cluster between h1 and body"
+    },
+    "typography.vibe": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "method": "OCR script mix + code detection"
+    },
+    "typography.weights": {
+      "status": "inferred",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "ocr_line": "三条铁律"
+        },
+        {
+          "ocr_line": "事故现"
+        },
+        {
+          "ocr_line": "一次发布的时间线"
+        }
+      ],
+      "method": "heading/body ink-coverage ratio = 1.23",
+      "note": "weight from ink coverage is a rough guess; confirm on the contact sheet"
+    }
+  },
+  "unknowns": [
+    {
+      "path": "layout.decor.glow",
+      "why": "radial glow not measured automatically — check contact sheet"
+    },
+    {
+      "path": "layout.decor.noise",
+      "why": "film grain/noise not measured"
+    },
+    {
+      "path": "motion.easing.emphasis",
+      "why": "default overshoot"
+    },
+    {
+      "path": "motion.easing.exit",
+      "why": "exits not separately measured"
+    },
+    {
+      "path": "motion.enter_distance_px",
+      "why": "default (flow magnitude not converted to distance)"
+    },
+    {
+      "path": "typography.families",
+      "why": "font identity cannot be measured from pixels"
+    },
+    {
+      "path": "typography.letter_spacing_em",
+      "why": "default"
+    },
+    {
+      "path": "typography.line_height",
+      "why": "default"
+    }
+  ],
+  "fidelity_notes": {
+    "rule": "seen = measured from pixels/audio with evidence; inferred = derived by heuristic or visual judgement; unknown = not measured (≠ absent). Rule adapted from aicodeking/leanrea (MIT).",
+    "status_counts": {
+      "seen": 43,
+      "inferred": 27,
+      "unknown": 8
+    },
+    "measured": [
+      "canvas.fps",
+      "canvas.height",
+      "canvas.width",
+      "components[0]:subtitle_bar",
+      "components[10]:bar_chart",
+      "components[11]:number_counter",
+      "components[13]:progress_bar",
+      "components[14]:transition",
+      "components[2]:bullet_list",
+      "components[3]:evidence_frame",
+      "components[4]:evidence_frame",
+      "components[5]:timeline",
+      "components[6]:code_block",
+      "components[8]:compare_columns",
+      "components[9]:flow_chart",
+      "components_style.compare",
+      "components_style.evidence",
+      "components_style.flow",
+      "components_style.progress_bar",
+      "components_style.subtitle",
+      "components_style.timeline",
+      "layout.decor.grid_lines",
+      "layout.margins_pct.bottom",
+      "layout.margins_pct.left",
+      "layout.radius_px",
+      "motion.durations_s.base",
+      "motion.transition.duration_s",
+      "palette.accent",
+      "palette.bg",
+      "palette.code_text",
+      "palette.measured_swatches",
+      "palette.primary",
+      "palette.surface",
+      "palette.text",
+      "palette.text_muted",
+      "rhythm.av_sync",
+      "rhythm.shot_mean_s",
+      "rhythm.shot_median_s",
+      "typography.scale_px.body",
+      "typography.scale_px.code",
+      "typography.scale_px.display",
+      "typography.scale_px.h1",
+      "typography.scale_px.h2"
+    ],
+    "inferred": [
+      "_readme",
+      "components[12]:keyword_highlight",
+      "components[1]:title_card",
+      "components[7]:code_block",
+      "layout.alignment",
+      "layout.grid",
+      "layout.margins_pct.right",
+      "layout.margins_pct.top",
+      "layout.safe_area_pct",
+      "motion.easing.enter",
+      "motion.easing.family_guess",
+      "motion.easings",
+      "motion.enter_style",
+      "motion.keyframes",
+      "motion.spring",
+      "motion.stagger_s",
+      "motion.title_enter_style",
+      "motion.transition.type",
+      "motion.typing_cps",
+      "rhythm.audio_bpm",
+      "rhythm.motion_onset_interval_s",
+      "rhythm.pacing_rule",
+      "rhythm.visual_bpm",
+      "typography.font_substitutions",
+      "typography.scale_px.caption",
+      "typography.vibe",
+      "typography.weights"
+    ],
+    "defaults": [
+      "layout.decor.glow",
+      "layout.decor.noise",
+      "motion.easing.emphasis",
+      "motion.easing.exit",
+      "motion.enter_distance_px",
+      "typography.families",
+      "typography.letter_spacing_em",
+      "typography.line_height"
+    ],
+    "needs_visual_review": [
+      "typography.families / vibe: 用 Read 看 contact_sheet.png，判断字形气质（几何/人文/圆体/宋体/手写）并选免费替代",
+      "typography.scale_px.display: 大标题经常读不出来，对照关键帧目测",
+      "layout.decor: 背景网格、光斑、噪点、描边、阴影等装饰",
+      "motion.transition.type: wipe/fade/slide 需看 entry/mid 关键帧确认",
+      "components: 检测器漏掉的元件（图标、箭头、流程图、标注框…）"
+    ],
+    "manual_overrides": [
+      "_readme",
+      "motion.durations_s.base"
+    ],
+    "not_pixel_identical_because": [
+      "原字体文件不复制，只用免费替代字体",
+      "原素材/logo/角色不搬运",
+      "随机种子、抗锯齿和编码损伤不可复原",
+      "缓动曲线是从像素运动反推的近似"
+    ]
+  }
+}
