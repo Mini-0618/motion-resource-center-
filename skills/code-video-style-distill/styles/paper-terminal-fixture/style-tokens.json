@@ -328,7 +328,7 @@
         "video": [
           "V-13"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "references/motion-taxonomy.md"
       },
       "params": {
         "bg": "#3D3D3B",
@@ -351,7 +351,7 @@
           "V-01",
           "V-15"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "references/motion-taxonomy.md"
       },
       "params": {}
     },
@@ -371,7 +371,7 @@
           "V-01",
           "V-10"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "references/motion-taxonomy.md"
       },
       "params": {}
     },
@@ -390,7 +390,7 @@
         "video": [
           "V-05"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "references/motion-taxonomy.md"
       },
       "params": {}
     },
@@ -409,7 +409,7 @@
         "video": [
           "V-02"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "references/motion-taxonomy.md"
       },
       "params": {
         "bars": [
@@ -450,7 +450,7 @@
           "V-02",
           "V-01"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "references/motion-taxonomy.md"
       },
       "params": {}
     },
@@ -469,7 +469,7 @@
           "V-01",
           "V-13"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "references/motion-taxonomy.md"
       },
       "params": {
         "syntax": "use **keyword** in script.json text"
@@ -488,7 +488,7 @@
         "video": [
           "V-15"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "references/motion-taxonomy.md"
       },
       "params": {
         "position": "top"
@@ -507,7 +507,7 @@
         "video": [
           "V-07"
         ],
-        "source": "/workspace/ip-team/deliverables/motion/taxonomy-from-user.md"
+        "source": "references/motion-taxonomy.md"
       },
       "params": {}
     }
