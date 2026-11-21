@@ -1,8 +1,8 @@
 {
-  "time_beijing": "2026-11-21T15:43:03+08:00",
+  "time_beijing": "2026-11-21T23:38:15+08:00",
   "target": 24,
   "new_candidates": 24,
-  "source_repositories_examined": 25,
+  "source_repositories_examined": 51,
   "errors": [],
   "candidates_without_verified_preview": 24,
   "source": "GitHub public repositories only"
