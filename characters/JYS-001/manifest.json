@@ -1,0 +1,124 @@
+{
+  "id": "JYS-001",
+  "version": "1.3-public-share",
+  "created_at": "2026-11-22",
+  "asset_type": "AI_generated_reference_images_not_actual_3D",
+  "public_repository": "Mini-0618/motion-resource-center-",
+  "images": [
+    {
+      "path": "images/01_identity/face_front.jpg",
+      "status": "identity_candidate",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/01_identity/photoreal_face_threequarter.jpg",
+      "status": "identity_candidate",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/02_body_reference/full_front_barefoot.jpg",
+      "status": "unverified",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/02_body_reference/t_bind_reference.jpg",
+      "status": "unverified",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/02_body_reference/turnaround_composite.jpg",
+      "status": "unverified",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/03_outfit_variants/black_heart_cutout_before_revision.jpg",
+      "status": "rejected_leg_proportions",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/03_outfit_variants/black_heart_cutout_longer_slimmer_legs_candidate.jpg",
+      "status": "awaiting_user_approval",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/03_outfit_variants/black_satin_evening_gown.jpg",
+      "status": "outfit_candidate",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/03_outfit_variants/black_satin_slit_dress.jpg",
+      "status": "outfit_candidate",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/03_outfit_variants/pink_turtleneck_mini_dress.jpg",
+      "status": "outfit_candidate",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/04_hair_specs/H01_H12_overview.jpg",
+      "status": "ai_reference_unverified",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/04_hair_specs/H01_crown_whorl.jpg",
+      "status": "ai_reference_unverified",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/04_hair_specs/H02_hairline.jpg",
+      "status": "ai_reference_unverified",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/04_hair_specs/H03_bangs.jpg",
+      "status": "ai_reference_unverified",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/04_hair_specs/H04_left_hair.jpg",
+      "status": "ai_reference_unverified",
+      "format": "jpg",
+      "lossy": true
+    },
+    {
+      "path": "images/04_hair_specs/H05_right_hair.jpg",
+      "status": "ai_reference_unverified",
+      "format": "jpg",
+      "lossy": true
+    }
+  ],
+  "design_targets": {
+    "height_cm": 180,
+    "heads_tall": 9,
+    "head_height_cm": 20,
+    "weight_kg_approx": 58,
+    "bust_cm": 88,
+    "waist_cm": 62,
+    "hip_cm": 96,
+    "shoe_eu": 40,
+    "leg_proportion_visual_target": "58-60% (definition pending)",
+    "rig_pose_zh": "标准 T 字绑定姿势"
+  },
+  "pending": [
+    "identity approval",
+    "leg/body proportion approval",
+    "orthographic model validation",
+    "H06–H12",
+    "true Blender mesh/PBR/rig/ARKit52/animations"
+  ]
+}
