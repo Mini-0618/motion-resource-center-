@@ -1,0 +1,7 @@
+asset_id,type,source,license_or_basis,allowed_use,unknowns
+A-01,原片视频文件（original.mp4）,Skillry CDN 直链 https://media.skillry.dev/opus-5-5/astrothewizard-618782/original.mp4（原帖 https://x.com/AstroTheWizard/status/2103629247751618782）,作者 @AstroTheWizard 公开发布；本库仅作分析证据留存,仅分析/蒸馏取证；不得搬运画面、配音、音乐进任何成片,SHA256 997f3acf842c583f1001d0f7fe5fcc80f7c2ff8bb16a5de00d8e2b2a02bb8d4c；8160157字节；1280x720/60fps/60.05s
+A-02,remake视频文件（remake.mp4）,Skillry CDN 直链 https://media.skillry.dev/opus-5-5/astrothewizard-618782/remake.mp4,Skillry（@skillry_dev）以同一提示词重生成；仅作对照分析,仅对照分析；不得搬运,SHA256 284c48e4988df1a77d9548b6ffaa8908f7ac1b7c121250b889e5b2b72063691a；6519391字节；1280x720/30fps/60.03s；无音轨
+A-03,提示词全文,GitHub 仓 yihui-dev/awesome-opus5-5-videos prompts/astrothewizard-618782.md ＋ data/videos.json（prompt_partial=false）,仓库以开源合集形式发布（仓内 LICENSE 文件）；作者原始提示词,方法拆解与结构引用（短句级别）；不整段复制为己方提示词发布,字数2470字符（英文）
+A-04,海报图（poster.webp）,Skillry CDN https://media.skillry.dev/opus-5-5/astrothewizard-618782/original.0b4b294e7f.webp,同A-01,仅盘点/索引展示,SHA256 0b4b294e7fa9d4ebdb8824e1b8148eb71a134c579408d521d4187f1e8df327c9（与URL内嵌哈希一致）；960x540
+A-05,旁白转写（audio.wav＋转写文本）,自原片A-01提取音频后 Groq Whisper 转写,原片旁白版权归原作者；转写仅作分析底稿,仅分析引用（短句）；不复制为己方文案,声线/TTS型号未知
+A-06,分析中间产物（接触表/静帧）,自A-01/A-02抽帧（work/contact_original.png、contact_remake.png、contact1fps.png、still_*.png）,自制分析材料,仅蒸馏取证,—

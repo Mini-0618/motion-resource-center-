@@ -1,0 +1,34 @@
+event_id,track,start,end,text_or_event,linked_shots,evidence,confidence
+VO-01,旁白,00:00.50,00:01.50,"Meet a photon.",S01,"Groq Whisper转写＋烧录字幕目检对齐（±0.5s）",高
+VO-02,旁白,00:01.50,00:03.00,"A tiny speck of light.",S01,"同上",高
+VO-03,旁白,00:03.00,00:06.50,"It's about to make the longest commute in the solar system.",S01;S02,"同上",高
+VO-04,旁白,00:07.00,00:09.50,"It was born here, in the heart of the Sun.",S03,"同上",高
+VO-05,旁白,00:09.50,00:10.50,"Fifteen million degrees...",S04,"同上",高
+VO-06,旁白,00:10.50,00:12.50,"...and very, very crowded.",S04,"同上",高
+VO-07,旁白,00:12.50,00:16.50,"Every time it tries to leave, it bumps into something.",S05,"同上",高
+VO-08,旁白,00:16.50,00:18.50,"Boing! Off in a random direction.",S05,"同上；与画面拟声字同帧",高
+VO-09,旁白,00:18.50,00:20.50,"Boing! And again. And again.",S05,"同上",高
+VO-10,旁白,00:20.50,00:22.50,"It's like trying to leave a party,",S06,"同上",高
+VO-11,旁白,00:22.50,00:24.50,"where everybody wants to say goodbye.",S06,"同上",高
+VO-12,旁白,00:24.50,00:27.50,"It keeps this up for a hundred thousand years.",S07,"同上",高
+VO-13,旁白,00:27.50,00:30.50,"While it bounces, the mammoths vanish,",S07,"同上",高
+VO-14,旁白,00:30.50,00:32.50,"the first cities rise,",S07,"同上",高
+VO-15,旁白,00:32.50,00:34.50,"and somebody builds the pyramids.",S07,"同上",高
+VO-16,旁白,00:34.50,00:36.50,"Near the top, the Sun gives it a lift.",S08,"同上",高
+VO-17,旁白,00:36.50,00:38.50,"A great, boiling elevator.",S08,"同上",高
+VO-18,旁白,00:38.50,00:39.50,"And then... Pop!",S09,"同上；Pop与白闪同帧",高
+VO-19,旁白,00:39.50,00:41.50,"Out here, there's nothing in the way.",S10,"同上",高
+VO-20,旁白,00:41.50,00:44.50,"A hundred and fifty million kilometres,",S10,"同上",高
+VO-21,旁白,00:44.50,00:47.50,"in eight minutes and twenty seconds.",S10,"同上",高
+VO-22,旁白,00:47.50,00:49.50,"Not one single bump.",S10,"同上；与BUMPS 0徽章同段",高
+VO-23,旁白,00:49.50,00:50.50,"And after all that wandering,",S11,"同上",高
+VO-24,旁白,00:50.50,00:51.50,"It lands, right here.",S11,"同上",高
+VO-25,旁白,00:51.50,00:53.00,"In your eye.",S11,"同上",高
+VO-26,旁白,00:53.50,00:55.00,"So next time the sun warms your face,",S12,"同上",高
+VO-27,旁白,00:55.00,00:56.50,"say hi.",S12,"同上",高
+VO-28,旁白,00:56.50,00:59.50,"It came a very long way.",S13,"同上",高
+MUS-01,音乐,00:00.00,01:00.05,"连续音乐床全程不断（-45dB阈值下无≥0.35s静音段）；曲风与分段变化未耳听核实，标待复核",全片,"ffmpeg silencedetect无检出＋loudnorm测量；提示词要求原创配乐随场景变段（推断）",中
+SFX-01,音效,00:16.50,00:20.50,"碰撞拟声（boing）与画面BOING字卡同步——音频本体未耳听，同步关系据提示词规格＋字卡同帧推断，标待复核",S05,"画面已观察；音频待复核",低
+SFX-02,音效,00:38.50,00:39.50,"POP音效与白闪同帧——同SFX-01口径",S09,"画面已观察；音频待复核",低
+MIX-01,混音测量,00:00.00,01:00.05,"整片综合响度 -14.38 LUFS；真峰值 -0.81 dBTP；响度范围 LRA 1.7 LU（流媒体母带规格，与提示词「mastered to streaming loudness」对应）",全片,"ffmpeg loudnorm测量（已实测）",高
+NOTE-01,备注,00:00.00,01:00.05,"旁白总词数约158词／60秒 ≈ 158 wpm；旁白为TTS合成（提示词明示要求TTS，声线型号未知）；remake版无音轨（ffprobe实测仅视频流）",全片,"转写计数＋ffprobe",高
