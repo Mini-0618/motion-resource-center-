@@ -1,0 +1,14 @@
+# 原片、音频、截图不入库（来自他人视频，有版权风险）
+*.mp4
+*.m4a
+*.webm
+*.wav
+*.mp3
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+# 抽帧与放大裁切目录整目录排除
+frames/
+**/frames/

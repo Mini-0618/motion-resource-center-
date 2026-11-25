@@ -1,0 +1,23 @@
+event_id,video,start_hhmmss,end_hhmmss,layer,description,measurement,evidence_status,tool
+E01,URTeTJ5tDrQ,00:00:01.20,00:00:14.71,镜头,开场大全景：公路+房车，人物走向路中央（scdet 检出区间）,镜长13.51s,已观察,ffmpeg scdet0.12+抽帧
+E02,URTeTJ5tDrQ,00:00:00.00,00:00:21.75,声音,无音乐段，仅拟音/环境声,M(瞬时响度)约 -46~-54 LUFS,已观察(响度)/已推断(内容为拟音),ebur128
+E03,URTeTJ5tDrQ,00:00:21.50,00:00:22.00,画面,吹蜡烛动作：21.50帧蛋糕贴近嘴边，22.00帧蛋糕放低,0.5s间隔抽帧,已观察(抽帧)/待复核(吹气精确帧),抽帧
+E04,URTeTJ5tDrQ,00:00:21.90,00:00:22.20,声音,音乐进入（21.9-22.1 先有一段宽带噪声，推断为吹气；22.1 起为音调性声音）,EBU R128 瞬时响度 M(400ms窗/100ms步进) -52.2@21.70 → -26.2@22.10 → -23.7@22.20 → 平台约 -20.6~-21.6(22.4-23.0)；100ms RMS -53.1 → -26.2 dBFS,已观察(响度)/已推断(是音乐；未分轨),ebur128+RMS+谱平坦度
+E05,URTeTJ5tDrQ,00:00:22.94,00:00:25.72,声音,同期声 "Okay I think that's good",whisper small.en,已观察(机器转写),faster-whisper
+E06,URTeTJ5tDrQ,00:00:25.72,00:00:31.54,声音,旁白 "So on October 30th 2021 ... turned 20 years old.",时长5.82s,已观察(机器转写),faster-whisper
+E07,URTeTJ5tDrQ,00:00:31.54,00:00:41.30,声音,无旁白窗口（BORDERLESS 定格动画标题+歌曲）,9.76s,已观察(无转写语音)/待复核(歌曲人声是否在此段),faster-whisper+ebur128
+E08,URTeTJ5tDrQ,00:00:32.67,00:00:41.78,镜头,BORDERLESS 定格纸字标题叠在房车画面上（scdet 区间）,9.11s,已观察,scdet+抽帧
+E09,URTeTJ5tDrQ,00:00:41.30,00:00:47.46,声音,旁白 "...celebrating my 20th birthday on the side of a road.",6.16s,已观察(机器转写),faster-whisper
+E10,URTeTJ5tDrQ,00:00:47.46,00:01:00.26,声音,无旁白呼吸段，含同期笑闹 "Oh I ate a rock"(48.70-53.00),12.80s,已观察(机器转写),faster-whisper
+E11,URTeTJ5tDrQ,00:01:00.26,00:01:12.90,声音,旁白 "But anyways the point is ... going to die.",12.64s；die 词结束 72.90,已观察(机器转写词级),faster-whisper
+E12,URTeTJ5tDrQ,00:01:12.90,00:01:13.00,声音,音乐骤停,M 从 -19.2(72.75) 到 -36.5(73.00) LUFS；voice 频段 39.2→1.4 dB(相对),已观察(响度/频段)/已推断(是音乐被切断),ebur128+FFT
+E13,URTeTJ5tDrQ,00:01:13.75,00:01:17.00,声音,低频重击(作者称 Bass Boom)及衰减,sub(20-120Hz)相对能量 73.75 峰值43.5 → 77.00 约12.7,已观察(频段)/已推断(对应作者说的 bass boom),FFT
+E14,URTeTJ5tDrQ,00:01:13.81,00:01:30.82,镜头,暗色长镜头：人物躺在枯木上、褐色枯林背景（scdet 区间）；前约6s SSIM≥0.987(静止)，约80.9s 后 SSIM 降到0.46-0.90(人物转头，可能有轻微数字推近，待复核),17.01s,已观察,scdet+抽帧
+E15,URTeTJ5tDrQ,00:01:17.25,00:01:18.50,声音,近静默,M ≤ -48 LUFS 约1.25s；silencedetect(-40dB/0.4s) 77.39-79.35 共1.96s,已观察,ebur128+silencedetect
+E16,URTeTJ5tDrQ,00:01:18.50,00:01:26.62,声音,低沉持续音渐强(作者字幕标 ominous music),M -48.7 → 约 -25 LUFS(84.0)；high 频段一直约 -15(相对)，谱平坦度≈0 (音调性),已观察(响度/频段)/已推断(是音乐铺底),ebur128+FFT
+E17,URTeTJ5tDrQ,00:01:26.62,00:01:30.60,声音,蒙太奇第一句 "There are many uncertainties in life. Death is not one of them.",VO 静默窗 72.90→86.62 = 13.72s,已观察(机器转写),faster-whisper
+E18,URTeTJ5tDrQ,00:01:30.75,00:01:30.82,声音+镜头,台词结束后低频重击+切到铁路桥俯拍航拍（监护仪画面在 00:01:34.76 之后；v1 误写为监护仪，已更正）,sub 峰值53 (90.75)；切点 90.82；them 结束 90.60,已观察,FFT+scdet
+E19,URTeTJ5tDrQ,00:01:26.62,00:02:08.50,镜头,死亡主题蒙太奇（库存/档案素材+旧电视框+烧录字幕）,scdet0.12 检出16个切点/41.88s → 17镜 平均2.46s（下限）,已观察,scdet+抽帧
+E20,URTeTJ5tDrQ,00:02:06.66,00:02:08.50,镜头,同一枯木镜头复现，切点落在 body 词起点(126.66),镜长1.84s（首次出现17.01s）,已观察,scdet+whisper词级
+E21,URTeTJ5tDrQ,00:02:08.50,00:02:10.86,镜头+声音,黑场；forever 结束128.52；中频瞬间消失、低频拖尾,M -17.5 → -35.0 LUFS；voice 频段 22.4→约0,已观察,ebur128+FFT+抽帧
+E22,URTeTJ5tDrQ,00:02:10.86,,镜头+声音,切到森林中坐着对镜头说话，旁白/口播 131.06 开始,,已观察,scdet+whisper

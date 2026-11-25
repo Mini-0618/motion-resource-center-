@@ -1,3 +1,5 @@
+> **状态：专项技术工具（2026-11-24 起退出默认创作流程）。仅在明确需要复刻代码动效风格时调用；不作为加伊莎默认创作依据。**
+
 # AGENTS.md — 给所有 AI 的使用说明（code-video-style-distill）
 
 > 读者：Cursor、Claude Code、Codex、ChatGPT、Grok 等任何能跑命令的 AI 助手。

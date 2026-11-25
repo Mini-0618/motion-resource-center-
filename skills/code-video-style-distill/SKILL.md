@@ -1,7 +1,11 @@
 ---
 name: code-video-style-distill
-description: 参考视频 → 蒸馏风格底座（style-tokens.json）→ 换选题量产（渲染后端可换：Remotion / Lemo-Opuscar 页面 / Motion Canvas / HyperFrames）→ 和原片对比迭代。用于底层由代码生成的动效视频（Remotion/React、GSAP/HTML、Manim、Motion Canvas、AE 表达式风格的 MG/知识类视频）。目标是高保真复刻风格，不承诺像素级一致。
+description: >-
+  专项技术工具 V1.1（2026-11-24 起退出默认创作流程）：仅在明确需要复刻代码动效风格时使用。参考视频 →
+  蒸馏风格底座（style-tokens.json）→ 换选题量产（Remotion / Lemo-Opuscar / Motion Canvas /
+  HyperFrames）→ 和原片对比迭代，适用于 Remotion/GSAP/Manim/Motion Canvas 等代码生成的 MG/知识类视频。
 ---
+> **当前版本：V1.1（2026-11-24）。状态：专项技术工具，已退出默认创作流程。** 仅在明确需要复刻代码动效风格时调用，不作为加伊莎默认创作依据。其输出属于代码动效专项结果，进入正式创作前仍须按 video-distill-master V1.2 的核验规则处理。
 
 # 代码动效视频：风格蒸馏与量产
 
@@ -302,3 +306,12 @@ $env:RIGHTS_OK = "1"
 ## 出处
 
 借鉴思路的项目和许可证见 `$T/THIRD_PARTY_NOTICES.md`；调研依据 `/workspace/ip-team/deliverables/video-reverse/REA调研-可复用点.md`。
+
+## 版本记录与回退
+
+| 版本 | 日期 | 修改前的问题 | 修改内容 | 依据 | 验证 | 对其他流程的影响 |
+| --- | --- | --- | --- | --- | --- | --- |
+| V1.0 | 2026-11（GitHub 提交 d7ac5b5） | — | 风格蒸馏与量产全流程，4 种渲染器 | — | 仓库自带测试 | 曾作为默认创作流程 |
+| V1.1 | 2026-11-24 | 被默认调用；595 条未验证动效候选被当成可用资源 | 描述和正文顶部改为专项技术工具，仅在明确需要复刻代码动效风格时调用；动效候选库降级为候选资产（见 ARCHIVE-STATUS.md） | 用户批准 G-001 任务 1 | 不适用（状态与触发条件调整，执行代码未改） | video-distill-master 第七节同步改为仅在明确需要时调用 |
+
+**回退方式：** V1.0 原文保存在 GitHub 仓库 `skills/code-video-style-distill/history/SKILL.v1.0.md`，以及本机 `/workspace/ip-team/skills-history/code-video-style-distill/SKILL.v1.0.md`。回退时用该文件重写本技能，并恢复 video-distill-master 第七节末尾的原句。差异文件为同目录下的 `v1.0-to-v1.1.diff`。执行代码没有改动，不需要回退代码。

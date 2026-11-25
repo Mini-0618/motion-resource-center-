@@ -1,0 +1,14 @@
+[Parsed_ebur128_0 @ 0x7f23a0002e00] t: 1177.299977 TARGET:-23 LUFS    M: -18.6 S: -13.4     I: -14.1 LUFS       LRA:   4.5 LU
+[Parsed_ebur128_0 @ 0x7f23a0002e00] Summary:
+
+  Integrated loudness:
+    I:         -14.1 LUFS
+    Threshold: -24.3 LUFS
+
+  Loudness range:
+    LRA:         4.5 LU
+    Threshold: -34.3 LUFS
+    LRA low:   -16.8 LUFS
+    LRA high:  -12.4 LUFS
+[out#0/null @ 0x55cc70898cc0] video:0KiB audio:202824KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:19:37.39 bitrate=N/A speed= 554x    

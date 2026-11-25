@@ -1,0 +1,27 @@
+THEORETICALLY MEDIA
+
+Inside the project
+
+Film Project/
+
+_. CLAUDE.md + SKILL.md
+___ references/
+
+__ brief/
+
+_ assets/
+
+__ tracking/
+
+Entry instructions and workflow
+
+Guides, story notes and style
+
+Prompts and shot lists
+
+Images, selects and videc ? = |
+Be
+
+Status, continuity and rest oe 4
+
+nN?

@@ -1,0 +1,15 @@
+THEORETICALLY MEDIA
+
+Inside the project
+
+Film Project/
+
+_. CLAUDE.md + SKILL.md Entry instructions and workflow
+
+__ references/ Guides, story notes and style
+
+__ brief/ Prompts and shot lists
+
+|_ assets/ Images, selects and videc Ae EY
+
+__ tracking/ Status, continuity and rest al an
