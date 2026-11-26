@@ -1,0 +1,266 @@
+{
+  "date": "2026-11-26",
+  "cli_version": "0.8.184",
+  "rendered": false,
+  "registry": {
+    "camera-rig-depth-stack": {
+      "sha256": "d0ab77610390dd1e30ac53347b06e3d6aa432ac972989c18df8593d2a2b6b19e",
+      "matches_cli_lock": true,
+      "exposed_variables": [],
+      "declared_gsap_timeline": false,
+      "external_scripts": []
+    },
+    "caption-clip-wipe": {
+      "sha256": "5675efd493c78d3a50a744ae4eb4b2b60fff97c231a5b756f8991581fbe569c8",
+      "matches_cli_lock": true,
+      "exposed_variables": [],
+      "declared_gsap_timeline": true,
+      "external_scripts": [
+        "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+      ]
+    },
+    "caption-editorial-emphasis": {
+      "sha256": "6144571b6c73dbdec282284fe2277d3c958e15cddaf362295ba9cca02e705d1c",
+      "matches_cli_lock": true,
+      "exposed_variables": [],
+      "declared_gsap_timeline": true,
+      "external_scripts": [
+        "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+      ]
+    },
+    "chart-story": {
+      "sha256": "d65180b77637521ea98676c9af1d59395f1e70ce0d0d5e1f604d02bee2821310",
+      "matches_cli_lock": true,
+      "exposed_variables": [
+        "type",
+        "data",
+        "labels",
+        "emphasize",
+        "unit",
+        "accent",
+        "exit"
+      ],
+      "declared_gsap_timeline": true,
+      "external_scripts": [
+        "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+      ]
+    },
+    "match-cut": {
+      "sha256": "34ffaa62e703ccd331889f44ae09aef650844b8c1f77d5ae417bf65cddf5ec5d",
+      "matches_cli_lock": true,
+      "exposed_variables": [
+        "accent",
+        "label_a",
+        "label_b"
+      ],
+      "declared_gsap_timeline": true,
+      "external_scripts": [
+        "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+      ]
+    }
+  },
+  "lint": {
+    "exit_code": 0,
+    "result": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "filesScanned": 1,
+      "_meta": {
+        "version": "0.8.184",
+        "latestVersion": "0.8.17",
+        "updateAvailable": false
+      }
+    }
+  },
+  "timeline": {
+    "exit_code": 0,
+    "result": {
+      "timeline": {
+        "duration": 8,
+        "tracks": [
+          {
+            "kind": "graphics",
+            "rows": [
+              {
+                "id": "slot-0",
+                "label": null,
+                "kind": "div",
+                "trackKind": "graphics",
+                "start": 0,
+                "duration": 4,
+                "end": 4,
+                "absStart": 0,
+                "absEnd": 4,
+                "file": "index.html",
+                "trackIndex": 1,
+                "src": "compositions/components/chart-story.html",
+                "sourceFile": "compositions/components/chart-story.html",
+                "volume": null,
+                "lanes": [],
+                "laneError": null,
+                "playbackRate": null,
+                "audioGroup": null,
+                "role": null,
+                "durationAuthored": true,
+                "durationSource": "authored",
+                "pendingReason": null,
+                "children": [
+                  {
+                    "kind": "graphics",
+                    "index": 1
+                  }
+                ],
+                "inside": [],
+                "ref": "#slot-0",
+                "warnings": [],
+                "elementId": "slot-0",
+                "hfId": null,
+                "syncOffsetFrames": null,
+                "mediaStart": null,
+                "index": 0,
+                "nested": false,
+                "host": null,
+                "hostRow": null,
+                "parentRow": null
+              },
+              {
+                "id": "chart-story-clip",
+                "label": null,
+                "kind": "div",
+                "trackKind": "graphics",
+                "start": 0,
+                "duration": 5,
+                "end": 5,
+                "absStart": 0,
+                "absEnd": 5,
+                "file": "compositions/components/chart-story.html",
+                "trackIndex": 0,
+                "src": null,
+                "sourceFile": null,
+                "volume": null,
+                "lanes": [],
+                "laneError": null,
+                "playbackRate": null,
+                "audioGroup": null,
+                "role": null,
+                "durationAuthored": true,
+                "durationSource": "authored",
+                "pendingReason": null,
+                "children": [],
+                "inside": [],
+                "ref": "#chart-story-clip",
+                "warnings": [],
+                "elementId": "chart-story-clip",
+                "hfId": null,
+                "syncOffsetFrames": null,
+                "mediaStart": null,
+                "index": 1,
+                "nested": true,
+                "host": "slot-0",
+                "hostRow": {
+                  "kind": "graphics",
+                  "index": 0
+                },
+                "parentRow": null
+              },
+              {
+                "id": "slot-1",
+                "label": null,
+                "kind": "div",
+                "trackKind": "graphics",
+                "start": 4,
+                "duration": 4,
+                "end": 8,
+                "absStart": 4,
+                "absEnd": 8,
+                "file": "index.html",
+                "trackIndex": 1,
+                "src": "compositions/components/match-cut.html",
+                "sourceFile": "compositions/components/match-cut.html",
+                "volume": null,
+                "lanes": [],
+                "laneError": null,
+                "playbackRate": null,
+                "audioGroup": null,
+                "role": null,
+                "durationAuthored": true,
+                "durationSource": "authored",
+                "pendingReason": null,
+                "children": [
+                  {
+                    "kind": "graphics",
+                    "index": 3
+                  }
+                ],
+                "inside": [],
+                "ref": "#slot-1",
+                "warnings": [],
+                "elementId": "slot-1",
+                "hfId": null,
+                "syncOffsetFrames": null,
+                "mediaStart": null,
+                "index": 2,
+                "nested": false,
+                "host": null,
+                "hostRow": null,
+                "parentRow": null
+              },
+              {
+                "id": "match-cut-clip",
+                "label": null,
+                "kind": "div",
+                "trackKind": "graphics",
+                "start": 0,
+                "duration": 4,
+                "end": 4,
+                "absStart": 4,
+                "absEnd": 8,
+                "file": "compositions/components/match-cut.html",
+                "trackIndex": 0,
+                "src": null,
+                "sourceFile": null,
+                "volume": null,
+                "lanes": [],
+                "laneError": null,
+                "playbackRate": null,
+                "audioGroup": null,
+                "role": null,
+                "durationAuthored": true,
+                "durationSource": "authored",
+                "pendingReason": null,
+                "children": [],
+                "inside": [],
+                "ref": "#match-cut-clip",
+                "warnings": [],
+                "elementId": "match-cut-clip",
+                "hfId": null,
+                "syncOffsetFrames": null,
+                "mediaStart": null,
+                "index": 3,
+                "nested": true,
+                "host": "slot-1",
+                "hostRow": {
+                  "kind": "graphics",
+                  "index": 2
+                },
+                "parentRow": null
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "version": "0.8.184",
+        "latestVersion": "0.8.17",
+        "updateAvailable": false
+      }
+    }
+  },
+  "fixture_scope": [
+    "chart-story",
+    "match-cut"
+  ]
+}

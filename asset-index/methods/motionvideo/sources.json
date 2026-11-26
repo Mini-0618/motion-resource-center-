@@ -1,0 +1,22 @@
+{
+  "as_of": "2026-11-26",
+  "site": "https://motionvideo.xyz/",
+  "source_repository": "https://github.com/motionvideohq/motionvideo.xyz/tree/a6d32f6273c1687aff87a3344ecf9ad0a5b2b403",
+  "source_code_license": "https://github.com/motionvideohq/motionvideo.xyz/blob/a6d32f6273c1687aff87a3344ecf9ad0a5b2b403/LICENSE",
+  "upstream_scope": "https://github.com/motionvideohq/motionvideo.xyz/blob/a6d32f6273c1687aff87a3344ecf9ad0a5b2b403/README.md#license",
+  "terms": "https://motionvideo.xyz/terms",
+  "public_move_descriptions": "https://github.com/motionvideohq/motionvideo.xyz/blob/a6d32f6273c1687aff87a3344ecf9ad0a5b2b403/apps/web/src/data/moves.json",
+  "move_counts": {
+    "families": 10,
+    "moves": 120
+  },
+  "gallery_rights": "逐作品授权；本包仅收录作品页、原创观察与方法。",
+  "public_skill": "https://github.com/motionvideohq/motionvideo-mcp/blob/137ecf03310e38eb42f4506d79e4f16c82adbebb/skills/motionvideo/SKILL.md",
+  "cinematic_skill": "https://github.com/motionvideohq/motionvideo.xyz/blob/a6d32f6273c1687aff87a3344ecf9ad0a5b2b403/.agents/skills/cinematic-shot/SKILL.md",
+  "cinematic_upstream": "https://github.com/1weiho/cinematic-shot",
+  "paid_scope": "Pro Skill、Moves 与模板的完整付费提示词另有条款。",
+  "camera_code": "https://github.com/motionvideohq/motionvideo.xyz/blob/a6d32f6273c1687aff87a3344ecf9ad0a5b2b403/apps/videos/src/film/LaunchFilm.tsx#L131-L153",
+  "camera_preset": "https://github.com/motionvideohq/motionvideo.xyz/blob/a6d32f6273c1687aff87a3344ecf9ad0a5b2b403/apps/videos/src/film/shots.json",
+  "easing_source": "https://github.com/motionvideohq/motionvideo.xyz/blob/a6d32f6273c1687aff87a3344ecf9ad0a5b2b403/apps/videos/src/lib/snap-cn-ui/motion.ts",
+  "credits": "https://github.com/motionvideohq/motionvideo.xyz/blob/a6d32f6273c1687aff87a3344ecf9ad0a5b2b403/apps/videos/CREDITS.md"
+}

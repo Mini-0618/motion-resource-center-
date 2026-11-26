@@ -47,5 +47,13 @@
   ],
   "status": "active",
   "note": "经授权检查的生产素材。本地原件按 SHA-256 核对。动效候选仍沿用原发现工作流。",
-  "manifest": "assets.jsonl"
+  "manifest": "assets.jsonl",
+  "method_catalogs": [
+    {
+      "id": "motionvideo",
+      "status": "candidate",
+      "render_tested": false,
+      "manifest": "methods/motionvideo/methods.json"
+    }
+  ]
 }

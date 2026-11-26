@@ -1,0 +1,227 @@
+{
+  "as_of": "2026-11-26",
+  "origin_commit": "a6d32f6273c1687aff87a3344ecf9ad0a5b2b403",
+  "scope": "candidate_methods",
+  "methods": [
+    {
+      "id": "motionvideo/line-mask-text-reveal",
+      "name": "逐行揭示判断",
+      "family": "type",
+      "status": "candidate",
+      "render_tested": false,
+      "production_approved": false,
+      "type": "method",
+      "source": "https://motionvideo.xyz/moves/type/line-mask-text-reveal",
+      "existing_components": [
+        "title-motion",
+        "caption-editorial-emphasis"
+      ],
+      "purpose": "让观众先读条件，再读结论。适合章节论点与转折。",
+      "parameters": {
+        "public_move": {
+          "line_ms": [
+            500,
+            700
+          ],
+          "stagger_ms": [
+            80,
+            120
+          ],
+          "mask_height_in_lines": 1.15
+        },
+        "editorial_start": {
+          "line_ms": 600,
+          "stagger_ms": 110,
+          "travel_lines": 1,
+          "hold_s": 1.4
+        }
+      },
+      "house_example": "一张字卡固定版面，第一行讲供给，第二行落到筛选成本。已有字幕组件的逐词时间表需要改为中文语义行。",
+      "original_direction_zh": "按两句的语义断行，每行自下而上跨过自己的遮罩。只让承担判断的词换色。两行完整出现后再切。",
+      "failure_mode": "整句拆成逐字跳动会让观众追字，也可能把限定条件和结论拆散。横向逐词擦入是不同动作。",
+      "acceptance_on_future_render": "回查首末帧字形，逐行检查中文标点、遮罩边缘和末帧停留。",
+      "source_cases": [
+        "https://motionvideo.xyz/videos/twoclipping-221cab",
+        "https://motionvideo.xyz/videos/beamnxw-375dbf",
+        "https://motionvideo.xyz/videos/twoclipping-15d018"
+      ]
+    },
+    {
+      "id": "motionvideo/annotation-callout",
+      "name": "在原数据上标注一个变化",
+      "family": "data",
+      "status": "candidate",
+      "render_tested": false,
+      "production_approved": false,
+      "type": "method",
+      "source": "https://motionvideo.xyz/moves/data/annotation-callout",
+      "existing_components": [
+        "chart-story",
+        "JYS-261126-07-01",
+        "JYS-261126-07-05"
+      ],
+      "purpose": "让被口播点名的数据有明确位置、比较对象和单位。",
+      "parameters": {
+        "public_move": {
+          "min_hold_s_per_short_line": 1
+        },
+        "hf_inputs": {
+          "type": "bars",
+          "data": "20,0.07",
+          "labels": "2022-11,2024-10",
+          "emphasize": 1,
+          "unit": " USD/M tokens",
+          "exit": "none"
+        },
+        "editorial_start": {
+          "callouts_at_once": 1,
+          "hold_s": 1.8
+        }
+      },
+      "house_example": "取库内 JYS-261126-04-06 的两次价格观察。同屏标明 MMLU 64.8% 门槛及每百万词元美元价格，用端点数值承载大落差。",
+      "original_direction_zh": "先出现口径和两次观察，再让细引线从第二个值向外伸出，落到 0.07。给数字和来源留阅读时间。",
+      "failure_mode": "连接两点容易暗示期间的价格路径。表格缺值应在送入组件前拦截，组件可能过滤无效值或回退到示例数据。",
+      "acceptance_on_future_render": "核对日期、单位、零点、数值小数位；0.07 即使柱子很短仍须读得清。",
+      "source_cases": [
+        "https://motionvideo.xyz/videos/rossaxbt-b85583"
+      ]
+    },
+    {
+      "id": "motionvideo/parallax-layers",
+      "name": "原件与注释分层",
+      "family": "camera",
+      "status": "candidate",
+      "render_tested": false,
+      "production_approved": false,
+      "type": "method",
+      "source": "https://motionvideo.xyz/moves/camera/parallax-layers",
+      "existing_components": [
+        "camera-rig-depth-stack",
+        "JYS-261126-07-01"
+      ],
+      "purpose": "把档案原页、现代注释和叙述层区分开，同时保留原页署名与空间关系。",
+      "parameters": {
+        "public_move": {
+          "depth_planes": [
+            3,
+            5
+          ],
+          "relative_motion": [
+            0.2,
+            0.5,
+            1,
+            1.4
+          ]
+        },
+        "editorial_start": {
+          "layer_travel_px": [
+            0,
+            8,
+            20
+          ],
+          "duration_s": 2.2,
+          "active_blur_px": 0
+        }
+      },
+      "house_example": "花谱扫描整体为一层，出处与编辑批注各占一层。使用现有花谱 JYS-261126-02-01；阅读原字时暂停运动。",
+      "original_direction_zh": "保留原页。只让新增批注与框线拉开少许距离，批注标明为编辑所加，再回到平面供阅读。",
+      "failure_mode": "把花和手写字拆成三维布景，会让人误以为有实拍机位或原件本就分层。",
+      "acceptance_on_future_render": "检查移出边缘、注释锚点是否漂移，原页墨迹和现代注释是否易于辨认。",
+      "source_cases": [
+        "https://motionvideo.xyz/videos/daniel-haida-8691d4"
+      ]
+    },
+    {
+      "id": "motionvideo/pull-back-reveal",
+      "name": "从局部拉回出处",
+      "family": "camera",
+      "status": "candidate",
+      "render_tested": false,
+      "production_approved": false,
+      "type": "method",
+      "source": "https://motionvideo.xyz/moves/camera/pull-back-reveal",
+      "existing_components": [
+        "camera-rig-depth-stack",
+        "JYS-261126-07-01",
+        "camera.mjs"
+      ],
+      "purpose": "说明一处标注属于哪一页、哪一份材料，让观众能核对上下文。",
+      "parameters": {
+        "public_move": {
+          "typical_scale": [
+            1.3,
+            1
+          ],
+          "duration_s": [
+            1.5,
+            3
+          ],
+          "scale_interpolation": "log"
+        },
+        "editorial_start": {
+          "scale": [
+            1.3,
+            1
+          ],
+          "duration_s": 2.2,
+          "tilt_deg": [
+            0,
+            0
+          ],
+          "drift_px": [
+            0,
+            0
+          ]
+        }
+      },
+      "house_example": "从花谱已有标注拉回整页，页外附馆藏名与年代。局部所写金额的含义须从史料核对。",
+      "original_direction_zh": "先停在需要辨认的细节，读完再沿同一锚点拉回整页，让出处与细节在终点同时可见。",
+      "failure_mode": "商品宣传片常用斜角和景深；在档案页上容易遮掉上下文或夸大低分辨率扫描的细节。",
+      "acceptance_on_future_render": "在起点、中段、终点核对锚点与可读性。相机透视设于父层，原页以自身像素坐标定位。",
+      "source_cases": [
+        "https://motionvideo.xyz/videos/jake11moran-3041df",
+        "https://motionvideo.xyz/videos/rossaxbt-94583b",
+        "https://motionvideo.xyz/videos/gdgtify-efbc09"
+      ]
+    },
+    {
+      "id": "motionvideo/match-cut",
+      "name": "保持视觉锚点的硬切",
+      "family": "transitions",
+      "status": "candidate",
+      "render_tested": false,
+      "production_approved": false,
+      "type": "method",
+      "source": "https://motionvideo.xyz/moves/transitions/match-cut",
+      "existing_components": [
+        "match-cut",
+        "JYS-261126-07-03"
+      ],
+      "purpose": "让观众比较两个对象共享的形状，同时看见身份、时间或功能的变化。",
+      "parameters": {
+        "public_move": {
+          "transition_frames": 0
+        },
+        "registry_default": {
+          "duration_s": 4,
+          "fps": 30,
+          "hard_cut_s": 1.4,
+          "cut_frame_zero_based": 42,
+          "inputs": [
+            "accent",
+            "label_a",
+            "label_b"
+          ]
+        }
+      },
+      "house_example": "同一页的总览与局部可对准一朵花切换；跨档案、跨年代时在切点明示两边身份与日期。",
+      "original_direction_zh": "找出两镜中足够醒目的同一轮廓，把圆心和尺寸对齐，在动作尚未停下时切换。两侧分别保留出处。",
+      "failure_mode": "把十七世纪花谱无标识地接到现代币价，容易让观众把相似形状理解成同一历史事件。",
+      "acceptance_on_future_render": "比较切点前一帧和后一帧的轮廓、比例与运动方向；另请观看者复述两张图的关系。",
+      "source_cases": [
+        "https://motionvideo.xyz/videos/higgsfield_ai-edddb9",
+        "https://motionvideo.xyz/videos/raphaelaubryy-b20885"
+      ]
+    }
+  ]
+}

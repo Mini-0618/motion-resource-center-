@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "shneural-2abdfa",
+    "title": "Bold kinetic type showreel",
+    "author": "shneural",
+    "url": "https://motionvideo.xyz/videos/shneural-2abdfa",
+    "duration_s": 31.893,
+    "sampled_times_s": [
+      3.83,
+      10.84,
+      18.5,
+      26.47
+    ],
+    "observation": "3.83 秒为浅底单词，18.50 秒换为粗体、荧光色重音和立体物件。",
+    "prompt_analysis_zh": "公开提示词只给作品集方向和 15 秒目标。媒体实长约 31.89 秒，不能用提示词反推片长。",
+    "transfer_inference": "借字重和位置指出论点；快速换造型只留给转折。",
+    "original_media_status": "reference_only",
+    "public_prompt_present": true
+  },
+  {
+    "slug": "groundcontrol-61b7d8",
+    "title": "Japan heatwave pencil data story",
+    "author": "GroundControl",
+    "url": "https://motionvideo.xyz/videos/groundcontrol-61b7d8",
+    "duration_s": 180.053333,
+    "sampled_times_s": [
+      21.61,
+      61.22,
+      104.43,
+      149.44
+    ],
+    "observation": "21.61 秒是温度计，61.22 秒是地图与气压标记，149.44 秒出现跨年柱形比较。",
+    "prompt_analysis_zh": "提示词同时指定比较问题、手绘质感和合成声音，未提供可直接照搬的财经统计口径。",
+    "transfer_inference": "先建立计量概念，再给地理分布和历史参照；使用本题的一手数据。",
+    "original_media_status": "reference_only",
+    "public_prompt_present": true
+  },
+  {
+    "slug": "twoclipping-221cab",
+    "title": "Photo print app launch film",
+    "author": "twoclipping",
+    "url": "https://motionvideo.xyz/videos/twoclipping-221cab",
+    "duration_s": 29.077,
+    "sampled_times_s": [
+      3.49,
+      9.89,
+      16.86,
+      24.13
+    ],
+    "observation": "16.86 秒可见网页里的拱门图像；24.13 秒可见相似图像出现在手持实体相框中。",
+    "prompt_analysis_zh": "提示词把输入清单和连续变形规则写清，规定场景继承上一个场景的对象。",
+    "transfer_inference": "用视觉锚点安排屏幕证据和实物之间的转换。所列时刻可核对画面，不能单凭两张抽帧认定中间是硬切。",
+    "original_media_status": "reference_only",
+    "public_prompt_present": true
+  },
+  {
+    "slug": "higgsfield_ai-edddb9",
+    "title": "PHYLLA language model launch",
+    "author": "higgsfield_ai",
+    "url": "https://motionvideo.xyz/videos/higgsfield_ai-edddb9",
+    "duration_s": 30.058667,
+    "sampled_times_s": [
+      3.61,
+      10.22,
+      17.43,
+      24.95
+    ],
+    "observation": "10.22 秒出现伸开的手和种子，17.43 秒出现标本式四格，24.95 秒出现放大的花与字。",
+    "prompt_analysis_zh": "提示词把原参考片、原图、字体、品牌和声音列为输入条件。",
+    "transfer_inference": "借用从细节到分类的编排。案例中的品牌、摄影及配乐分别核权。",
+    "original_media_status": "reference_only",
+    "public_prompt_present": true
+  }
+]

@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-26",
+  "endpoint": "https://mcp.motionvideo.xyz/mcp",
+  "transport": "Streamable HTTP",
+  "auth": "anonymous",
+  "tools_list": [
+    "list-bookmarks",
+    "my-featured",
+    "search-videos",
+    "get-video",
+    "search-directory",
+    "list-filters",
+    "search-moves",
+    "get-move-prompt"
+  ],
+  "queries": [
+    {
+      "tool": "list-filters",
+      "arguments": {
+        "scope": "videos"
+      },
+      "status": "ok",
+      "total": null,
+      "shown": null,
+      "fields": [
+        "videos"
+      ],
+      "sample": null
+    },
+    {
+      "tool": "search-videos",
+      "arguments": {
+        "query": "kinetic type",
+        "limit": 5
+      },
+      "status": "ok",
+      "total": 293,
+      "shown": 5,
+      "fields": [
+        "offset",
+        "resolved",
+        "shown",
+        "total",
+        "videos"
+      ],
+      "sample": {
+        "slug": "suna_gaku-96989c",
+        "title": "Gemini 4 Neon neon showcase film",
+        "handle": "suna_gaku",
+        "pageUrl": "https://motionvideo.xyz/videos/suna_gaku-96989c",
+        "promptShared": true,
+        "category": null
+      }
+    },
+    {
+      "tool": "search-videos",
+      "arguments": {
+        "query": "camera",
+        "limit": 5
+      },
+      "status": "ok",
+      "total": 73,
+      "shown": 5,
+      "fields": [
+        "offset",
+        "resolved",
+        "shown",
+        "total",
+        "videos"
+      ],
+      "sample": {
+        "slug": "ishanjx-27086e",
+        "title": "Kinetic shader showreel in one file",
+        "handle": "IshanJX",
+        "pageUrl": "https://motionvideo.xyz/videos/ishanjx-27086e",
+        "promptShared": true,
+        "category": null
+      }
+    },
+    {
+      "tool": "search-videos",
+      "arguments": {
+        "query": "data visualization",
+        "limit": 6
+      },
+      "status": "ok",
+      "total": 1,
+      "shown": 1,
+      "fields": [
+        "offset",
+        "resolved",
+        "shown",
+        "total",
+        "videos"
+      ],
+      "sample": {
+        "slug": "groundcontrol-61b7d8",
+        "title": "Japan heatwave pencil data story",
+        "handle": "GroundControl",
+        "pageUrl": "https://motionvideo.xyz/videos/groundcontrol-61b7d8",
+        "promptShared": true,
+        "category": null
+      }
+    },
+    {
+      "tool": "get-video",
+      "arguments": {
+        "slug": "shneural-2abdfa"
+      },
+      "status": "ok",
+      "total": null,
+      "shown": null,
+      "fields": [
+        "slug",
+        "title",
+        "handle",
+        "pageUrl",
+        "promptShared",
+        "category"
+      ],
+      "sample": "https://motionvideo.xyz/videos/shneural-2abdfa"
+    },
+    {
+      "tool": "search-directory",
+      "arguments": {
+        "section": "skills",
+        "query": "hyperframes",
+        "limit": 3
+      },
+      "status": "ok",
+      "total": 40,
+      "shown": 3,
+      "fields": [
+        "entries",
+        "offset",
+        "section",
+        "shown",
+        "total"
+      ],
+      "sample": {
+        "id": "video-production-skills",
+        "name": "Video Production Skills",
+        "url": "https://github.com/Pluviobyte/video-production-skills",
+        "category": "AI video"
+      }
+    }
+  ]
+}
