@@ -1,0 +1,19 @@
+{
+  "type": "timeline",
+  "duration_s": 3.2,
+  "heading": "一张证据图怎样进入成片",
+  "events": [
+    {
+      "date": "检索",
+      "label": "定位原表"
+    },
+    {
+      "date": "核验",
+      "label": "核对口径"
+    },
+    {
+      "date": "剪辑",
+      "label": "选取局部"
+    }
+  ]
+}

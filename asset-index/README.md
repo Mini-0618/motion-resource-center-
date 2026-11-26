@@ -4,4 +4,6 @@ Shared, tool-neutral asset metadata for AI assistants. Read schema.json and asse
 
 This public index must not include personal writing, secrets, tokens or private repository contents. Rendering requires separate video tools. AI clients need explicit GitHub read access or the public raw URL; this index does not automatically connect them.
 
-Status: schema and index entrypoint initialized; existing 48 candidates are not yet imported. No sync or render pipeline enabled.
+## 首批生产素材
+
+按叙事用途、分类、作者和许可读取 [assets.jsonl](assets.jsonl)。在本机用文件哈希找到原件。可运行的动效带参数、调用脚本及原许可。

@@ -1,0 +1,23 @@
+{
+  "type": "bars",
+  "duration_s": 3.2,
+  "heading": "欧盟企业使用生成式影像或音频工具",
+  "data": [
+    {
+      "label": "10–49 人",
+      "value": 8.1
+    },
+    {
+      "label": "50–249 人",
+      "value": 14.45
+    },
+    {
+      "label": "250 人及以上",
+      "value": 27.92,
+      "highlight": true
+    }
+  ],
+  "unit": "%",
+  "decimals": 2,
+  "sourceNote": "Eurostat · isoc_eb_ai · 2025 · 欧盟调查覆盖行业 · 各规模组内企业占比"
+}

@@ -12,7 +12,10 @@
     "writing",
     "video_template",
     "audio",
-    "image"
+    "image",
+    "video",
+    "evidence",
+    "dataset"
   ],
   "verification_status": [
     "discovered",

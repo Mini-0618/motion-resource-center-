@@ -1,0 +1,11 @@
+{
+  "type": "flow",
+  "duration_s": 3.2,
+  "heading": "让一个外部输入改变画面",
+  "steps": [
+    "读取输入",
+    "选择映射规则",
+    "更新视觉属性"
+  ],
+  "direction": "horizontal"
+}

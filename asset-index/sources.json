@@ -1,0 +1,665 @@
+[
+  {
+    "site_name": "The Metropolitan Museum of Art",
+    "website": "https://www.metmuseum.org/",
+    "search": "https://www.metmuseum.org/art/collection",
+    "api_or_method": "https://metmuseum.github.io/ · v1.1/search 查询、v1/objects/{id} → primaryImage",
+    "limits": "不需 API key；官方上限每秒80次。仅下载 isPublicDomain=true 且附原件链接的条目。",
+    "commercial_modification_redistribution": "馆方 Open Access 的公版作品图像可依 CC0 商用、改编与再分发；受限作品与馆徽另核。",
+    "quality_and_types": "开放的馆藏原件照片及画作数字图；实收完整 JPEG。",
+    "rights_urls": [
+      "https://metmuseum.github.io/",
+      "https://www.metmuseum.org/hubs/open-access"
+    ],
+    "verified": "2026-11-26",
+    "source_items": [
+      "https://www.metmuseum.org/art/collection/search/436722",
+      "https://www.metmuseum.org/art/collection/search/200048",
+      "https://www.metmuseum.org/art/collection/search/202374",
+      "https://www.metmuseum.org/art/collection/search/922227",
+      "https://www.metmuseum.org/art/collection/search/339024",
+      "https://www.metmuseum.org/art/collection/search/261941",
+      "https://www.metmuseum.org/art/collection/search/11122",
+      "https://www.metmuseum.org/art/collection/search/436527",
+      "https://www.metmuseum.org/art/collection/search/11979",
+      "https://www.metmuseum.org/art/collection/search/437310"
+    ],
+    "download_urls": [
+      "https://images.metmuseum.org/CRDImages/ep/original/DP-18296-017.jpg",
+      "https://images.metmuseum.org/CRDImages/es/original/DP-37854-002.jpg",
+      "https://images.metmuseum.org/CRDImages/es/original/170299.jpg",
+      "https://images.metmuseum.org/CRDImages/ep/original/DP-41727-001.jpg",
+      "https://images.metmuseum.org/CRDImages/dp/original/DP810224.jpg",
+      "https://images.metmuseum.org/CRDImages/ph/original/DP223650.jpg",
+      "https://images.metmuseum.org/CRDImages/ad/original/DP-20821-001.jpg",
+      "https://images.metmuseum.org/CRDImages/ep/original/DP-14936-045.jpg",
+      "https://images.metmuseum.org/CRDImages/ad/original/DT240273.jpg",
+      "https://images.metmuseum.org/CRDImages/ep/original/DP-21959-001.jpg"
+    ],
+    "asset_ids": [
+      "JYS-261126-05-01",
+      "JYS-261126-05-02",
+      "JYS-261126-05-03",
+      "JYS-261126-05-04",
+      "JYS-261126-05-05",
+      "JYS-261126-06-01",
+      "JYS-261126-06-02",
+      "JYS-261126-06-03",
+      "JYS-261126-06-04",
+      "JYS-261126-06-05"
+    ],
+    "status": "已用来源"
+  },
+  {
+    "site_name": "Kenney",
+    "website": "https://kenney.nl/",
+    "search": "https://kenney.nl/assets",
+    "api_or_method": "作品包页面 Download → Continue without donating → 取得限时签名 ZIP。",
+    "limits": "临时签名不可作为永久地址。每包附 License.txt，使用 Audio/内文件。",
+    "commercial_modification_redistribution": "本批三个包的包内条款均是 CC0，可商用、改编、再分发，署名可选。",
+    "quality_and_types": "界面、拟音、游戏音乐乐句；实收四个包内 OGG。",
+    "rights_urls": [
+      "https://kenney.nl/assets/interface-sounds",
+      "https://kenney.nl/assets/impact-sounds",
+      "https://kenney.nl/assets/music-jingles",
+      "https://kenney.nl/support"
+    ],
+    "verified": "2026-11-26",
+    "source_items": [
+      "https://kenney.nl/assets/interface-sounds",
+      "https://kenney.nl/assets/impact-sounds",
+      "https://kenney.nl/assets/music-jingles"
+    ],
+    "download_urls": [
+      "https://kenney.nl/assets/interface-sounds#inline-download",
+      "https://kenney.nl/assets/impact-sounds#inline-download",
+      "https://kenney.nl/assets/music-jingles#inline-download"
+    ],
+    "asset_ids": [
+      "JYS-261126-08-01",
+      "JYS-261126-08-02",
+      "JYS-261126-08-03",
+      "JYS-261126-08-04"
+    ],
+    "status": "已用来源"
+  },
+  {
+    "site_name": "Chris Zabriskie",
+    "website": "https://www.chriszabriskie.com/",
+    "search": "https://www.chriszabriskie.com/music/",
+    "api_or_method": "按专辑与曲序核对作者、发行日期、曲名和创作项目授权。",
+    "limits": "作者官网用于核权；本批完整音轨文件取自 Free Music Archive。",
+    "commercial_modification_redistribution": "本批曲目 CC BY 4.0，成片可商用、修改及再分发，须署名、链接许可并列更改。作者请求发生误识别时与其联系。",
+    "quality_and_types": "作者自述与专辑说明，核对完整器乐配乐。",
+    "rights_urls": [
+      "https://www.chriszabriskie.com/use/",
+      "https://www.chriszabriskie.com/cylinders/"
+    ],
+    "verified": "2026-11-26",
+    "source_items": [
+      "https://www.chriszabriskie.com/cylinders/"
+    ],
+    "download_urls": [
+      "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Music_for_Video/Chris_Zabriskie/Cylinders/Chris_Zabriskie_-_05_-_Cylinder_Five.mp3"
+    ],
+    "asset_ids": [
+      "JYS-261126-08-05"
+    ],
+    "status": "已用来源"
+  },
+  {
+    "site_name": "Free Music Archive",
+    "website": "https://freemusicarchive.org/",
+    "search": "https://freemusicarchive.org/",
+    "api_or_method": "使用已核对的曲目原始 files.freemusicarchive.org MP3 链接；比对 ID3 与作者网站。",
+    "limits": "本次单曲原件可公开下载，其他作品逐件检查。未验证公共批量 API。",
+    "commercial_modification_redistribution": "本批 Cylinder Five 的 ID3 和作者网站均列 CC BY 4.0；其他曲目逐件核查。",
+    "quality_and_types": "完整曲目文件；曲名、专辑、作者、许可及来源可在 MP3 ID3 回查。",
+    "rights_urls": [
+      "https://www.chriszabriskie.com/use/",
+      "https://creativecommons.org/licenses/by/4.0/"
+    ],
+    "verified": "2026-11-26",
+    "source_items": [
+      "https://freemusicarchive.org/music/Chris_Zabriskie/2014010103336111/Chris_Zabriskie_-_Cylinders_-_05_-_Cylinder_Five"
+    ],
+    "download_urls": [
+      "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/Music_for_Video/Chris_Zabriskie/Cylinders/Chris_Zabriskie_-_05_-_Cylinder_Five.mp3"
+    ],
+    "asset_ids": [
+      "JYS-261126-08-05"
+    ],
+    "status": "已用来源"
+  },
+  {
+    "site_name": "Wikimedia Commons",
+    "website": "https://commons.wikimedia.org/",
+    "search": "https://commons.wikimedia.org/wiki/Special:MediaSearch",
+    "api_or_method": "https://commons.wikimedia.org/w/api.php · action=query, prop=imageinfo, iiprop=url|extmetadata。",
+    "limits": "本次取得 OGG 描述元数据；原件链接返回 HTTP 429，改从合法 FMA 单曲来源取得 MP3，未把 OGG 计作本地资产。",
+    "commercial_modification_redistribution": "逐文件核对作者、许可、上传来源、姓名权及其他第三方权利；此条另与作者官网核对为 CC BY 4.0。",
+    "quality_and_types": "本批只作授权/曲目交叉验证。Commons 提供真实素材原件与逐项元数据。",
+    "rights_urls": [
+      "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia",
+      "https://commons.wikimedia.org/wiki/File:Chris_Zabriskie_-_05_-_Cylinder_Five.ogg",
+      "https://creativecommons.org/licenses/by-sa/4.0/"
+    ],
+    "verified": "2026-11-26",
+    "source_items": [
+      "https://commons.wikimedia.org/wiki/File:Chris_Zabriskie_-_05_-_Cylinder_Five.ogg",
+      "https://commons.wikimedia.org/wiki/File:Inside_the_Cleanroom_III.jpg"
+    ],
+    "download_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/3f/Inside_the_Cleanroom_III.jpg"
+    ],
+    "asset_ids": [
+      "JYS-261126-08-05",
+      "JYS-261126-01-04"
+    ],
+    "status": "实际取得或沿用单件；以资产记录权利及状态为准"
+  },
+  {
+    "site_name": "Pexels",
+    "website": "https://www.pexels.com/",
+    "search": "https://www.pexels.com/search/videos/",
+    "api_or_method": "https://www.pexels.com/api/documentation/ · 申请 key，按作品页选原尺寸文件。",
+    "limits": "API 适用展示来源、限额和其他使用规则，额度以账户为准。",
+    "commercial_modification_redistribution": "Pexels License 允许在商业视频内使用和修改；禁止出售未修改副本、在其他素材/壁纸平台再分发及暗示代言。人物、商标另核。",
+    "quality_and_types": "实拍图片与短视频，逐项判断真实性及摆拍程度。",
+    "rights_urls": [
+      "https://www.pexels.com/license/",
+      "https://www.pexels.com/api/documentation/"
+    ],
+    "verified": "2026-11-26",
+    "status": "discovery_only",
+    "source_items": [],
+    "download_urls": [],
+    "asset_ids": [],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "Pixabay",
+    "website": "https://pixabay.com/",
+    "search": "https://pixabay.com/videos/search/",
+    "api_or_method": "https://pixabay.com/api/docs/ · 图片、视频可用 API，取得 key 后依文档限额查询。",
+    "limits": "本次仅核接口说明及许可摘要；各类原件下载、音乐 Content ID 凭据依单项。",
+    "commercial_modification_redistribution": "允许免费商用及改编，禁止将内容以独立形式出售或分发；可识别商标、肖像及音频另查项级权利。",
+    "quality_and_types": "视频、图像、音乐和音效；需区别 AI 图像与实拍。",
+    "rights_urls": [
+      "https://pixabay.com/service/license-summary/",
+      "https://pixabay.com/service/terms/",
+      "https://pixabay.com/api/docs/"
+    ],
+    "verified": "2026-11-26",
+    "status": "discovery_only",
+    "source_items": [],
+    "download_urls": [],
+    "asset_ids": [],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "Mixkit",
+    "website": "https://mixkit.co/",
+    "search": "https://mixkit.co/free-stock-video/",
+    "api_or_method": "作品页选 Download 并读取实际类型的 License，未核到开放 API。",
+    "limits": "User Terms 禁止脚本或机器人批量下载，不用预览文件替代原件。",
+    "commercial_modification_redistribution": "Stock Video Free License 许商业视频及修改；Restricted 仅个人非商业；音频等按各自许可。不得把文件汇总在素材站提供或转售未经实质加工的副本。",
+    "quality_and_types": "短片、音乐、音效和剪辑模板；同站不同项的授权不同。",
+    "rights_urls": [
+      "https://mixkit.co/license/modal/videoFree/",
+      "https://mixkit.co/license/modal/videoRestricted/",
+      "https://mixkit.co/terms/"
+    ],
+    "verified": "2026-11-26",
+    "status": "discovery_only",
+    "source_items": [],
+    "download_urls": [],
+    "asset_ids": [],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "NASA Image and Video Library",
+    "website": "https://images.nasa.gov/",
+    "search": "https://images.nasa.gov/",
+    "api_or_method": "https://images-api.nasa.gov/ · search 取 nasa_id，再用 asset 获取可用文件变体。",
+    "limits": "下载前核单项 caption、credit、第三方内容及不同文件版本。",
+    "commercial_modification_redistribution": "NASA 自制媒体一般在美国不受版权保护。事实性编辑用途可以按指南使用并注明 NASA；广告、标志、人物和第三方素材需另审，修改/分发同受这些限制。",
+    "quality_and_types": "航天工程、历史、地球观测影像，部分条目含合作机构作品。",
+    "rights_urls": [
+      "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+    ],
+    "verified": "2026-11-26",
+    "status": "实际取得或沿用单件；以资产记录权利及状态为准",
+    "source_items": [
+      "https://images.nasa.gov/details/iss015e05977",
+      "https://images.nasa.gov/details/KSC-20200610-MH-GEB01_0001-Artemis_II_Crew_Module_Move_to_Clean_Room-3252303",
+      "https://images.nasa.gov/details/KSC-20210405-PH-NAS01_0001",
+      "https://images.nasa.gov/details/iss011e07380"
+    ],
+    "download_urls": [
+      "https://images-assets.nasa.gov/image/iss015e05977/iss015e05977~orig.jpg",
+      "https://images-assets.nasa.gov/video/KSC-20200610-MH-GEB01_0001-Artemis_II_Crew_Module_Move_to_Clean_Room-3252303/KSC-20200610-MH-GEB01_0001-Artemis_II_Crew_Module_Move_to_Clean_Room-3252303~orig.mp4",
+      "https://images-assets.nasa.gov/image/KSC-20210405-PH-NAS01_0001/KSC-20210405-PH-NAS01_0001~orig.JPG",
+      "https://images-assets.nasa.gov/image/iss011e07380/iss011e07380~orig.jpg"
+    ],
+    "asset_ids": [
+      "JYS-261126-01-01",
+      "JYS-261126-01-03",
+      "JYS-261126-01-05",
+      "JYS-261126-01-06"
+    ],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "Openverse",
+    "website": "https://openverse.org/",
+    "search": "https://openverse.org/search/image/",
+    "api_or_method": "https://docs.openverse.org/api/ · 可查询图像与音频元数据。",
+    "limits": "服务有身份与调用频率控制。聚合检索后应在原托管方下载原件。",
+    "commercial_modification_redistribution": "逐项以原持有方许可证确定商用、改编、分发；本次仅核 API 文档，站点通用条款未核实。",
+    "quality_and_types": "聚合发现入口。结果缩略图不能作为正式媒体。",
+    "rights_urls": [
+      "https://docs.openverse.org/api/"
+    ],
+    "verified": "2026-11-26",
+    "status": "discovery_only",
+    "source_items": [],
+    "download_urls": [],
+    "asset_ids": [],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "Internet Archive",
+    "website": "https://archive.org/",
+    "search": "https://archive.org/advancedsearch.php",
+    "api_or_method": "https://archive.org/developers/ · /metadata/{identifier} 可查文件清单与派生关系。",
+    "limits": "部分条目限借阅、访问受限，需选来源明确且可下载的文件。",
+    "commercial_modification_redistribution": "Rights 说明要求用户自行核实；商用、修改、分发按原作者许可或可验证的公版状态。",
+    "quality_and_types": "历史影片、唱片及出版物；上传者信息及上传时代不能替代馆方来历。",
+    "rights_urls": [
+      "https://help.archive.org/help/rights/"
+    ],
+    "verified": "2026-11-26",
+    "status": "discovery_only",
+    "source_items": [],
+    "download_urls": [],
+    "asset_ids": [],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "U.S. National Archives and Records Administration",
+    "website": "https://www.archives.gov/",
+    "search": "https://catalog.archives.gov/",
+    "api_or_method": "https://www.archives.gov/research/catalog/help/api · 目录 API 查询说明、数字对象及原始来源。",
+    "limits": "API 按官方 Gaining Access 与 Rate Limits；逐件打开 Access/Use Restrictions，确认可下数字对象。",
+    "commercial_modification_redistribution": "美国联邦雇员职务作品一般在美国公版；捐赠档案及特殊媒体可能保留权利。商用、改编与再分发要核作品、受赠协议和发行地。",
+    "quality_and_types": "国家档案相片与动影像；馆号和描述便于追溯。",
+    "rights_urls": [
+      "https://www.archives.gov/research/still-pictures/permissions",
+      "https://www.archives.gov/research/catalog/help/api"
+    ],
+    "verified": "2026-11-26",
+    "status": "discovery_only",
+    "source_items": [],
+    "download_urls": [],
+    "asset_ids": [],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "Harvard Library",
+    "website": "https://library.harvard.edu/",
+    "search": "https://library.harvard.edu/services-tools/hollis-images",
+    "api_or_method": "https://ask.library.harvard.edu/HOLLIS/faq/330466 · LibraryCloud 可查目录，HOLLIS Images 查看原持有馆与文件。",
+    "limits": "仅取已公开且允许使用的扫描；研究参考副本与付费复制服务另有条件。",
+    "commercial_modification_redistribution": "馆方对符合条件的公版作品开放数字复制件；其他材料及海外底层权利逐项审查，未获许可不得直接商用、改编或分发。",
+    "quality_and_types": "大学特藏、照片、手稿和历史地图。",
+    "rights_urls": [
+      "https://library.harvard.edu/about/policies/privacy-terms-use-copyright-information",
+      "https://library.harvard.edu/about/policies/policy-access-digital-reproductions-works-public-domain"
+    ],
+    "verified": "2026-11-26",
+    "status": "discovery_only",
+    "source_items": [],
+    "download_urls": [],
+    "asset_ids": [],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "Poly Haven",
+    "website": "https://polyhaven.com/",
+    "search": "https://polyhaven.com/assets",
+    "api_or_method": "https://polyhaven.com/our-api · https://api.polyhaven.com/ 列资产、文件与不同分辨率。",
+    "limits": "API 适用 ToS 和合理使用；网页照片、说明、标志须与下载的资产分开核查。",
+    "commercial_modification_redistribution": "正式资产依 CC0 可商用、改编、再分发；API 现行说明允许商业调用。",
+    "quality_and_types": "摄影测量模型、HDRI、PBR 纹理，适合可控三维隐喻。",
+    "rights_urls": [
+      "https://polyhaven.com/license",
+      "https://polyhaven.com/our-api",
+      "https://github.com/Poly-Haven/Public-API/blob/master/ToS.md"
+    ],
+    "verified": "2026-11-26",
+    "status": "discovery_only",
+    "source_items": [],
+    "download_urls": [],
+    "asset_ids": [],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "Freesound",
+    "website": "https://freesound.org/",
+    "search": "https://freesound.org/search/",
+    "api_or_method": "https://freesound.org/docs/api/ · 可筛许可；原件获取区分用户登录和 OAuth，预听文件另标。",
+    "limits": "免费声音许可与商业 API 使用协议独立，商业 API 条款需与 UPF 单独确认。",
+    "commercial_modification_redistribution": "逐声核 CC0、CC BY、CC BY-NC 或旧 Sampling+；仅前两类在相应条件下可商用改编和分发。保留署名，检查被录物和平台指纹声明。",
+    "quality_and_types": "现场录音、工业与城市环境、器材和电子音效。",
+    "rights_urls": [
+      "https://freesound.org/help/faq/",
+      "https://freesound.org/help/tos_api/",
+      "https://freesound.org/docs/api/"
+    ],
+    "verified": "2026-11-26",
+    "status": "discovery_only",
+    "source_items": [],
+    "download_urls": [],
+    "asset_ids": [],
+    "verification_scope": "仅查官方许可、政策或接口说明，尚未核验该站的任何新素材。"
+  },
+  {
+    "site_name": "Eurostat",
+    "website": "https://ec.europa.eu/eurostat/",
+    "search": "https://ec.europa.eu/eurostat/databrowser/",
+    "api_or_method": "Eurostat dissemination Statistics API 1.0；按 geo/time/indic_is/unit 查询 JSON-stat。",
+    "limits": "本次小范围查询，无账户或密钥；复杂查询可能异步。",
+    "commercial_modification_redistribution": "署名、列数据代码和访问日、注明筛选重绘；具体特殊数据另核。",
+    "quality_and_types": "欧洲企业怎样使用生成式影像与声音",
+    "source_items": [
+      "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table?lang=en"
+    ],
+    "download_urls": [
+      "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ai?lang=en&geo=EU27_2020&time=2025&indic_is=E_AI_TPVSG&unit=PC_ENT"
+    ],
+    "verified": "2026-11-26",
+    "asset_ids": [
+      "JYS-261126-04-01"
+    ],
+    "rights_urls": [],
+    "status": "已用来源"
+  },
+  {
+    "site_name": "Statistics Netherlands",
+    "website": "https://www.cbs.nl/",
+    "search": "https://www.cbs.nl/en-gb/figures",
+    "api_or_method": "新闻原始发布表 HTML；StatLine 数据另可通过 OData 获取。",
+    "limits": "本次无需账户或密钥；使用发布表数值。",
+    "commercial_modification_redistribution": "CC BY 4.0；注明CBS和改编，照片和网站设计等有例外。",
+    "quality_and_types": "荷兰郁金香种球种植面积",
+    "source_items": [
+      "https://www.cbs.nl/en-gb/news/2025/13/area-used-to-grow-flower-bulbs-has-increased-in-10-years-decreased-in-2024"
+    ],
+    "download_urls": [
+      "https://www.cbs.nl/en-gb/news/2025/13/area-used-to-grow-flower-bulbs-has-increased-in-10-years-decreased-in-2024"
+    ],
+    "verified": "2026-11-26",
+    "asset_ids": [
+      "JYS-261126-04-02"
+    ],
+    "rights_urls": [],
+    "status": "已用来源"
+  },
+  {
+    "site_name": "World Bank / WDI",
+    "website": "https://data.worldbank.org/",
+    "search": "https://data.worldbank.org/indicator",
+    "api_or_method": "Indicators API v2 无密钥，限制年份、分页、source=2。",
+    "limits": "本次请求每页100行；并非所有WDI指标均相同许可。",
+    "commercial_modification_redistribution": "两项指标元数据分别标CC BY 4.0，还须采用数据集条款署名、传递条款、避免暗示背书。",
+    "quality_and_types": "全球贸易占国内生产总值的比重；全球制造业增加值占比",
+    "source_items": [
+      "https://data360files.worldbank.org/data360-data/metadata/WB_WDI/WB_WDI_NE_TRD_GNFS_ZS.pdf",
+      "https://data360files.worldbank.org/data360-data/metadata/WB_WDI/WB_WDI_NV_IND_MANF_ZS.pdf"
+    ],
+    "download_urls": [
+      "https://api.worldbank.org/v2/country/WLD/indicator/NE.TRD.GNFS.ZS?source=2&date=1960:2024&format=json&per_page=100",
+      "https://api.worldbank.org/v2/country/WLD/indicator/NV.IND.MANF.ZS?source=2&date=1960:2024&format=json&per_page=100"
+    ],
+    "verified": "2026-11-26",
+    "asset_ids": [
+      "JYS-261126-04-03",
+      "JYS-261126-04-05"
+    ],
+    "rights_urls": [],
+    "status": "已用来源"
+  },
+  {
+    "site_name": "ECB Data Portal",
+    "website": "https://data.ecb.europa.eu/",
+    "search": "https://data.ecb.europa.eu/search-results",
+    "api_or_method": "ECB SDMX API，按 EXR key 与业务日区间获取 CSVdata。",
+    "limits": "无需账户；无发布日不补值；引用源统计及元数据。",
+    "commercial_modification_redistribution": "可商业免费使用及再分发，须署名、保留统计值与元数据；收费材料须说明来源免费。",
+    "quality_and_types": "欧元兑美元每日参考汇率",
+    "source_items": [
+      "https://data.ecb.europa.eu/data/datasets/EXR/EXR.D.USD.EUR.SP00.A"
+    ],
+    "download_urls": [
+      "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?startPeriod=2018-01-01&endPeriod=2019-12-31&format=csvdata"
+    ],
+    "verified": "2026-11-26",
+    "asset_ids": [
+      "JYS-261126-04-04"
+    ],
+    "rights_urls": [],
+    "status": "已用来源"
+  },
+  {
+    "site_name": "motion-resource-center-",
+    "website": "https://github.com/Mini-0618/motion-resource-center-",
+    "search": "https://github.com/Mini-0618/motion-resource-center-/tree/main/skills/code-video-style-distill",
+    "api_or_method": "git clone 后从固定commit继承 runtime.js，定位组件行号，浏览器渲染。",
+    "limits": "公开读取无需密钥；原库其他文件逐文件核许。",
+    "commercial_modification_redistribution": "runtime.js 文件头明确MIT；再分发代码保留声明许可证，演示数据另列。",
+    "quality_and_types": "证据表格定位；有次序的时间节点；同题材的双栏对照；从输入到输出的因果流程；带终值的比例比较",
+    "source_items": [
+      "https://github.com/Mini-0618/motion-resource-center-/blob/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js#L212-L226",
+      "https://github.com/Mini-0618/motion-resource-center-/blob/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js#L227-L241",
+      "https://github.com/Mini-0618/motion-resource-center-/blob/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js#L242-L255",
+      "https://github.com/Mini-0618/motion-resource-center-/blob/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js#L256-L274",
+      "https://github.com/Mini-0618/motion-resource-center-/blob/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js#L155-L172"
+    ],
+    "download_urls": [
+      "https://raw.githubusercontent.com/Mini-0618/motion-resource-center-/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js",
+      "https://raw.githubusercontent.com/Mini-0618/motion-resource-center-/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js",
+      "https://raw.githubusercontent.com/Mini-0618/motion-resource-center-/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js",
+      "https://raw.githubusercontent.com/Mini-0618/motion-resource-center-/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js",
+      "https://raw.githubusercontent.com/Mini-0618/motion-resource-center-/863e2bd165e2ea46cfb0ac5ab858a8c7556704bf/skills/code-video-style-distill/renderers/html/runtime.js"
+    ],
+    "verified": "2026-11-26",
+    "asset_ids": [
+      "JYS-261126-07-01",
+      "JYS-261126-07-02",
+      "JYS-261126-07-03",
+      "JYS-261126-07-04",
+      "JYS-261126-07-05"
+    ],
+    "rights_urls": [],
+    "status": "已用来源"
+  },
+  {
+    "site_name": "Wageningen University & Research Library",
+    "website": "https://www.wur.nl/",
+    "search": "https://images.wur.nl/",
+    "api_or_method": "Collection / WUR eDepot 单件条目或机构 PDF，与 Commons 公版标记核对。",
+    "limits": "依单件下载；本次限两件，无需账号。",
+    "quality_and_types": "农业史、标价图谱、十七世纪小册子",
+    "commercial_modification_redistribution": "所选历史作品公有领域，注明馆藏与签名。仅扉页制作衍生素材；其余作品逐件复核。",
+    "verified": "2026-11-26",
+    "rights_urls": [
+      "https://creativecommons.org/publicdomain/mark/1.0/",
+      "https://commons.wikimedia.org/wiki/File:Tooneel_van_Flora_Handel_der_Floristen_in_Amsterdam_1637_(Tulip_mania).png"
+    ],
+    "asset_ids": [
+      "JYS-261126-02-01",
+      "JYS-261126-02-03"
+    ],
+    "source_items": [
+      "https://images.wur.nl/digital/collection/coll2/id/318",
+      "https://edepot.wur.nl/197358"
+    ],
+    "download_urls": [
+      "https://upload.wikimedia.org/wikipedia/commons/d/d8/Tulipomania.jpg",
+      "https://edepot.wur.nl/197358"
+    ],
+    "status": "实际取得或沿用单件；以资产记录权利及状态为准"
+  },
+  {
+    "site_name": "Rijksmuseum",
+    "website": "https://www.rijksmuseum.nl/",
+    "search": "https://www.rijksmuseum.nl/en/collection",
+    "api_or_method": "单件馆藏页定位图像，根据馆方 IIIF 端点获取 full/max，核对尺寸。",
+    "limits": "保留单件权利字段；馆方数字文件与原底片尺寸有别。",
+    "quality_and_types": "高分辨率绘画、版画、摄影与图谱",
+    "commercial_modification_redistribution": "本批三件作品页明确 Public domain，遵循单件标志和署名规范。",
+    "verified": "2026-11-26",
+    "rights_urls": [
+      "https://creativecommons.org/publicdomain/mark/1.0/"
+    ],
+    "asset_ids": [
+      "JYS-261126-02-02",
+      "JYS-261126-02-04",
+      "JYS-261126-02-05"
+    ],
+    "source_items": [
+      "https://www.rijksmuseum.nl/en/collection/object/Gezicht-op-de-binnenplaats-van-de-Beurs-van-Hendrik-de-Keyser-te-Amsterdam--7b4bfdefb5540ad52282257d9bd5fdf9",
+      "https://www.rijksmuseum.nl/en/collection/object/Sheet-from-a-Tulip-Book--0cc1f420e5cde256094f98f62fb6819e",
+      "https://www.rijksmuseum.nl/en/collection/object/Sadie-Pfeiffer-Spinner-in-a-Cotton-Mill--bd0c3886c127383fadd0e66c58712493"
+    ],
+    "download_urls": [
+      "https://iiif.micr.io/bHigz/full/max/0/default.jpg",
+      "https://iiif.micr.io/oSnri/full/max/0/default.jpg",
+      "https://iiif.micr.io/KnslI/full/max/0/default.jpg"
+    ],
+    "status": "实际取得或沿用单件；以资产记录权利及状态为准"
+  },
+  {
+    "site_name": "Anna Ridler",
+    "website": "https://annaridler.com/",
+    "search": "https://annaridler.com/works",
+    "api_or_method": "读取作者作品详情页、年份与分段说明。",
+    "limits": "本次取得事实和本地核查原页，没有取得作品录像的传播许可。",
+    "quality_and_types": "生成艺术装置的一手说明",
+    "commercial_modification_redistribution": "仅使用自写事实卡。原作录像、照片、标签和网页图样未获商业再利用授权。",
+    "verified": "2026-11-26",
+    "rights_urls": [
+      "https://www.copyright.gov/help/faq/faq-protect.html"
+    ],
+    "asset_ids": [
+      "JYS-261126-03-01",
+      "JYS-261126-03-02",
+      "JYS-261126-03-03"
+    ],
+    "source_items": [
+      "https://annaridler.com/works/myriad-tulips",
+      "https://annaridler.com/works/mosaic-2018",
+      "https://annaridler.com/works/mosaic-2019"
+    ],
+    "download_urls": [
+      "https://annaridler.com/works/myriad-tulips",
+      "https://annaridler.com/works/mosaic-2018",
+      "https://annaridler.com/works/mosaic-2019"
+    ],
+    "status": "实际取得或沿用单件；以资产记录权利及状态为准"
+  },
+  {
+    "site_name": "爱思想",
+    "website": "https://www.aisixiang.com/",
+    "search": "https://www.aisixiang.com/",
+    "api_or_method": "继承已保存的对应文章 HTML，并复核原页段落、刊期和署名。",
+    "limits": "网页可能返回 429；本次沿用已有缓存，不绕过限制。",
+    "quality_and_types": "有署名的学术评论",
+    "commercial_modification_redistribution": "仅做署名观点转述。未取得原文版式、全文、第三方图片的商业再传播许可。",
+    "verified": "2026-11-26",
+    "rights_urls": [
+      "https://www.copyright.gov/help/faq/faq-protect.html"
+    ],
+    "asset_ids": [
+      "JYS-261126-03-04"
+    ],
+    "source_items": [
+      "https://www.aisixiang.com/data/183216.html"
+    ],
+    "download_urls": [
+      "https://www.aisixiang.com/data/183216.html"
+    ],
+    "status": "实际取得或沿用单件；以资产记录权利及状态为准"
+  },
+  {
+    "site_name": "Stanford HAI",
+    "website": "https://hai.stanford.edu/",
+    "search": "https://hai.stanford.edu/ai-index",
+    "api_or_method": "官方 AI Index 文章及报告页面；抽取带基准的两期价格。",
+    "limits": "无账号；本次取两项明确数字。",
+    "quality_and_types": "实测推理价格、基准和统计口径",
+    "commercial_modification_redistribution": "注明报告、基准和观测时间。采用自绘图与事实转述，未将官方图表或整篇报告授权给生产端。",
+    "verified": "2026-11-26",
+    "rights_urls": [
+      "https://www.copyright.gov/help/faq/faq-protect.html"
+    ],
+    "asset_ids": [
+      "JYS-261126-03-05",
+      "JYS-261126-04-06"
+    ],
+    "source_items": [
+      "https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts"
+    ],
+    "download_urls": [
+      "https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts"
+    ],
+    "status": "实际取得或沿用单件；以资产记录权利及状态为准"
+  },
+  {
+    "site_name": "Science Advances / Europe PMC",
+    "website": "https://www.science.org/journal/sciadv",
+    "search": "https://europepmc.org/",
+    "api_or_method": "由 DOI 对应 PMCID，通过 Europe PMC REST 全文接口取 JATS XML。",
+    "limits": "按单篇访问。开放获取仍需核查文章许可字段及插图例外。",
+    "quality_and_types": "同行评议实验论文、方法与结果",
+    "commercial_modification_redistribution": "本篇正文 CC BY 4.0。商业重用须署名、链接许可、说明改动，第三方材料另核。",
+    "verified": "2026-11-26",
+    "rights_urls": [
+      "https://creativecommons.org/licenses/by/4.0/"
+    ],
+    "asset_ids": [
+      "JYS-261126-03-06"
+    ],
+    "source_items": [
+      "https://doi.org/10.1126/sciadv.adn5290"
+    ],
+    "download_urls": [
+      "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11244532/fullTextXML"
+    ],
+    "status": "实际取得或沿用单件；以资产记录权利及状态为准"
+  },
+  {
+    "site_name": "Library of Congress",
+    "website": "https://www.loc.gov/",
+    "search": "https://www.loc.gov/film-and-videos/",
+    "api_or_method": "继承已有馆方 MP4 和版权卡，求证单件及原音。",
+    "limits": "本机文件可用；本次 HTTP 接入部分馆页返回 403。",
+    "quality_and_types": "1903 年纽约港历史运动影像",
+    "commercial_modification_redistribution": "本件原作在美国为公有领域，数字音轨及其他发行地区未核定。列为候选。",
+    "verified": "2026-11-26",
+    "rights_urls": [
+      "https://www.loc.gov/item/00694365/#rights-and-access"
+    ],
+    "asset_ids": [
+      "JYS-261126-02-06"
+    ],
+    "source_items": [
+      "https://www.loc.gov/item/00694365/"
+    ],
+    "download_urls": [
+      "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/00045654/00045654.mp4"
+    ],
+    "status": "实际取得或沿用单件；以资产记录权利及状态为准"
+  }
+]
